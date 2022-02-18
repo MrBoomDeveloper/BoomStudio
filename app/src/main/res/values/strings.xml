@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Android Studio</string>
+
+    <string name="create">Create</string>
+
+    <string name="editor">Editor</string>
+    <string name="settings">Settings</string>
+</resources>
