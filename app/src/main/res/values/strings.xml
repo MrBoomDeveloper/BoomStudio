@@ -13,4 +13,10 @@
     <string name="new_project">New project</string>
     <string name="open_folder">Open directory</string>
     <string name="install_apk">Install APK</string>
+    <string name="back">Back</string>
+    <string name="menu">Menu</string>
+    <string name="project_package">Package name</string>
+    <string name="default_package" translatable="false">com.example.helloworld</string>
+    <string name="default_app_name" translatable="false">Hello world</string>
+    <string name="project_name">App name</string>
 </resources>

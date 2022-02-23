@@ -2,7 +2,7 @@ package com.mrboomdev.androidstudio;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.PopupMenu;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,6 +18,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ImageView create = findViewById(R.id.new_project);
+        ImageView notifications = findViewById(R.id.notifications);
+        ImageView settings = findViewById(R.id.settings);
+
+        notifications.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), NotificationsActivity.class);
+            startActivity(intent);
+        });
+
+        settings.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
+            startActivity(intent);
+        });
 
         create.setOnClickListener(v -> {
             PopupMenu popupMenu = new PopupMenu(this, v);
@@ -27,11 +39,11 @@ public class MainActivity extends AppCompatActivity {
                         public boolean onMenuItemClick(MenuItem item) {
                             switch (item.getItemId()) {
                                 case R.id.create_project:
-                                    Toast.makeText(getApplicationContext(),"create project",
-                                            Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(getApplicationContext(), CreateProjectActivity.class);
+                                    startActivity(intent);
                                     return true;
                                 case R.id.open_project:
-                                    Toast.makeText(getApplicationContext(),"open folder",
+                                    Toast.makeText(getApplicationContext(),"currently not available",
                                             Toast.LENGTH_SHORT).show();
                                     return true;
                                 default:
