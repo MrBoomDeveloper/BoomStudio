@@ -20,8 +20,8 @@
             android:layout_height="56dp"
             android:contentDescription="@string/app_name"
             android:padding="15dp"
-            app:srcCompat="@drawable/ic_androidstudio"
-            tools:srcCompat="@drawable/ic_androidstudio" />
+            app:srcCompat="@drawable/ic_outline_android_24"
+            tools:srcCompat="@drawable/ic_outline_android_24" />
 
         <TextView
             android:id="@+id/studio"
@@ -46,6 +46,18 @@
             tools:srcCompat="@drawable/ic_outline_add_24" />
 
         <ImageView
+            android:id="@+id/notifications"
+            android:layout_width="48dp"
+            android:layout_height="56dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="@string/notifications"
+            android:focusable="true"
+            android:padding="10dp"
+            app:srcCompat="@drawable/ic_outline_notifications_24"
+            tools:srcCompat="@drawable/ic_outline_notifications_24" />
+
+        <ImageView
             android:id="@+id/settings"
             android:layout_width="56dp"
             android:layout_height="56dp"
@@ -59,13 +71,13 @@
             tools:srcCompat="@drawable/ic_outline_settings_24" />
     </LinearLayout>
 
-    <View
+    <com.google.android.material.divider.MaterialDivider
         android:id="@+id/divider"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/divider" />
+        android:layout_height="wrap_content"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/background" />
 </LinearLayout>

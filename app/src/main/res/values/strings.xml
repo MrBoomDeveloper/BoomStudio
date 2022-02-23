@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">Android Studio</string>
+    <string name="app_name">DroidStudio</string>
 
     <string name="create">Create</string>
-
+    <string name="notifications">Notifications</string>
     <string name="editor">Editor</string>
     <string name="settings">Settings</string>
 </resources>
