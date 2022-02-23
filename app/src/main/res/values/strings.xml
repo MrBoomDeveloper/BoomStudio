@@ -1,11 +1,16 @@
 <resources>
-    <string name="app_name">DroidStudio</string>
+    <string name="app_name" translatable="false">DroidStudio</string>
 
     <string name="create">Create</string>
+    <string name="copy">Copy</string>
+    <string name="share">Share</string>
+    <string name="delete">Delete</string>
+
     <string name="notifications">Notifications</string>
     <string name="editor">Editor</string>
     <string name="settings">Settings</string>
 
     <string name="new_project">New project</string>
     <string name="open_folder">Open directory</string>
+    <string name="install_apk">Install APK</string>
 </resources>
