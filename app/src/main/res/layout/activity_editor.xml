@@ -14,8 +14,12 @@
         android:orientation="horizontal">
 
         <ImageView
+      	  android:id="@+menu"
             android:layout_width="56dp"
             android:layout_height="56dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
             android:contentDescription="@string/menu"
             android:padding="15dp"
             app:srcCompat="@drawable/ic_outline_menu_24"
