@@ -2,6 +2,8 @@ package com.mrboomdev.androidstudio;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+import android.view.View;
+import android.widget.ImageView;
 
 public class SettingsActivity extends AppCompatActivity {
 
