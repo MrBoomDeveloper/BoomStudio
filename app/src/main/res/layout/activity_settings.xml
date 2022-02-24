@@ -17,6 +17,9 @@
         <ImageView
             android:layout_width="56dp"
             android:layout_height="56dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
             android:contentDescription="@string/back"
             android:padding="15dp"
             app:srcCompat="@drawable/ic_outline_arrow_back_24"
