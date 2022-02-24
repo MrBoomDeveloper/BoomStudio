@@ -45,8 +45,7 @@
             android:padding="15dp"
             android:text="@string/create"
             android:textColor="@color/primary"
-            android:textSize="16sp"
-            tools:ignore="TextContrastCheck" />
+            android:textSize="16sp" />
 
     </LinearLayout>
 
