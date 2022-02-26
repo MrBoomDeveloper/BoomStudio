@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_launcher_background"
+    android:background="@color/background"
     android:orientation="vertical">
 
     <LinearLayout
@@ -14,13 +14,13 @@
         android:orientation="horizontal">
 
         <ImageView
-        	android:id="@+back"
+            android:id="@+id/close"
             android:layout_width="56dp"
             android:layout_height="56dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
+            android:background="?attr/actionBarItemBackground"
             android:clickable="true"
-            android:focusable="true"
             android:contentDescription="@string/back"
+            android:focusable="true"
             android:padding="15dp"
             app:srcCompat="@drawable/ic_outline_close_24"
             tools:srcCompat="@drawable/ic_outline_close_24" />
@@ -38,7 +38,7 @@
             android:id="@+id/create"
             android:layout_width="wrap_content"
             android:layout_height="56dp"
-            android:background="?attr/actionBarItemBackground"
+            android:background="?attr/selectableItemBackgroundBorderless"
             android:clickable="true"
             android:focusable="true"
             android:gravity="center_vertical"
@@ -62,7 +62,26 @@
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/project_name"
+                android:textColorHint="@color/hint"
+                app:boxStrokeColor="@color/input">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/default_app_name"
+                    android:textColor="@color/white"
+                    tools:ignore="TextContrastCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:hint="@string/project_package"
                 android:textColorHint="@color/hint"
                 app:boxStrokeColor="@color/input">
@@ -82,19 +101,47 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp"
-                android:hint="@string/project_name"
+                android:hint="@string/project_location"
                 android:textColorHint="@color/hint"
                 app:boxStrokeColor="@color/input">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:singleLine="true"
-                    android:text="@string/default_app_name"
-                    android:textColor="@color/white"
-                    tools:ignore="TextContrastCheck" />
+                    android:text="@string/default_project_location"
+                    android:textColor="@color/white" />
 
             </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:text="@string/language"
+                    android:textColor="@color/hint"
+                    tools:ignore="TextContrastCheck" />
+
+                <Spinner
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:background="@color/divider"
+                    android:dropDownWidth="match_parent"
+                    android:entries="@array/langs"
+                    android:minHeight="50dp"
+                    android:padding="10dp"
+                    android:popupBackground="@color/divider" />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 

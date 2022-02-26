@@ -82,15 +82,7 @@
         android:orientation="vertical"
         android:paddingLeft="45dp"
         android:paddingRight="45dp"
-        android:paddingBottom="50dp">
-
-        <ImageView
-            android:layout_width="225dp"
-            android:layout_height="225dp"
-            android:layout_marginBottom="10dp"
-            android:contentDescription="@string/app_name"
-            app:srcCompat="@drawable/ic_no_content_upside_down"
-            tools:srcCompat="@drawable/ic_no_content_upside_down" />
+        android:paddingBottom="25dp">
 
         <TextView
             android:layout_width="wrap_content"

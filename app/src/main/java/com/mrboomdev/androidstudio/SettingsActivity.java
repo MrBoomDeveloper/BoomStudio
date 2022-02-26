@@ -2,7 +2,6 @@ package com.mrboomdev.androidstudio;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
-import android.view.View;
 import android.widget.ImageView;
 
 public class SettingsActivity extends AppCompatActivity {
@@ -14,9 +13,7 @@ public class SettingsActivity extends AppCompatActivity {
         
         ImageView back = findViewById(R.id.back);
         
-        back.setOnClickListener(v -> {
-        	finish();
-        });
+        back.setOnClickListener(v -> finish());
     }
 
 }

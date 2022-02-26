@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="langs">
+        <item>Java</item>
+        <item>Kotlin</item>
+    </array>
+    <array name="sdk_version">
+        <item>Android 12 (API level 31)</item>
+        <item>Android 11 (API level 30)</item>
+        <item>Android 10 (API level 29)</item>
+        <item>Android 9 (API level 28)</item>
+        <item>Android 8.1 (API level 27)</item>
+        <item>Android 8.0 (API level 26)</item>
+        <item>Android 7.1 (API level 25)</item>
+        <item>Android 7.0 (API level 24)</item>
+        <item>Android 6.0 (API level 23)</item>
+        <item>Android 5.1 (API level 22)</item>
+        <item>Android 5.0 (API level 21)</item>
+    </array>
+</resources>

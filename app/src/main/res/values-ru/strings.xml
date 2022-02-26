@@ -4,11 +4,9 @@
     <string name="copy">Копировать</string>
     <string name="share">Поделиться</string>
     <string name="delete">Удалить</string>
-
     <string name="notifications">Уведомления</string>
     <string name="editor">Редактор</string>
     <string name="settings">Настройки</string>
-
     <string name="new_project">Создать проект</string>
     <string name="open_folder">Открыть папку</string>
     <string name="install_apk">Установить АПК</string>
@@ -16,4 +14,11 @@
     <string name="menu">Меню</string>
     <string name="project_package">Название пакета</string>
     <string name="project_name">Название приложения</string>
+    <string name="project_location">Путь проекта</string>
+    <string name="welcome_title">Добро Пожаловать в DroidStudio</string>
+    <string name="welcome_description">Создайте новый проект, чтобы начать с нуля. Откройте существующий проект из хранилища чтобы продолжить.</string>
+    <string name="open">Открыть</string>
+    <string name="get_from_vcs">Открыть репозиторий</string>
+    <string name="language">Язык</string>
+    <string name="project_sdk">Минимальный SDK</string>
 </resources>

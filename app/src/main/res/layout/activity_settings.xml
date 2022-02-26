@@ -15,13 +15,13 @@
         android:orientation="horizontal">
 
         <ImageView
-        	android:id="@+back"
+            android:id="@+id/back"
             android:layout_width="56dp"
             android:layout_height="56dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
+            android:background="?attr/actionBarItemBackground"
             android:clickable="true"
-            android:focusable="true"
             android:contentDescription="@string/back"
+            android:focusable="true"
             android:padding="15dp"
             app:srcCompat="@drawable/ic_outline_arrow_back_24"
             tools:srcCompat="@drawable/ic_outline_arrow_back_24" />

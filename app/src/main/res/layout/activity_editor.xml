@@ -14,13 +14,13 @@
         android:orientation="horizontal">
 
         <ImageView
-      	  android:id="@+menu"
+            android:id="@+id/menu"
             android:layout_width="56dp"
             android:layout_height="56dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
+            android:background="?attr/actionBarItemBackground"
             android:clickable="true"
-            android:focusable="true"
             android:contentDescription="@string/menu"
+            android:focusable="true"
             android:padding="15dp"
             app:srcCompat="@drawable/ic_outline_menu_24"
             tools:srcCompat="@drawable/ic_outline_menu_24" />
@@ -37,7 +37,7 @@
         <ImageView
             android:layout_width="48dp"
             android:layout_height="56dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
+            android:background="?attr/actionBarItemBackground"
             android:clickable="true"
             android:contentDescription="@string/create"
             android:focusable="true"
@@ -48,7 +48,7 @@
         <ImageView
             android:layout_width="48dp"
             android:layout_height="56dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
+            android:background="?attr/actionBarItemBackground"
             android:clickable="true"
             android:contentDescription="@string/notifications"
             android:focusable="true"
@@ -59,7 +59,7 @@
         <ImageView
             android:layout_width="56dp"
             android:layout_height="56dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
+            android:background="?attr/actionBarItemBackground"
             android:clickable="true"
             android:contentDescription="@string/settings"
             android:focusable="true"
@@ -73,6 +73,47 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:dividerColor="@color/divider" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        app:tabIndicatorFullWidth="false"
+        app:tabIndicatorHeight="1dp"
+        app:tabMode="scrollable"
+        app:tabPaddingEnd="10dp"
+        app:tabPaddingStart="10dp"
+        app:tabTextAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:tabTextColor="@color/white">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/copy" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progressBackgroundTint="@color/transparent"
+        android:progressTint="@color/primary" />
 
     <com.google.android.material.divider.MaterialDivider
         android:layout_width="match_parent"
