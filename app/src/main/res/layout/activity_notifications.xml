@@ -20,7 +20,7 @@
             android:layout_height="56dp"
             android:background="?attr/actionBarItemBackground"
             android:clickable="true"
-            android:contentDescription="@string/back"
+            android:contentDescription="@string/action_back"
             android:focusable="true"
             android:padding="15dp"
             app:srcCompat="@drawable/ic_outline_arrow_back_24"
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="15dp"
             android:layout_weight="1"
-            android:text="@string/notifications"
+            android:text="@string/menu_notifications"
             android:textColor="@color/white"
             android:textSize="20sp" />
 

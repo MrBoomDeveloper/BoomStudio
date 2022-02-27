@@ -1,27 +1,32 @@
 <resources>
     <string name="app_name" translatable="false">DroidStudio</string>
-    <string name="create">Create</string>
-    <string name="copy">Copy</string>
-    <string name="share">Share</string>
-    <string name="delete">Delete</string>
-    <string name="notifications">Notifications</string>
-    <string name="editor">Editor</string>
-    <string name="settings">Settings</string>
-    <string name="new_project">New project</string>
-    <string name="open_folder">Open directory</string>
-    <string name="install_apk">Install APK</string>
-    <string name="back">Back</string>
-    <string name="menu">Menu</string>
+    <string name="app_welcome">Welcome to DroidStudio</string>
+    <string name="app_description">Create a new project to start from scratch. Open existing project from storage to continue.</string>
+
+    <string name="action_back">Back</string>
+    <string name="action_menu">Menu</string>
+    <string name="action_open">Open</string>
+    <string name="action_create">Create</string>
+    <string name="action_copy">Copy</string>
+    <string name="action_share">Share</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_new_project">New project</string>
+    <string name="action_open_folder">Open directory</string>
+    <string name="action_install_apk">Install APK</string>
+    <string name="action_get_from_vcs">Get from VCS</string>
+
+    <string name="menu_notifications">Notifications</string>
+    <string name="menu_editor">Editor</string>
+    <string name="menu_settings">Settings</string>
+
     <string name="project_package">Package name</string>
-    <string name="default_package" translatable="false">com.example.helloworld</string>
-    <string name="default_app_name" translatable="false">Hello world</string>
+    <string name="project_package_default" translatable="false">com.example.helloworld</string>
     <string name="project_name">App name</string>
-    <string name="default_project_location" translatable="false">/sdcard/Android/data/com.mrboomdev.androidstudio/files/projects/helloworld/</string>
+    <string name="project_name_default" translatable="false">Hello world</string>
     <string name="project_location">Project location</string>
-    <string name="welcome_title">Welcome to DroidStudio</string>
-    <string name="welcome_description">Create a new project to start from scratch. Open existing project from storage to continue.</string>
-    <string name="open">Open</string>
-    <string name="get_from_vcs">Open repository</string>
-    <string name="language">Language</string>
+    <string name="project_location_default" translatable="false">/sdcard/Android/data/com.mrboomdev.androidstudio/files/projects/helloworld/</string>
+    <string name="project_lang">Language</string>
+    <string name="project_lang_default" translatable="false">Java</string>
     <string name="project_sdk">Minimum SDK</string>
+    <string name="project_sdk_default" translatable="false">Android 7.1 (API level 25)</string>
 </resources>

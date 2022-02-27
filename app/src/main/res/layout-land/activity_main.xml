@@ -37,7 +37,7 @@
             android:layout_height="56dp"
             android:background="?attr/actionBarItemBackground"
             android:clickable="true"
-            android:contentDescription="@string/create"
+            android:contentDescription="@string/action_new_project"
             android:focusable="true"
             android:padding="10dp"
             app:srcCompat="@drawable/ic_outline_add_24"
@@ -50,7 +50,7 @@
             android:layout_height="56dp"
             android:background="?attr/actionBarItemBackground"
             android:clickable="true"
-            android:contentDescription="@string/notifications"
+            android:contentDescription="@string/menu_notifications"
             android:focusable="true"
             android:padding="10dp"
             app:srcCompat="@drawable/ic_outline_notifications_24"
@@ -62,7 +62,7 @@
             android:layout_height="56dp"
             android:background="?attr/actionBarItemBackground"
             android:clickable="true"
-            android:contentDescription="@string/settings"
+            android:contentDescription="@string/menu_settings"
             android:focusable="true"
             android:padding="15dp"
             app:srcCompat="@drawable/ic_outline_settings_24"
@@ -89,7 +89,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-medium"
             android:gravity="center_horizontal"
-            android:text="@string/welcome_title"
+            android:text="@string/app_welcome"
             android:textColor="@color/white"
             android:textSize="24sp" />
 
@@ -99,7 +99,7 @@
             android:layout_marginTop="5dp"
             android:gravity="center_horizontal"
             android:maxWidth="300dp"
-            android:text="@string/welcome_description"
+            android:text="@string/app_description"
             android:textColor="@color/second"
             android:textSize="16sp" />
 
@@ -116,7 +116,8 @@
                 android:layout_width="125dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dp"
-                android:text="@string/create"
+                android:text="@string/action_create"
+                android:textAllCaps="false"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
@@ -126,7 +127,8 @@
                 android:layout_width="125dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:text="@string/open"
+                android:text="@string/action_open"
+                android:textAllCaps="false"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
         </LinearLayout>

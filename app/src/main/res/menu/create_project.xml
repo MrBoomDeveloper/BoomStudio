@@ -4,11 +4,11 @@
 
     <item
         android:id="@+id/create_project"
-        android:title="@string/new_project" />
+        android:title="@string/action_new_project" />
     <item
         android:id="@+id/open_project"
-        android:title="@string/open_folder" />
+        android:title="@string/action_open_folder" />
     <item
         android:id="@+id/get_from_vcs"
-        android:title="@string/get_from_vcs" />
+        android:title="@string/action_get_from_vcs" />
 </menu>
