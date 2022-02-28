@@ -17,7 +17,7 @@
             android:id="@+id/close"
             android:layout_width="56dp"
             android:layout_height="56dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
+            android:background="@drawable/ripple_circle"
             android:clickable="true"
             android:contentDescription="@string/action_back"
             android:focusable="true"
@@ -38,7 +38,7 @@
             android:id="@+id/create"
             android:layout_width="wrap_content"
             android:layout_height="56dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
+            android:background="@drawable/ripple_circle"
             android:clickable="true"
             android:focusable="true"
             android:gravity="center_vertical"
@@ -62,7 +62,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="@string/project_name"
                 android:textColorHint="@color/hint"
                 app:boxStrokeColor="@color/input">
@@ -72,8 +72,7 @@
                     android:layout_height="wrap_content"
                     android:singleLine="true"
                     android:text="@string/project_name_default"
-                    android:textColor="@color/white"
-                    tools:ignore="TextContrastCheck" />
+                    android:textColor="@color/white" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -91,15 +90,14 @@
                     android:layout_height="wrap_content"
                     android:singleLine="true"
                     android:text="@string/project_package_default"
-                    android:textColor="@color/white"
-                    tools:ignore="TextContrastCheck" />
+                    android:textColor="@color/white" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:hint="@string/project_location"
                 android:textColorHint="@color/hint"
@@ -119,12 +117,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:hint="@string/project_lang"
-                android:textColorHint="@color/hint">
+                android:textColorHint="@color/hint"
+                android:theme="@style/Dropdown"
+                app:boxStrokeColor="@color/input"
+                app:endIconTint="@color/second">
 
                 <AutoCompleteTextView
                     android:id="@+id/langs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:dropDownSelector="@color/hint"
                     android:hint="@string/project_sdk"
                     android:inputType="none"
                     android:text="@string/project_lang_default"
@@ -138,13 +140,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:clipToPadding="false"
                 android:hint="@string/project_sdk"
-                android:textColorHint="@color/hint">
+                android:textColorHint="@color/hint"
+                android:theme="@style/Dropdown"
+                app:boxStrokeColor="@color/input"
+                app:endIconTint="@color/hint">
 
                 <AutoCompleteTextView
                     android:id="@+id/sdk"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:dropDownSelector="@color/hint"
                     android:hint="@string/project_sdk"
                     android:inputType="none"
                     android:text="@string/project_sdk_default"

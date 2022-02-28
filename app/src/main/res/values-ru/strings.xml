@@ -15,6 +15,9 @@
     <string name="action_install_apk">Установить APK</string>
     <string name="action_get_from_vcs">Получить из VCS</string>
 
+    <string name="pref_cat_theme">Тема</string>
+    <string name="pref_autosave">Автосохранение</string>
+
     <string name="menu_notifications">Уведомления</string>
     <string name="menu_editor">Редактор</string>
     <string name="menu_settings">Настройки</string>
