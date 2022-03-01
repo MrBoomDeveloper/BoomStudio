@@ -26,7 +26,7 @@
     <string name="pref_install">Install APK After Build</string>
     <string name="pref_hidden">Hidden Files</string>
     <string name="pref_beta_compilier">Beta Compilier</string>
-    <string name="pref_about">
+    <string name="pref_about">Made by MrBoomDev in 2022</string>
 
     <string name="menu_notifications">Notifications</string>
     <string name="menu_editor">Editor</string>
