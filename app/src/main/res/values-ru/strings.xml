@@ -17,6 +17,7 @@
 
     <string name="pref_cat_theme">Тема</string>
     <string name="pref_cat_editor">Редактор</string>
+    <string name="pref_cat_about">Об приложении</string>
     <string name="pref_autosave">Автосохранение</string>
 
     <string name="menu_notifications">Уведомления</string>
