@@ -61,5 +61,15 @@ public class MainActivity extends AppCompatActivity {
                     });
             popupMenu.show();
         });
+        new MaterialAlertDialogBuilder(MainActivity.this)
+			.setTitle("Title")
+			.setMessage("Your message goes here. Keep it short but clear.")
+			.setPositiveButton("GOT IT",
+			new DialogInterface.OnClickListener() {
+				@Override
+				public void onClick(DialogInterface dialogInterface, int i) {
+					System.out.println("Click");
+			} }) 
+			.show();
     }
 }
