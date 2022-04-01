@@ -8,6 +8,11 @@
         <item name="colorOnSecondary">#B300FF</item>
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <item name="popupMenuBackground">@drawable/popup</item>
+        <item name="textAppearanceLargePopupMenu">@style/PopupText</item>
+        <item name="textAppearanceSmallPopupMenu">@style/PopupText</item>
+    </style>
+    <style name="PopupText" parent="Dark">
+        <item name="android:textSize">18sp</item>
     </style>
     <style name="Dropdown" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
         <item name="colorSurface">@color/divider</item>
