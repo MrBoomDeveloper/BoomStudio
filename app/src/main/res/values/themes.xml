@@ -10,7 +10,6 @@
         <item name="popupMenuBackground">@drawable/popup</item>
         <item name="textAppearanceLargePopupMenu">@style/PopupText</item>
         <item name="textAppearanceSmallPopupMenu">@style/PopupText</item>
-        <item name="navigationBarColor">@color/background</item>
     </style>
     <style name="Dialog" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
         <item name="colorOnSurface">@color/white</item>
