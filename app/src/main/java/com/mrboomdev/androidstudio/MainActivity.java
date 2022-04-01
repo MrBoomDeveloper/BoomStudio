@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                     });
             popupMenu.show();
         });
-        new MaterialAlertDialogBuilder(MainActivity.this)
+        new MaterialAlertDialogBuilder(MainActivity.this, R.style.Dialog)
 			.setTitle(getResources().getString(R.string.menu_storage_permission))
 			.setMessage(getResources().getString(R.string.description_storage))
             .setCancelable(false)
