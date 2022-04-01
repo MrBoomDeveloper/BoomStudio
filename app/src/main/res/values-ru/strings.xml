@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_welcome">Добро Пожаловать в DroidStudio</string>
-    <string name="app_description">Создайте новый проект, чтобы начать с нуля. Откройте существующий проект из хранилища чтобы продолжить.</string>
 
+    <string name="description_welcome">Создайте новый проект, чтобы начать с нуля. Откройте существующий проект из хранилища чтобы продолжить.</string>
+    <string name="description_storage">Для создания и открытия проектов из вашего хранилища, нам нужно разрешение на управление им.</string>
+
+    <string name="task_building">Сборка APK</string>
+
+    <string name="action_refresh">Обновить</string>
+    <string name="action_filter">Фильтры</string>
+    <string name="action_search">Поиск</string>
+    <string name="action_sort">Сортировать</string>
+    <string name="action_new">Новый</string>
+    <string name="action_save">Сохранить все</string>
     <string name="action_back">Назад</string>
     <string name="action_menu">Меню</string>
     <string name="action_open">Открыть</string>
@@ -16,20 +26,29 @@
     <string name="action_get_from_vcs">Получить из VCS</string>
 
     <string name="pref_cat_theme">Тема</string>
-    <string name="pref_cat_editor">Редактор</string>
     <string name="pref_cat_about">Об приложении</string>
     <string name="pref_autosave">Автосохранение</string>
     <string name="pref_wordwrap">Перенос Строк</string>
     <string name="pref_line_number">Номера Строк</string>
     <string name="pref_syntax">Подсветка Синтаксиса</string>
-    <string name="pref_install">Устанавливать APK После Сборки</string>
+    <string name="pref_install">Устанавливать APK после сборки</string>
     <string name="pref_hidden">Скрытые Файлы</string>
-    <string name="pref_beta_compilier">Бета Компилятор</string>
     <string name="pref_about">Сделанно MrBoomDev в 2022</string>
 
+    <string name="menu_icons">Выберите Иконку</string>
+    <string name="menu_vector">Конфигурация Векторной Графики</string>
+    <string name="menu_resources">Ресурсы</string>
     <string name="menu_notifications">Уведомления</string>
     <string name="menu_editor">Редактор</string>
     <string name="menu_settings">Настройки</string>
+    <string name="menu_storage_permission">Доступ к Хранилищу</string>
+
+    <string name="category_projects">роекты</string>
+    <string name="category_customize">Кастомизировать</string>
+    <string name="category_plugins">Плагины</string>
+    <string name="category_help">Помощь</string>
+    <string name="category_project">Проект</string>
+    <string name="category_theme">Аттрибуты темы</string>
 
     <string name="project_package">Название пакета</string>
     <string name="project_name">Название приложения</string>

@@ -9,17 +9,25 @@
         <entry key="..\:/Users/MisterS/AndroidStudioProjects/AndroidStudio/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Users/MisterS/AndroidStudioProjects/AndroidStudio/app/src/main/res/drawable/popup.xml" value="0.1655" />
         <entry key="..\:/Users/MisterS/AndroidStudioProjects/AndroidStudio/app/src/main/res/drawable/ripple_circle.xml" value="0.1655" />
+        <entry key="..\:/Users/MisterS/AndroidStudioProjects/AndroidStudio/app/src/main/res/drawable/ripple_square.xml" value="0.1665" />
         <entry key="..\:/Users/MisterS/AndroidStudioProjects/AndroidStudio/app/src/main/res/layout-land/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/MisterS/AndroidStudioProjects/AndroidStudio/app/src/main/res/layout-sw600dp/activity_main.xml" value="0.15061475409836064" />
-        <entry key="..\:/Users/MisterS/AndroidStudioProjects/AndroidStudio/app/src/main/res/layout/activity_create_project.xml" value="0.25" />
+        <entry key="..\:/Users/MisterS/AndroidStudioProjects/AndroidStudio/app/src/main/res/layout/activity_commit.xml" value="0.2" />
+        <entry key="..\:/Users/MisterS/AndroidStudioProjects/AndroidStudio/app/src/main/res/layout/activity_create_project.xml" value="0.33" />
         <entry key="..\:/Users/MisterS/AndroidStudioProjects/AndroidStudio/app/src/main/res/layout/activity_editor.xml" value="0.25" />
-        <entry key="..\:/Users/MisterS/AndroidStudioProjects/AndroidStudio/app/src/main/res/layout/activity_main.xml" value="0.21" />
+        <entry key="..\:/Users/MisterS/AndroidStudioProjects/AndroidStudio/app/src/main/res/layout/activity_icons.xml" value="0.25" />
+        <entry key="..\:/Users/MisterS/AndroidStudioProjects/AndroidStudio/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/MisterS/AndroidStudioProjects/AndroidStudio/app/src/main/res/layout/activity_notifications.xml" value="0.25" />
+        <entry key="..\:/Users/MisterS/AndroidStudioProjects/AndroidStudio/app/src/main/res/layout/activity_resources.xml" value="0.25" />
         <entry key="..\:/Users/MisterS/AndroidStudioProjects/AndroidStudio/app/src/main/res/layout/activity_settings.xml" value="0.25" />
         <entry key="..\:/Users/MisterS/AndroidStudioProjects/AndroidStudio/app/src/main/res/layout/spinner.xml" value="0.17094017094017094" />
         <entry key="..\:/Users/MisterS/AndroidStudioProjects/AndroidStudio/app/src/main/res/layout/spinner_item.xml" value="0.17094017094017094" />
         <entry key="..\:/Users/MisterS/AndroidStudioProjects/AndroidStudio/app/src/main/res/menu/create_project.xml" value="0.1718683197947841" />
+        <entry key="..\:/Users/MisterS/AndroidStudioProjects/AndroidStudio/app/src/main/res/menu/editor_edit.xml" value="0.17094017094017094" />
+        <entry key="..\:/Users/MisterS/AndroidStudioProjects/AndroidStudio/app/src/main/res/menu/editor_file.xml" value="0.17094017094017094" />
+        <entry key="..\:/Users/MisterS/AndroidStudioProjects/AndroidStudio/app/src/main/res/menu/editor_git.xml" value="0.17094017094017094" />
         <entry key="..\:/Users/MisterS/AndroidStudioProjects/AndroidStudio/app/src/main/res/menu/project_options.xml" value="0.21" />
+        <entry key="..\:/Users/MisterS/AndroidStudioProjects/AndroidStudio/app/src/main/res/menu/projects_bar.xml" value="0.25" />
         <entry key="..\:/Users/MisterS/AndroidStudioProjects/AndroidStudio/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2165" />
         <entry key="..\:/Users/MisterS/AndroidStudioProjects/AndroidStudio/app/src/main/res/xml/settings.xml" value="0.25" />
       </map>

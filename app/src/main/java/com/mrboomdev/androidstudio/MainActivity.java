@@ -1,9 +1,13 @@
 package com.mrboomdev.androidstudio;
 
+import android.os.Bundle;
+
+import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.PopupMenu;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -62,13 +66,14 @@ public class MainActivity extends AppCompatActivity {
             popupMenu.show();
         });
         new MaterialAlertDialogBuilder(MainActivity.this)
-			.setTitle("Title")
-			.setMessage("Your message goes here. Keep it short but clear.")
+			.setTitle(getResources().getString(R.string.menu_storage_permission))
+			.setMessage(getResources().getString(R.string.description_storage))
+            .setCancelable(false)
 			.setPositiveButton("GOT IT",
 			new DialogInterface.OnClickListener() {
 				@Override
 				public void onClick(DialogInterface dialogInterface, int i) {
-					System.out.println("Click");
+                    Toast.makeText(MainActivity.this, "test", Toast.LENGTH_SHORT).show();
 			} }) 
 			.show();
     }

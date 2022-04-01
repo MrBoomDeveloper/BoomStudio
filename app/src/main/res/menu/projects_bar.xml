@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/projects"
+        android:enabled="true"
+        android:icon="@drawable/ic_outline_home_24"
+        android:title="@string/category_projects" />
+    <item
+        android:icon="@drawable/ic_outline_dashboard_customize_24"
+        android:title="@string/category_customize" />
+    <item
+        android:icon="@drawable/ic_outline_reviews_24"
+        android:title="@string/category_plugins" />
+    <item
+        android:icon="@drawable/ic_outline_help_outline_24"
+        android:title="@string/category_help" />
+</menu>

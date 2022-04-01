@@ -9,19 +9,21 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="64dp"
+        android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/header_padding"
+        android:paddingRight="@dimen/header_padding">
 
         <ImageView
             android:id="@+id/close"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
+            android:layout_width="@dimen/header_item"
+            android:layout_height="@dimen/header_item"
             android:background="@drawable/ripple_circle"
             android:clickable="true"
             android:contentDescription="@string/action_back"
             android:focusable="true"
-            android:padding="15dp"
+            android:padding="@dimen/header_item_padding"
             app:srcCompat="@drawable/ic_outline_close_24"
             tools:srcCompat="@drawable/ic_outline_close_24" />
 
@@ -37,7 +39,7 @@
         <TextView
             android:id="@+id/create"
             android:layout_width="wrap_content"
-            android:layout_height="56dp"
+            android:layout_height="@dimen/header_item"
             android:background="@drawable/ripple_circle"
             android:clickable="true"
             android:focusable="true"
@@ -45,7 +47,7 @@
             android:padding="15dp"
             android:text="@string/action_create"
             android:textColor="@color/primary"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
     </LinearLayout>
 
@@ -126,7 +128,7 @@
                     android:id="@+id/langs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:dropDownSelector="@color/hint"
+                    android:dropDownSelector="?attr/selectableItemBackground"
                     android:hint="@string/project_sdk"
                     android:inputType="none"
                     android:text="@string/project_lang_default"
@@ -151,7 +153,7 @@
                     android:id="@+id/sdk"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:dropDownSelector="@color/hint"
+                    android:dropDownSelector="?attr/selectableItemBackground"
                     android:hint="@string/project_sdk"
                     android:inputType="none"
                     android:text="@string/project_sdk_default"

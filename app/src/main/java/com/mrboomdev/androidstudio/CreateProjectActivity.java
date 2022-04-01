@@ -16,6 +16,7 @@ public class CreateProjectActivity extends AppCompatActivity {
 
         String[] langs = {"Java", "Kotlin"};
         String[] sdks = {
+                "Android 12L (API level 32)",
                 "Android 12 (API level 31)",
                 "Android 11 (API level 30)",
                 "Android 10 (API level 29)",

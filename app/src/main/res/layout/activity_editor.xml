@@ -4,24 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_launcher_background"
+    android:background="@color/background"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="64dp"
+        android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/header_padding"
+        android:paddingRight="@dimen/header_padding">
 
         <ImageView
-            android:id="@+id/lang"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:background="?attr/actionBarItemBackground"
+            android:layout_width="@dimen/header_item"
+            android:layout_height="@dimen/header_item"
+            android:background="@drawable/ripple_circle"
             android:clickable="true"
             android:contentDescription="@string/action_menu"
             android:focusable="true"
-            android:padding="15dp"
+            android:padding="@dimen/header_item_padding"
             app:srcCompat="@drawable/ic_outline_menu_24"
             tools:srcCompat="@drawable/ic_outline_menu_24" />
 
@@ -35,44 +36,39 @@
             android:textSize="20sp" />
 
         <ImageView
-            android:layout_width="48dp"
-            android:layout_height="56dp"
-            android:background="?attr/actionBarItemBackground"
+            android:layout_width="@dimen/header_item"
+            android:layout_height="@dimen/header_item"
+            android:background="@drawable/ripple_circle"
             android:clickable="true"
             android:contentDescription="@string/action_create"
             android:focusable="true"
-            android:padding="10dp"
-            app:srcCompat="@drawable/ic_outline_add_24"
-            tools:srcCompat="@drawable/ic_outline_add_24" />
+            android:padding="@dimen/header_item_padding"
+            app:srcCompat="@drawable/ic_outline_edit_24"
+            tools:srcCompat="@drawable/ic_outline_edit_24" />
 
         <ImageView
-            android:layout_width="48dp"
-            android:layout_height="56dp"
-            android:background="?attr/actionBarItemBackground"
+            android:layout_width="@dimen/header_item"
+            android:layout_height="@dimen/header_item"
+            android:background="@drawable/ripple_circle"
             android:clickable="true"
             android:contentDescription="@string/action_copy"
             android:focusable="true"
-            android:padding="10dp"
-            app:srcCompat="@drawable/ic_outline_notifications_24"
-            tools:srcCompat="@drawable/ic_outline_notifications_24" />
+            android:padding="@dimen/header_item_padding"
+            app:srcCompat="@drawable/ic_outline_insert_drive_file_24"
+            tools:srcCompat="@drawable/ic_outline_insert_drive_file_24" />
 
         <ImageView
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:background="?attr/actionBarItemBackground"
+            android:layout_width="@dimen/header_item"
+            android:layout_height="@dimen/header_item"
+            android:background="@drawable/ripple_circle"
             android:clickable="true"
             android:contentDescription="@string/action_back"
             android:focusable="true"
-            android:padding="15dp"
-            app:srcCompat="@drawable/ic_outline_settings_24"
-            tools:ignore="DuplicateSpeakableTextCheck"
-            tools:srcCompat="@drawable/ic_outline_settings_24" />
-    </LinearLayout>
+            android:padding="@dimen/header_item_padding"
+            app:srcCompat="@drawable/ic_outline_featured_play_list_24"
+            tools:srcCompat="@drawable/ic_outline_featured_play_list_24" />
 
-    <com.google.android.material.divider.MaterialDivider
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:dividerColor="@color/divider" />
+    </LinearLayout>
 
     <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
@@ -102,6 +98,11 @@
             android:text="@string/action_share" />
     </com.google.android.material.tabs.TabLayout>
 
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:dividerColor="@color/divider" />
+
     <androidx.viewpager2.widget.ViewPager2
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -122,14 +123,66 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:background="@drawable/ripple_square"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/header_padding"
+        android:paddingRight="@dimen/header_padding">
+
+        <ImageView
+            android:id="@+id/processing"
+            android:layout_width="@dimen/header_item"
+            android:layout_height="@dimen/header_item"
+            android:contentDescription="@string/action_get_from_vcs"
+            android:padding="@dimen/header_item_padding"
+            app:srcCompat="@drawable/ic_outline_done_24"
+            tools:srcCompat="@drawable/ic_outline_done_24" />
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:textColor="@color/white" />
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:text="@string/task_building"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="@dimen/header_item"
+            android:layout_height="@dimen/header_item"
+            android:background="@drawable/ripple_circle"
+            android:clickable="true"
+            android:contentDescription="@string/project_sdk_default"
+            android:focusable="true"
+            android:padding="@dimen/header_item_padding"
+            app:srcCompat="@drawable/ic_outline_build_24"
+            tools:srcCompat="@drawable/ic_outline_build_24" />
+
+        <ImageView
+            android:id="@+id/git"
+            android:layout_width="@dimen/header_item"
+            android:layout_height="@dimen/header_item"
+            android:background="@drawable/ripple_circle"
+            android:clickable="true"
+            android:contentDescription="@string/pref_autosave"
+            android:focusable="true"
+            android:padding="@dimen/header_item_padding"
+            app:srcCompat="@drawable/ic_outline_update_24"
+            tools:srcCompat="@drawable/ic_outline_update_24" />
+
+        <ImageView
+            android:id="@+id/run"
+            android:layout_width="@dimen/header_item"
+            android:layout_height="@dimen/header_item"
+            android:background="@drawable/ripple_circle"
+            android:clickable="true"
+            android:contentDescription="@string/menu_notifications"
+            android:focusable="true"
+            android:padding="@dimen/header_item_padding"
+            app:srcCompat="@drawable/ic_outline_play_arrow_24"
+            tools:srcCompat="@drawable/ic_outline_play_arrow_24" />
     </LinearLayout>
 </LinearLayout>
