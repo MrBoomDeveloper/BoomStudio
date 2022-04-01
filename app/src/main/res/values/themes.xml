@@ -10,10 +10,11 @@
         <item name="popupMenuBackground">@drawable/popup</item>
         <item name="textAppearanceLargePopupMenu">@style/PopupText</item>
         <item name="textAppearanceSmallPopupMenu">@style/PopupText</item>
+        <item name="navigationBarColor">@style/background</item>
     </style>
     <style name="Dialog" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
         <item name="colorOnSurface">@color/white</item>
-        <item name="backgroundTint">@color/background</item>
+        <item name="?attr/colorSurface">@color/background</item>
     </style>
     <style name="PopupText" parent="Dark">
         <item name="android:textSize">14sp</item>
