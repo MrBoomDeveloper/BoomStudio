@@ -10,6 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:elevation="8dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:paddingLeft="@dimen/header_padding"
@@ -24,6 +25,7 @@
             android:contentDescription="@string/action_back"
             android:focusable="true"
             android:padding="@dimen/header_item_padding"
+            android:tooltipText="@string/action_back"
             app:srcCompat="@drawable/ic_outline_close_24"
             tools:srcCompat="@drawable/ic_outline_close_24" />
 

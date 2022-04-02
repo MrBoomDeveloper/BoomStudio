@@ -3,10 +3,17 @@
     <string name="app_welcome">Добро Пожаловать в DroidStudio</string>
 
     <string name="description_welcome">Создайте новый проект, чтобы начать с нуля. Откройте существующий проект из хранилища чтобы продолжить.</string>
-    <string name="description_storage">Для создания и открытия проектов из вашего хранилища, нам нужно разрешение на управление им.</string>
+    <string name="description_storage">Приложению необходимо разрешение на доступ к хранилищу для открытия и редактирования проектов.</string>
 
     <string name="task_building">Сборка APK</string>
+    <string name="task_loading">Загрузка</string>
 
+    <string name="action_remove">Убрать</string>
+    <string name="action_got_it">ПОНЯТНО</string>
+    <string name="action_file">Файл</string>
+    <string name="action_edit">Редактировать</string>
+    <string name="action_view">Вид</string>
+    <string name="action_run">Запустить</string>
     <string name="action_refresh">Обновить</string>
     <string name="action_filter">Фильтры</string>
     <string name="action_search">Поиск</string>
@@ -43,7 +50,7 @@
     <string name="menu_settings">Настройки</string>
     <string name="menu_storage_permission">Доступ к Хранилищу</string>
 
-    <string name="category_projects">роекты</string>
+    <string name="category_projects">Проекты</string>
     <string name="category_customize">Кастомизировать</string>
     <string name="category_plugins">Плагины</string>
     <string name="category_help">Помощь</string>

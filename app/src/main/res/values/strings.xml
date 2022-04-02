@@ -3,10 +3,17 @@
     <string name="app_welcome">Welcome to DroidStudio</string>
 
     <string name="description_welcome">Create a new project to start from scratch. Open existing project from storage to continue.</string>
-    <string name="description_storage">To create and open projects from your storage, we need permission to manage it.</string>
+    <string name="description_storage">The app needs storage permission to open and edit projects.</string>
 
     <string name="task_building">Building APK</string>
+    <string name="task_loading">Loading</string>
 
+    <string name="action_remove">Remove</string>
+    <string name="action_got_it">GOT IT</string>
+    <string name="action_file">File</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_view">View</string>
+    <string name="action_run">Run</string>
     <string name="action_refresh">Refresh</string>
     <string name="action_filter">Filter</string>
     <string name="action_search">Search</string>

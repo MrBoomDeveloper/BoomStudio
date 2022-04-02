@@ -10,6 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:elevation="8dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:paddingLeft="@dimen/header_padding"
@@ -71,82 +72,99 @@
             tools:srcCompat="@drawable/ic_outline_settings_24" />
     </LinearLayout>
 
-    <LinearLayout
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="2"
-        android:gravity="center_horizontal|center_vertical"
-        android:orientation="vertical"
-        android:paddingLeft="45dp"
-        android:paddingRight="45dp"
-        android:paddingBottom="45dp">
-
-        <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:contentDescription="@string/description_welcome"
-            app:srcCompat="@drawable/ic_no_content_upside_down"
-            tools:srcCompat="@drawable/ic_no_content_upside_down" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="34dp"
-            android:gravity="bottom"
-            android:text="@string/app_welcome"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:gravity="center_horizontal"
-            android:maxWidth="300dp"
-            android:text="@string/description_welcome"
-            android:textColor="@color/second"
-            android:textSize="16sp" />
+        android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <Button
-                android:id="@+id/create"
-                style="@style/Widget.MaterialComponents.Button"
-                android:layout_width="125dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
-                android:text="@string/action_create"
-                android:textColor="@color/black1" />
+            <LinearLayout
+                android:id="@+id/no_projects"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="45dp"
+                android:paddingRight="45dp"
+                android:paddingBottom="45dp">
 
-            <Button
-                android:id="@+id/open"
-                style="@style/Widget.AppCompat.Button"
-                android:layout_width="125dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:text="@string/action_open"
-                android:textColor="@color/black1" />
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:contentDescription="@string/description_welcome"
+                    app:srcCompat="@drawable/ic_no_content_upside_down"
+                    tools:srcCompat="@drawable/ic_no_content_upside_down" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:gravity="bottom"
+                    android:text="@string/app_welcome"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal"
+                    android:maxWidth="300dp"
+                    android:text="@string/description_welcome"
+                    android:textColor="@color/second"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/create"
+                        style="@style/Widget.MaterialComponents.Button"
+                        android:layout_width="125dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/action_create"
+                        android:textColor="@color/black1" />
+
+                    <Button
+                        android:id="@+id/open"
+                        style="@style/Widget.AppCompat.Button"
+                        android:layout_width="125dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/action_open"
+                        android:textColor="@color/black1" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/projects_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/background"
+                android:visibility="gone" />
+
         </LinearLayout>
 
-    </LinearLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/projects"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:backgroundTint="@color/background"
-        android:visibility="gone" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/background"
+        android:elevation="8dp"
         app:itemIconTint="@color/menu"
         app:itemTextColor="@color/menu"
         app:labelVisibilityMode="labeled"

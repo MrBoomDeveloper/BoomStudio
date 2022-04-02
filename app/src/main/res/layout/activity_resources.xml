@@ -23,6 +23,7 @@
             android:contentDescription="@string/action_menu"
             android:focusable="true"
             android:padding="@dimen/header_item_padding"
+            android:tooltipText="@string/action_back"
             app:srcCompat="@drawable/ic_outline_arrow_back_24"
             tools:srcCompat="@drawable/ic_outline_arrow_back_24" />
 
@@ -43,6 +44,7 @@
             android:contentDescription="@string/action_create"
             android:focusable="true"
             android:padding="@dimen/header_item_padding"
+            android:tooltipText="@string/action_new"
             app:srcCompat="@drawable/ic_outline_add_24"
             tools:srcCompat="@drawable/ic_outline_add_24" />
 
@@ -55,6 +57,7 @@
             android:contentDescription="@string/action_search"
             android:focusable="true"
             android:padding="@dimen/header_item_padding"
+            android:tooltipText="@string/action_search"
             app:srcCompat="@drawable/ic_outline_search_24"
             tools:srcCompat="@drawable/ic_outline_search_24" />
 
@@ -66,6 +69,7 @@
             android:contentDescription="@string/action_refresh"
             android:focusable="true"
             android:padding="@dimen/header_item_padding"
+            android:tooltipText="@string/action_refresh"
             app:srcCompat="@drawable/ic_outline_refresh_24"
             tools:srcCompat="@drawable/ic_outline_refresh_24" />
 
