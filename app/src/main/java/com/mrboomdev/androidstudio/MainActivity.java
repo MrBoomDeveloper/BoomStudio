@@ -3,7 +3,7 @@ package com.mrboomdev.androidstudio;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
-import android.os.Bundle
+import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
@@ -86,10 +86,13 @@ public class MainActivity extends AppCompatActivity {
                         switch (item.getItemId()) {
                             case R.id.create_project:
                                 create.performClick();
+                                break;
                             case R.id.open_project:
                                 open.performClick();
+                                break;
                             case R.id.get_from_vcs:
-                                Toast.makeText(getApplicationContext(),"currently not available", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(),"currently not available1", Toast.LENGTH_SHORT).show();
+                                break;
                         }
                         return true;
                     }
