@@ -9,13 +9,6 @@
     android:orientation="horizontal"
     android:padding="10dp">
 
-    <ImageView
-        android:id="@+id/icon"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:contentDescription="@string/app_name"
-        app:srcCompat="@mipmap/ic_launcher_round" />
-
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
