@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         setTheme(R.style.Main);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
 
         refresh = findViewById(R.id.refresh);
         no_projects = findViewById(R.id.no_projects);
@@ -109,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
             });
             listProjects();
         } else {
-            new MaterialAlertDialogBuilder(MainActivity.this, R.style.Dialog)
+            new MaterialAlertDialogBuilder(MainActivity.this)
                     .setTitle(getResources().getString(R.string.menu_storage_permission))
                     .setMessage(getResources().getString(R.string.description_storage))
                     .setCancelable(false)
