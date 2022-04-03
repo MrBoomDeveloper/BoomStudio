@@ -3,8 +3,7 @@ package com.mrboomdev.androidstudio;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
-import android.os.Bundle;
-
+import android.os.Bundle
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
@@ -27,7 +26,6 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.mrboomdev.androidstudio.utils.File;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -66,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
             startActivity(intent);
         });
+        projects_recycler.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
         checkPermission();
     }
 
@@ -136,7 +135,6 @@ public class MainActivity extends AppCompatActivity {
         project_info.put("path", "test2 path");
         projects_list.add(project_info);
         projects_recycler.setAdapter(new ProjectsListAdapter(projects_list, this));
-        projects_recycler.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
         refresh.setRefreshing(false);
     }
 
