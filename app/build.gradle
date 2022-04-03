@@ -1,6 +1,5 @@
 plugins {
     id 'com.android.application'
-    id 'com.google.gms.google-services'
 }
 
 android {
@@ -27,8 +26,6 @@ android {
 }
 
 dependencies {
-    implementation platform('com.google.firebase:firebase-bom:29.2.1')
-    implementation 'com.google.firebase:firebase-analytics'
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
     implementation 'androidx.preference:preference:1.2.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
