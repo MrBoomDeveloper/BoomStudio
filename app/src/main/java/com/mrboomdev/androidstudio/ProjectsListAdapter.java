@@ -34,7 +34,6 @@ public class ProjectsListAdapter extends RecyclerView.Adapter<ProjectsListAdapte
     public void onBindViewHolder(@NonNull ProjectsListAdapter.ViewHolder holder, int position) {
         holder.name.setText(this.data.get(position).get("name").toString());
         holder.path.setText(this.data.get(position).get("path").toString());
-        Log.d("test", this.data.get(position));
     }
 
     @Override
