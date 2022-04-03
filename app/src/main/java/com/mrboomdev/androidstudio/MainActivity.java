@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
                 popupMenu.show();
             });
             refresh.setColorSchemeColors(Color.parseColor("#39A8FF"));
-            refresh.setProgressBackgroundColorSchemeColor(R.color.background);
+            refresh.setProgressBackgroundColorSchemeColor(Color.parseColor("#212121"));
             refresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
                 @Override
                 public void onRefresh() {
