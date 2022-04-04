@@ -155,7 +155,9 @@ public class MainActivity extends AppCompatActivity {
     	super.onActivityResult(requestCode, resultCode, data);
     	switch(requestCode) {
         	case 2:
-        		Toast.makeText(getApplicationContext(),data.getData().toString(), Toast.LENGTH_SHORT).show();
+        		if(data != null) {
+        			Toast.makeText(getApplicationContext(),data.getData().toString(), Toast.LENGTH_SHORT).show();
+        		}
             	break;
     	}
 	}
