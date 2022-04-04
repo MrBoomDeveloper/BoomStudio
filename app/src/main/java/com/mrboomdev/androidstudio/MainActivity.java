@@ -77,7 +77,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             });
             open.setOnClickListener(v -> {
-                Toast.makeText(getApplicationContext(),"currently not available", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE); 
+    			i.addCategory(Intent.CATEGORY_DEFAULT);
+    			startActivityForResult(Intent.createChooser(i, "Choose directory"), 2);
+
             });
             new_project.setOnClickListener(v -> {
                 PopupMenu popupMenu = new PopupMenu(this, v);
@@ -147,4 +150,14 @@ public class MainActivity extends AppCompatActivity {
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
         checkPermission();
     }
+    
+    @Override
+	protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    	super.onActivityResult(requestCode, resultCode, data);
+    	switch(requestCode) {
+        	case 2:
+        		Toast.makeText(getApplicationContext(),data.getData(), Toast.LENGTH_SHORT).show();
+            	break;
+    	}
+	}
 }
