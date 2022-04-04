@@ -19,8 +19,8 @@
 
         <ImageView
             android:id="@+id/back"
-            android:layout_width="@dimen/header_main_item"
-            android:layout_height="@dimen/header_main_item"
+            android:layout_width="@dimen/header_height"
+            android:layout_height="@dimen/header_item"
             android:background="@drawable/ripple_circle"
             android:clickable="true"
             android:contentDescription="@string/action_back"
