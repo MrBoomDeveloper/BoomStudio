@@ -77,10 +77,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             });
             open.setOnClickListener(v -> {
-                Intent i = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE); 
-    			i.addCategory(Intent.CATEGORY_DEFAULT);
-    			startActivityForResult(Intent.createChooser(i, "Choose directory"), 2);
-
+            	Intent i = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
+				startActivityForResult(i, 2);
             });
             new_project.setOnClickListener(v -> {
                 PopupMenu popupMenu = new PopupMenu(this, v);
