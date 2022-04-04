@@ -33,6 +33,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import android.net.Uri;
 
 public class MainActivity extends AppCompatActivity {
     LinearLayout no_projects;
@@ -154,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
     	super.onActivityResult(requestCode, resultCode, data);
     	switch(requestCode) {
         	case 2:
-        		Toast.makeText(getApplicationContext(),data.getData(), Toast.LENGTH_SHORT).show();
+        		Toast.makeText(getApplicationContext(),data.getData().toString(), Toast.LENGTH_SHORT).show();
             	break;
     	}
 	}
