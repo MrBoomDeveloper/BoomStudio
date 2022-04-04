@@ -10,7 +10,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/header_height"
         android:elevation="8dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
@@ -19,9 +19,9 @@
 
         <ImageView
             android:id="@+id/back"
-            android:layout_width="@dimen/header_item"
-            android:layout_height="56dp"
-            android:background="?attr/actionBarItemBackground"
+            android:layout_width="@dimen/header_height"
+            android:layout_height="@dimen/header_item"
+            android:background="@drawable/ripple_circle"
             android:clickable="true"
             android:contentDescription="@string/action_back"
             android:focusable="true"
@@ -33,11 +33,13 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/header_padding"
             android:layout_marginRight="15dp"
             android:layout_weight="1"
             android:text="@string/menu_notifications"
             android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:fontFamily="sans-serif-medium"
+            android:textSize="@dimen/header_title" />
 
     </LinearLayout>
 
