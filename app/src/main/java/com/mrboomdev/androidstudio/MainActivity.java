@@ -67,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
             startActivity(intent);
         });
+        projects_recycler.setLayoutManager(new LinearLayoutManager(this));
+        projects_recycler.setHasFixedSize(true);
         projects_recycler.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
         checkPermission();
     }
@@ -131,11 +133,10 @@ public class MainActivity extends AppCompatActivity {
     public void listProjects() {
         no_projects.setVisibility(View.GONE);
         projects_recycler.setVisibility(View.VISIBLE);
-        projects_recycler.setLayoutManager(new LinearLayoutManager(this));
         ArrayList<ProjectItem> projects_list = new ArrayList<>();
         projects_list.add(new ProjectItem("Java", "HelloWorld", "/sdcard/MrBoomDev/DroidStudio/HelloWorld"));
 		projects_list.add(new ProjectItem("Kotlin", "I HATE KOTLIN", "/sdcard/MrBoomDev/DroidStudio/I_HATE_KOTLIN/"));
-        projects_recycler.setAdapter(new ProjectsListAdapter(projects_list, this));
+        projects_recycler.setAdapter(new ProjectsListAdapter(projects_list));
         refresh.setRefreshing(false);
     }
 
