@@ -22,7 +22,7 @@ public class ProjectsListAdapter extends RecyclerView.Adapter<ProjectsListAdapte
         }
     }
 
-    public ProjectsListAdapter(ArrayList<ExampleItem> list) {
+    public ProjectsListAdapter(ArrayList<ProjectItem> list) {
         mProjectsList = list;
     }
 
