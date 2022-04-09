@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
 				case R.id.page_help:
 					Toast.makeText(getApplicationContext(),"help", Toast.LENGTH_SHORT).show();
 					break;
+				}
     		return true;
 		});
         projects_recycler.setLayoutManager(new LinearLayoutManager(this));
