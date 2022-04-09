@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         open = findViewById(R.id.open);
         ImageView notifications = findViewById(R.id.notifications);
         ImageView settings = findViewById(R.id.settings);
+        BottomNavigationView navigation = findViewById(R.id.navigation);
 
         notifications.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), NotificationsActivity.class);
@@ -67,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
             startActivity(intent);
         });
+        
         projects_recycler.setLayoutManager(new LinearLayoutManager(this));
         projects_recycler.setHasFixedSize(true);
         projects_recycler.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
