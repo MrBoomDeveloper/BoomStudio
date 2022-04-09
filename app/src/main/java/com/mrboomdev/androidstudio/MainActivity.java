@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
         bottomNavigationView.setOnItemSelectedListener(item -> {
-        	switch(item.itemId) {
+        	switch(item.getItemId()) {
 				case R.id.page_projects:
 					Toast.makeText(getApplicationContext(),"projects", Toast.LENGTH_SHORT).show();
 					break;
