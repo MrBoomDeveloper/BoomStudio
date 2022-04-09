@@ -135,7 +135,11 @@ public class MainActivity extends AppCompatActivity {
         projects_recycler.setVisibility(View.VISIBLE);
         ArrayList<ProjectItem> projects_list = new ArrayList<>();
         projects_list.add(new ProjectItem("Java", "HelloWorld", "/sdcard/MrBoomDev/DroidStudio/HelloWorld"));
-		projects_list.add(new ProjectItem("Kotlin", "I HATE KOTLIN", "/sdcard/MrBoomDev/DroidStudio/I_HATE_KOTLIN/"));
+		projects_list.add(new ProjectItem("Kotlin", "I HATE KOTLIN", "/sdcard/MrBoomDev/DroidStudio/I_HATE_KOTLIN"));
+		projects_list.add(new ProjectItem("Java", "Test", "/sdcard/MrBoomDev/DroidStudio/Test"));
+		projects_list.add(new ProjectItem("Java", "FreeHugs", "/sdcard/MrBoomDev/DroidStudio/Hugs"));
+		projects_list.add(new ProjectItem("Java", "YTVanced", "/sdcard/MrBoomDev/DroidStudio/Vanced"));
+		projects_list.add(new ProjectItem("Java", "VKClient", "/sdcard/MrBoomDev/DroidStudio/vkontakte"));
         projects_recycler.setAdapter(new ProjectsListAdapter(projects_list));
         refresh.setRefreshing(false);
     }
