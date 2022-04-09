@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
             startActivity(intent);
         });
-        bottomNavigationView.setOnItemSelectedListener(item -> {
+        navigation.setOnItemSelectedListener(item -> {
         	switch(item.getItemId()) {
 				case R.id.page_projects:
 					Toast.makeText(getApplicationContext(),"projects", Toast.LENGTH_SHORT).show();
