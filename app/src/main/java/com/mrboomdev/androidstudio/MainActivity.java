@@ -135,17 +135,7 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<ProjectItem> projects_list = new ArrayList<>();
         projects_list.add(new ProjectItem("Java", "HelloWorld", "/sdcard/MrBoomDev/DroidStudio/HelloWorld"));
 		projects_list.add(new ProjectItem("Kotlin", "I HATE KOTLIN", "/sdcard/MrBoomDev/DroidStudio/I_HATE_KOTLIN/"));
-        
-        /*List<Map> projects_list = new ArrayList<>();
-        HashMap<String, String> project_info = new HashMap<>();
-        project_info.put("name", "test1 name");
-        project_info.put("path", "test1 path");
-        projects_list.add(project_info);
-        project_info.clear();
-        project_info.put("name", "test2 name");
-        project_info.put("path", "test2 path");
-        projects_list.add(project_info);
-        projects_recycler.setAdapter(new ProjectsListAdapter(projects_list, this));*/
+        projects_recycler.setAdapter(new ProjectsListAdapter(projects_list, this));
         refresh.setRefreshing(false);
     }
 
