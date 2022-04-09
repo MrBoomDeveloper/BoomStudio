@@ -5,7 +5,7 @@
     <item
         android:id="@+id/projects"
         android:enabled="true"
-        android:icon="@drawable/ic_outline_home_24"
+        android:icon="@drawable/ic_nav_home"
         android:title="@string/category_projects" />
     <item
         android:icon="@drawable/ic_outline_dashboard_customize_24"
