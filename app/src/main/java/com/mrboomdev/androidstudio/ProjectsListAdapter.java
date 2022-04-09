@@ -5,39 +5,36 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import androidx.appcompat.widget.PopupMenu;
 import androidx.recyclerview.widget.RecyclerView;
-import java.util.List;
-import java.util.Map;
+import java.util.ArrayList;
 
-public class ProjectsListAdapter extends RecyclerView.Adapter<ProjectsListAdapter.ViewHolder> {
-	private ArrayList<ProjectItem> mProjectsList;
+public class ProjectsListAdapter extends RecyclerView.Adapter<ProjectsListAdapter.ProjectsViewHolder> {
+    private ArrayList<ProjectItem> mProjectsList;
 
-	public class ViewHolder extends RecyclerView.ViewHolder {
-		public TextView name;
-		public TextView path;
-		public ImageView options;
+    public static class ProjectsViewHolder extends RecyclerView.ViewHolder {
+        public TextView mName;
+        public TextView mPath;
 
-        public ViewHolder(View view) {
+        public ProjectsViewHolder(View view) {
             super(view);
-            name = view.findViewById(R.id.name);
-            path = view.findViewById(R.id.path);
-            options = view.findViewById(R.id.options);
+            mName = itemView.findViewById(R.id.name);
+            mPath = itemView.findViewById(R.id.path);
         }
     }
-    
-    public ProjectsListAdapter(ArrayList<ProjectItem> list) {
-    	mProjectsList = list;
-	}
 
-    @Override
-    public ProjectsListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_project, parent, false);
-        return new ViewHolder(v);
+    public ProjectsListAdapter(ArrayList<ExampleItem> list) {
+        mProjectsList = list;
     }
 
     @Override
-    public void onBindViewHolder(ProjectsListAdapter.ViewHolder holder, int position) {
+    public ProjectsViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_project, parent, false);
+        ProjectsViewHolder evh = new ProjectsViewHolder(v);
+        return evh;
+    }
+
+    @Override
+    public void onBindViewHolder(ProjectsViewHolder holder, int position) {
         ProjectItem currentItem = mProjectsList.get(position);
         holder.mName.setText(currentItem.getName());
         holder.mPath.setText(currentItem.getPath());
