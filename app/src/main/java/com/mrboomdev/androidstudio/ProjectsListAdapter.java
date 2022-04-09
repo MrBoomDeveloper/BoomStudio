@@ -17,8 +17,8 @@ public class ProjectsListAdapter extends RecyclerView.Adapter<ProjectsListAdapte
 
         public ProjectsViewHolder(View view) {
             super(view);
-            mName = itemView.findViewById(R.id.name);
-            mPath = itemView.findViewById(R.id.path);
+            mName = view.findViewById(R.id.name);
+            mPath = view.findViewById(R.id.path);
         }
     }
 
