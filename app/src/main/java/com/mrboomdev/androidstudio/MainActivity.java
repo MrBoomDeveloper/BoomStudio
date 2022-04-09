@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import com.google.android.material.navigation.NavigationBarView;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         open = findViewById(R.id.open);
         ImageView notifications = findViewById(R.id.notifications);
         ImageView settings = findViewById(R.id.settings);
-        BottomNavigationView navigation = findViewById(R.id.navigation);
+        NavigationBarView navigation = findViewById(R.id.navigation);
 
         notifications.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), NotificationsActivity.class);
