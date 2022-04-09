@@ -69,7 +69,22 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
             startActivity(intent);
         });
-        
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+        	switch(item.itemId) {
+				case R.id.page_projects:
+					Toast.makeText(getApplicationContext(),"projects", Toast.LENGTH_SHORT).show();
+					break;
+				case R.id.page_customize:
+					Toast.makeText(getApplicationContext(),"customize", Toast.LENGTH_SHORT).show();
+					break;
+				case R.id.page_plugins:
+					Toast.makeText(getApplicationContext(),"plugins", Toast.LENGTH_SHORT).show();
+					break;
+				case R.id.page_help:
+					Toast.makeText(getApplicationContext(),"help", Toast.LENGTH_SHORT).show();
+					break;
+    		return true;
+		});
         projects_recycler.setLayoutManager(new LinearLayoutManager(this));
         projects_recycler.setHasFixedSize(true);
         projects_recycler.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
