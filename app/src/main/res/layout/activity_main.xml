@@ -36,16 +36,11 @@
 
         <ImageView
             android:id="@+id/new_project"
-            android:layout_width="@dimen/header_item"
-            android:layout_height="@dimen/header_item"
-            android:background="@drawable/ripple_circle"
-            android:clickable="true"
             android:contentDescription="@string/action_new_project"
-            android:focusable="true"
-            android:padding="@dimen/header_item_padding"
             android:tooltipText="@string/action_new_project"
             app:srcCompat="@drawable/ic_outline_add_24"
-            tools:srcCompat="@drawable/ic_outline_add_24" />
+            tools:srcCompat="@drawable/ic_outline_add_24"
+            style="@style/header_item" />
 
         <ImageView
             android:id="@+id/notifications"
