@@ -1,187 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/background"
-    android:orientation="vertical">
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/background"
+	android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/header_height"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingLeft="@dimen/header_padding"
-        android:paddingRight="@dimen/header_padding">
+	<LinearLayout
+		style="@style/header" >
 
-        <ImageView
-            android:layout_width="@dimen/header_height"
-            android:layout_height="@dimen/header_item"
-            android:background="@drawable/ripple_circle"
-            android:clickable="true"
-            android:contentDescription="@string/action_menu"
-            android:focusable="true"
-            android:padding="@dimen/header_item_padding"
-            android:tooltipText="@string/action_menu"
-            app:srcCompat="@drawable/ic_outline_menu_24"
-            tools:srcCompat="@drawable/ic_outline_menu_24" />
+		<ImageView
+			android:contentDescription="@string/action_menu"
+			android:tooltipText="@string/action_menu"
+			app:srcCompat="@drawable/ic_outline_menu_24"
+			tools:srcCompat="@drawable/ic_outline_menu_24"
+			style="@style/header_item.main.clickable" />
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/header_padding"
-            android:layout_marginRight="15dp"
-            android:layout_weight="1"
-            android:text="@string/menu_editor"
-            android:textColor="@color/white"
-            android:fontFamily="sans-serif-medium"
-            android:textSize="@dimen/header_title" />
+		<TextView
+			android:text="@string/menu_editor"
+			style="@style/header_title" />
 
-        <ImageView
-            android:layout_width="@dimen/header_item"
-            android:layout_height="@dimen/header_item"
-            android:background="@drawable/ripple_circle"
-            android:clickable="true"
-            android:contentDescription="@string/action_edit"
-            android:focusable="true"
-            android:padding="@dimen/header_item_padding"
-            android:tooltipText="@string/action_edit"
-            app:srcCompat="@drawable/ic_outline_edit_24"
-            tools:srcCompat="@drawable/ic_outline_edit_24" />
+		<ImageView
+			android:contentDescription="@string/action_edit"
+			android:tooltipText="@string/action_edit"
+			app:srcCompat="@drawable/ic_outline_edit_24"
+			tools:srcCompat="@drawable/ic_outline_edit_24"
+			style="@style/header_item.clickable" />
 
-        <ImageView
-            android:layout_width="@dimen/header_item"
-            android:layout_height="@dimen/header_item"
-            android:background="@drawable/ripple_circle"
-            android:clickable="true"
-            android:contentDescription="@string/action_file"
-            android:focusable="true"
-            android:padding="@dimen/header_item_padding"
-            android:tooltipText="@string/action_file"
-            app:srcCompat="@drawable/ic_outline_insert_drive_file_24"
-            tools:srcCompat="@drawable/ic_outline_insert_drive_file_24" />
+		<ImageView
+			android:contentDescription="@string/action_file"
+			android:tooltipText="@string/action_file"
+			app:srcCompat="@drawable/ic_outline_insert_drive_file_24"
+			tools:srcCompat="@drawable/ic_outline_insert_drive_file_24"
+			style="@style/header_item.clickable" />
 
-        <ImageView
-            android:layout_width="@dimen/header_item"
-            android:layout_height="@dimen/header_item"
-            android:background="@drawable/ripple_circle"
-            android:clickable="true"
-            android:contentDescription="@string/action_view"
-            android:focusable="true"
-            android:padding="@dimen/header_item_padding"
-            android:tooltipText="@string/action_view"
-            app:srcCompat="@drawable/ic_outline_insert_photo_24"
-            tools:srcCompat="@drawable/ic_outline_insert_photo_24" />
+		<ImageView
+			android:contentDescription="@string/action_view"
+			android:tooltipText="@string/action_view"
+			app:srcCompat="@drawable/ic_outline_insert_photo_24"
+			tools:srcCompat="@drawable/ic_outline_insert_photo_24"
+			style="@style/header_item.clickable" />
 
-    </LinearLayout>
+	</LinearLayout>
 
-    <com.google.android.material.tabs.TabLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/transparent"
-        app:tabIndicatorFullWidth="false"
-        app:tabIndicatorHeight="1dp"
-        app:tabMode="scrollable"
-        app:tabPaddingEnd="10dp"
-        app:tabPaddingStart="10dp"
-        app:tabTextAppearance="@style/TextAppearance.AppCompat.Body1"
-        app:tabTextColor="@color/white">
+	<com.google.android.material.tabs.TabLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/transparent"
+		app:tabIndicatorFullWidth="false"
+		app:tabIndicatorHeight="1dp"
+		app:tabMode="scrollable"
+		app:tabPaddingEnd="10dp"
+		app:tabPaddingStart="10dp"
+		app:tabTextAppearance="@style/TextAppearance.AppCompat.Body1"
+		app:tabTextColor="@color/white">
 
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/app_name" />
+		<com.google.android.material.tabs.TabItem
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/app_name" />
 
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/action_get_from_vcs" />
+		<com.google.android.material.tabs.TabItem
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/action_get_from_vcs" />
 
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/action_share" />
-    </com.google.android.material.tabs.TabLayout>
+		<com.google.android.material.tabs.TabItem
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/action_share" />
+	</com.google.android.material.tabs.TabLayout>
 
-    <com.google.android.material.divider.MaterialDivider
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:dividerColor="@color/divider" />
+	<com.google.android.material.divider.MaterialDivider
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:dividerColor="@color/divider" />
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
+	<androidx.viewpager2.widget.ViewPager2
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1" />
 
-    <ProgressBar
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:max="100"
-        android:progressBackgroundTint="@color/transparent"
-        android:progressTint="@color/primary" />
+	<ProgressBar
+		style="?android:attr/progressBarStyleHorizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:max="100"
+		android:progressBackgroundTint="@color/transparent"
+		android:progressTint="@color/primary" />
 
-    <com.google.android.material.divider.MaterialDivider
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:dividerColor="@color/divider" />
+	<com.google.android.material.divider.MaterialDivider
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:dividerColor="@color/divider" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/ripple_square"
-        android:clickable="true"
-        android:focusable="true"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingLeft="@dimen/header_padding"
-        android:paddingRight="@dimen/header_padding">
+	<LinearLayout
+		style="@style/header" >
 
-        <ImageView
-            android:id="@+id/processing"
-            android:layout_width="@dimen/header_item"
-            android:layout_height="@dimen/header_item"
-            android:contentDescription="@string/action_get_from_vcs"
-            android:padding="@dimen/header_item_padding"
-            app:srcCompat="@drawable/ic_outline_done_24"
-            tools:srcCompat="@drawable/ic_outline_done_24" />
+		<ImageView
+			android:id="@+id/processing"
+			android:contentDescription="@string/action_get_from_vcs"
+			app:srcCompat="@drawable/ic_outline_done_24"
+			tools:srcCompat="@drawable/ic_outline_done_24" 
+			style="@style/header_item.clickable"/>
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="15dp"
-            android:layout_weight="1"
-            android:text="@string/task_building"
-            android:textColor="@color/white"
-            android:textSize="16sp" />
+		<TextView
+			android:text="@string/task_building"
+			style="@style/header_title" />
 
-        <ImageView
-            android:id="@+id/git"
-            android:layout_width="@dimen/header_item"
-            android:layout_height="@dimen/header_item"
-            android:background="@drawable/ripple_circle"
-            android:clickable="true"
-            android:contentDescription="@string/pref_cat_github"
-            android:focusable="true"
-            android:padding="@dimen/header_item_padding"
-            android:tooltipText="@string/pref_cat_github"
-            app:srcCompat="@drawable/ic_outline_update_24"
-            tools:srcCompat="@drawable/ic_outline_update_24" />
+		<ImageView
+			android:id="@+id/git"
+			android:contentDescription="@string/pref_cat_github"
+			android:tooltipText="@string/pref_cat_github"
+			app:srcCompat="@drawable/ic_outline_update_24"
+			tools:srcCompat="@drawable/ic_outline_update_24"
+			style="@style/header_item.clickable" />
 
-        <ImageView
-            android:id="@+id/run"
-            android:layout_width="@dimen/header_item"
-            android:layout_height="@dimen/header_item"
-            android:background="@drawable/ripple_circle"
-            android:clickable="true"
-            android:contentDescription="@string/action_run"
-            android:focusable="true"
-            android:padding="@dimen/header_item_padding"
-            android:tooltipText="@string/action_run"
-            android:visibility="gone"
-            app:srcCompat="@drawable/ic_outline_play_arrow_24"
-            tools:srcCompat="@drawable/ic_outline_play_arrow_24"
-            tools:visibility="visible" />
-    </LinearLayout>
+		<ImageView
+			android:id="@+id/run"
+			android:contentDescription="@string/action_run"
+			android:tooltipText="@string/action_run"
+			app:srcCompat="@drawable/ic_outline_play_arrow_24"
+			tools:srcCompat="@drawable/ic_outline_play_arrow_24"
+			style="@style/header_item.clickable" />
+	</LinearLayout>
 </LinearLayout>
