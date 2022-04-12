@@ -22,6 +22,11 @@
 	<style name="header_item.main">
 		<item name="android:layout_width">@dimen/header_height</item>
 	</style>
+	<style name="header_item.main.clickable">
+		<item name="android:background">@drawable/ripple_circle</item>
+		<item name="android:clickable">true</item>
+		<item name="android:focusable">true</item>
+	</style>
 	<style name="header_title">
 		<item name="android:layout_width">0dp</item>
 		<item name="android:layout_height">wrap_content</item>
