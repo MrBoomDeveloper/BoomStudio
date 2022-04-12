@@ -26,7 +26,7 @@
             android:tooltipText="@string/action_new_project"
             app:srcCompat="@drawable/ic_outline_add_24"
             tools:srcCompat="@drawable/ic_outline_add_24"
-            style="@style/header_item" />
+            style="@style/header_item.clickable" />
 
         <ImageView
             android:id="@+id/notifications"
@@ -34,7 +34,7 @@
             android:tooltipText="@string/menu_notifications"
             app:srcCompat="@drawable/ic_outline_notifications_24"
             tools:srcCompat="@drawable/ic_outline_notifications_24" 
-			style="@style/header_item" />
+			style="@style/header_item.clickable" />
 
         <ImageView
             android:id="@+id/settings"
@@ -42,7 +42,7 @@
             android:tooltipText="@string/menu_settings"
             app:srcCompat="@drawable/ic_outline_settings_24"
             tools:srcCompat="@drawable/ic_outline_settings_24"
-			style="@style/header_item" />
+			style="@style/header_item.clickable" />
     </LinearLayout>
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
