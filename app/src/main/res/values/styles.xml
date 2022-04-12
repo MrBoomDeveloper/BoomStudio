@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="header_item">
+		<item name="android:layout_width">@dimen/header_item</item>
+		<item name="android:layout_height">@dimen/header_item</item>
+		<item name="android:padding">@dimen/header_item_padding</item>
+		<item name="android:background">@drawable/ripple_circle</item>
+		<item name="android:clickable">true</item>
+		<item name="android:focusable">true</item>
+	</style>
+</resources>
