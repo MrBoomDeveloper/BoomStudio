@@ -103,8 +103,8 @@
                     <Button
                         android:id="@+id/create"
                         style="@style/Widget.MaterialComponents.Button"
-                        android:layout_width="110dp"
-                        android:layout_height="45dp"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginRight="5dp"
                         android:text="@string/action_create"
                         android:textColor="@color/black1" />
@@ -112,8 +112,8 @@
                     <Button
                         android:id="@+id/open"
                         style="@style/Widget.MaterialComponents.Button"
-                        android:layout_width="110dp"
-                        android:layout_height="45dp"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:text="@string/action_open"
                         android:textColor="@color/black1" />
@@ -143,11 +143,6 @@
 		android:id="@+id/navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/background"
-        android:elevation="8dp"
-        app:itemIconTint="@color/menu"
-        app:itemTextColor="@color/menu"
-        app:labelVisibilityMode="labeled"
-        app:menu="@menu/projects_bar" />
+		style="@style/navigation" />
 
 </LinearLayout>
