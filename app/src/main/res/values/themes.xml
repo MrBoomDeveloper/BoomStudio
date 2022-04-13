@@ -21,6 +21,6 @@
         <item name="android:textColor">@color/white</item>
     </style>
     <style name="Opening" parent="Main">
-        <item name="android:windowBackground">@color/background</item>
+        <item name="android:windowBackground">@drawable/splash_screen</item>
     </style>
 </resources>
