@@ -143,6 +143,11 @@
 		android:id="@+id/navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-		style="@style/navigation" />
+		android:background="@color/background"
+        android:elevation="8dp"
+        app:itemIconTint="@color/menu"
+        app:itemTextColor="@color/menu"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/projects_bar" />
 
 </LinearLayout>
