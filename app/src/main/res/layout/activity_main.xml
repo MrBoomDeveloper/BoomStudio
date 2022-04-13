@@ -111,7 +111,7 @@
 
                     <Button
                         android:id="@+id/open"
-                        style="@style/Widget.AppCompat.Button"
+                        style="@style/Widget.MaterialComponents.Button"
                         android:layout_width="110dp"
                         android:layout_height="45dp"
                         android:layout_marginLeft="5dp"
