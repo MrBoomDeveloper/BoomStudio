@@ -36,4 +36,12 @@
 		<item name="android:fontFamily">sans-serif-medium</item>
 		<item name="android:textSize">@dimen/header_title</item>
 	</style>
+	<style name="navigation">
+		<item name="android:background">@color/background</item>
+        <item name="android:elevation">8dp</item>
+        <item name="app:itemIconTint">@color/menu</item>
+        <item name="app:itemTextColor">@color/menu</item>
+        <item name="app:labelVisibilityMode">labeled</item>
+        <item name="app:menu">@menu/projects_bar</item>
+	</style>
 </resources>
