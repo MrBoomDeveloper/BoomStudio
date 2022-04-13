@@ -6,7 +6,11 @@
     <PreferenceCategory
         android:title="@string/pref_cat_theme"
         app:iconSpaceReserved="false">
-
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/menu_editor"
+        app:iconSpaceReserved="false">
+        	
         <SwitchPreference
             android:defaultValue="true"
             android:key="wordwrap"
@@ -24,25 +28,35 @@
             app:iconSpaceReserved="false" />
     </PreferenceCategory>
     <PreferenceCategory
-        android:title="@string/menu_editor"
+    	android:title="Build"
         app:iconSpaceReserved="false">
-
         <SwitchPreference
             android:defaultValue="true"
             android:key="innstall"
             android:title="@string/pref_install"
             app:iconSpaceReserved="false" />
-        <SwitchPreference
-            android:defaultValue="false"
-            android:key="autosave"
-            android:title="@string/pref_autosave"
-            app:iconSpaceReserved="false" />
-        <SwitchPreference
-            android:defaultValue="false"
-            android:key="hidden"
-            android:title="@string/pref_hidden"
-            app:iconSpaceReserved="false" />
     </PreferenceCategory>
+	<PreferenceCategory
+		android:title="Files"
+		app:iconSpaceReserved="false">
+			
+		<Preference
+			android:title="Default Encoding"
+			app:iconSpaceReserved="false" />.
+        <Preference
+			android:title="File Association"
+			app:iconSpaceReserved="false" />
+        <SwitchPreference
+			android:defaultValue="false"
+			android:key="autosave"
+			android:title="@string/pref_autosave"
+			app:iconSpaceReserved="false" />
+		<SwitchPreference
+			android:defaultValue="false"
+			android:key="hidden"
+			android:title="@string/pref_hidden"
+			app:iconSpaceReserved="false" />
+	</PreferenceCategory>
     <PreferenceCategory
         android:title="@string/pref_cat_about"
         app:iconSpaceReserved="false">
