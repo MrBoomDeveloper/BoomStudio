@@ -1,41 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:iconSpaceReserved="false">
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	app:iconSpaceReserved="false">
 
-    <PreferenceCategory
-        android:title="@string/pref_cat_theme"
-        app:iconSpaceReserved="false">
-    </PreferenceCategory>
-    <PreferenceCategory
-        android:title="@string/menu_editor"
-        app:iconSpaceReserved="false">
-        	
-        <SwitchPreference
-            android:defaultValue="true"
-            android:key="wordwrap"
-            android:title="@string/pref_wordwrap"
-            app:iconSpaceReserved="false" />
-        <SwitchPreference
-            android:defaultValue="true"
-            android:key="line"
-            android:title="@string/pref_line_number"
-            app:iconSpaceReserved="false" />
-        <SwitchPreference
-            android:defaultValue="true"
-            android:key="highlight"
-            android:title="@string/pref_syntax"
-            app:iconSpaceReserved="false" />
-    </PreferenceCategory>
-    <PreferenceCategory
-    	android:title="Build"
-        app:iconSpaceReserved="false">
-        <SwitchPreference
-            android:defaultValue="true"
-            android:key="innstall"
-            android:title="@string/pref_install"
-            app:iconSpaceReserved="false" />
-    </PreferenceCategory>
+	<PreferenceCategory
+		android:title="@string/pref_cat_theme"
+		app:iconSpaceReserved="false">
+		<Preference
+			android:title="Dark Theme"
+			app:iconSpaceReserved="false" />
+	</PreferenceCategory>
+	<PreferenceCategory
+		android:title="@string/menu_editor"
+		app:iconSpaceReserved="false">
+			
+		<SwitchPreference
+			android:defaultValue="true"
+			android:key="wordwrap"
+			android:title="@string/pref_wordwrap"
+			app:iconSpaceReserved="false" />
+		<SwitchPreference
+			android:defaultValue="true"
+			android:key="line"
+			android:title="@string/pref_line_number"
+			app:iconSpaceReserved="false" />
+		<SwitchPreference
+			android:defaultValue="true"
+			android:key="highlight"
+			android:title="@string/pref_syntax"
+			app:iconSpaceReserved="false" />
+		<SwitchPreference
+			android:defaultValue="true"
+			android:key="undobyback"
+			android:title="Undo By Back Button"
+			app:iconSpaceReserved="false" />
+		<Preference
+			android:title="Font Type"
+			app:iconSpaceReserved="false" />
+		<Preference
+			android:title="Font Size"
+			app:iconSpaceReserved="false" />
+		<Preference
+			android:title="Line Spacing"
+			app:iconSpaceReserved="false" />
+	</PreferenceCategory>
 	<PreferenceCategory
 		android:title="Files"
 		app:iconSpaceReserved="false">
@@ -43,10 +51,10 @@
 		<Preference
 			android:title="Default Encoding"
 			app:iconSpaceReserved="false" />.
-        <Preference
+		<Preference
 			android:title="File Association"
 			app:iconSpaceReserved="false" />
-        <SwitchPreference
+		<SwitchPreference
 			android:defaultValue="false"
 			android:key="autosave"
 			android:title="@string/pref_autosave"
@@ -57,12 +65,27 @@
 			android:title="@string/pref_hidden"
 			app:iconSpaceReserved="false" />
 	</PreferenceCategory>
-    <PreferenceCategory
-        android:title="@string/pref_cat_about"
-        app:iconSpaceReserved="false">
+	<PreferenceCategory
+		android:title="Build"
+		app:iconSpaceReserved="false">
+		<SwitchPreference
+			android:defaultValue="true"
+			android:key="innstall"
+			android:title="@string/pref_install"
+			app:iconSpaceReserved="false" />
+	</PreferenceCategory>
+	<PreferenceCategory
+		android:title="@string/pref_cat_about"
+		app:iconSpaceReserved="false">
 
-        <Preference
-            android:title="@string/pref_about"
-            app:iconSpaceReserved="false" />
-    </PreferenceCategory>
+		<Preference
+			android:title="App Version"
+			app:iconSpaceReserved="false" />
+		<Preference
+			android:title="@string/pref_about"
+			app:iconSpaceReserved="false" />
+		<Preference
+			android:title="Discord Server"
+			app:iconSpaceReserved="false" />
+	</PreferenceCategory>
 </PreferenceScreen>
