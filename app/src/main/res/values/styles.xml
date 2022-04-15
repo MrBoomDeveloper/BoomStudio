@@ -40,12 +40,9 @@
 		<item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColorHint">@color/view_second</item>
-        <item name="app:boxStrokeColor">@color/input</item>
 	</style>
 	<style name="textinput.edit" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox" />
-	<style name="textinput.drop" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
-		<item name="app:endIconTint">@color/view_second</item>
-	</style>
+	<style name="textinput.drop" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu" />
 	<style name="textinput_content">
 		<item name="android:layout_width">match_parent</item>
 		<item name="android:layout_height">wrap_content</item>
