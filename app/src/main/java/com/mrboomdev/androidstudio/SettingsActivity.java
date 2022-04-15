@@ -16,7 +16,6 @@ public class SettingsActivity extends AppCompatActivity {
 
         back.setOnClickListener(v -> finish());
 
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.prefs, new SettingsFragment())
