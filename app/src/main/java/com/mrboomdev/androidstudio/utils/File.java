@@ -21,10 +21,6 @@ public class File {
 		return false;
 	}
 	
-	public void ArrayList(String path) {
-		return null;
-	}
-	
 	public boolean unzip(String from, String to, boolean isAsset) {
 		return false;
 	}
