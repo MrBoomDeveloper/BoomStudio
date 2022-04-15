@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+	<color name="window_background">#FEFEFE</color>
+	<color name="window_transparent">#00000000</color>
+	
+	<color name="view_divider">#DFDFDF</color>
+	<color name="view_first">#121212</color>
+	<color name="view_second">#757575</color>
+	<color name="view_primary">#39A8FF</color>
+	
+	
+	<!--REMOVE AFTER REFACTOR-->
     <color name="background">#FEFEFE</color>
     <color name="divider">#383838</color>
     <color name="hint">#AAAAAA</color>
