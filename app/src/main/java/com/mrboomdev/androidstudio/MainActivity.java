@@ -49,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
         setTheme(R.style.Main);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
 
         refresh = findViewById(R.id.refresh);
         no_projects = findViewById(R.id.no_projects);
