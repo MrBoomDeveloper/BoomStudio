@@ -4,7 +4,7 @@
 	app:iconSpaceReserved="false">
 
 	<PreferenceCategory
-		android:title="@string/pref_cat_theme"
+		android:title="Appearance"
 		app:iconSpaceReserved="false">
 		<Preference
 			android:title="Dark Theme"
@@ -82,7 +82,7 @@
 			android:title="App Version"
 			app:iconSpaceReserved="false" />
 		<Preference
-			android:title="@string/pref_about"
+			android:title="Developer"
 			app:iconSpaceReserved="false" />
 		<Preference
 			android:title="Discord Server"
