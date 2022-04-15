@@ -3,6 +3,7 @@
 	<color name="window_background">#111111</color>
 	<color name="window_ripple">#55f5f5f5</color>
 	
+	<color name="view_icon">#E1E1E1</color>
 	<color name="view_divider">#BDBDBD</color>
 	<color name="view_first">#FFFFFF</color>
 	<color name="view_second">#AAAAAA</color>
