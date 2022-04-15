@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+	<color name="window_background">#111111</color>
+	
+	<color name="view_divider">#BDBDBD</color>
+	<color name="view_first">#FFFFFF</color>
+	<color name="view_second">#AAAAAA</color>
+	
+	
+	<!--REMOVE AFTER REFACTOR-->
     <color name="background">#212121</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="second">#888888</color>
     <color name="black">#000000</color>
     <color name="black1">#030303</color>
     <color name="white">#FFFFFF</color>
