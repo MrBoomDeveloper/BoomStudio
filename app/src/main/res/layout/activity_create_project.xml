@@ -1,151 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/window_background"
-    android:orientation="vertical">
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/window_background"
+	android:orientation="vertical">
 
-    <LinearLayout
-        style="@style/header" >
+	<LinearLayout
+		style="@style/header" >
 
-        <ImageView
-            android:id="@+id/close"
-            android:contentDescription="@string/action_back"
-            android:tooltipText="@string/action_back"
-            app:srcCompat="@drawable/ic_outline_close_24"
+		<ImageView
+			android:id="@+id/close"
+			android:contentDescription="@string/action_back"
+			android:tooltipText="@string/action_back"
+			app:srcCompat="@drawable/ic_outline_close_24"
 			style="@style/header_item.clickable" />
 
-        <TextView
-            android:text="@string/action_new_project"
-            style="@style/header_title" />
+		<TextView
+			android:text="@string/action_new_project"
+			style="@style/header_title" />
 
-        <TextView
-            android:id="@+id/create"
-            style="@style/header_item.clickable"
-            android:layout_width="wrap_content"
-            android:gravity="center_vertical"
-            android:padding="15dp"
-            android:text="@string/action_create"
-            android:textColor="@color/primary"
-            android:textSize="14sp" />
+		<TextView
+			android:id="@+id/create"
+			style="@style/header_item.clickable"
+			android:layout_width="wrap_content"
+			android:gravity="center_vertical"
+			android:padding="15dp"
+			android:text="@string/action_create"
+			android:textColor="@color/primary"
+			android:textSize="14sp" />
 
-    </LinearLayout>
+	</LinearLayout>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="15dp">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:padding="15dp">
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/project_name"
-                android:textColorHint="@color/hint"
-                app:boxStrokeColor="@color/input">
+			<com.google.android.material.textfield.TextInputLayout
+				style="@style/textinput.edit"
+				android:hint="@string/project_name">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:singleLine="true"
-                    android:text="@string/project_name_default"
-                    android:textColor="@color/white" />
+				<com.google.android.material.textfield.TextInputEditText
+					style="@style/textinput_content"
+					android:text="@string/project_name_default" />
 
-            </com.google.android.material.textfield.TextInputLayout>
+			</com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:hint="@string/project_package"
-                android:textColorHint="@color/hint"
-                app:boxStrokeColor="@color/input">
+			<com.google.android.material.textfield.TextInputLayout
+				style="@style/textinput.edit"
+				android:layout_marginTop="10dp"
+				android:hint="@string/project_package">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:singleLine="true"
-                    android:text="@string/project_package_default"
-                    android:textColor="@color/white" />
+				<com.google.android.material.textfield.TextInputEditText
+					style="@style/textinput_content"
+					android:text="@string/project_package_default" />
 
-            </com.google.android.material.textfield.TextInputLayout>
+			</com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:hint="@string/project_location"
-                android:textColorHint="@color/hint"
-                app:boxStrokeColor="@color/input">
+			<com.google.android.material.textfield.TextInputLayout
+				style="@style/textinput.edit"
+				android:layout_marginTop="10dp"
+				android:hint="@string/project_location">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:singleLine="true"
-                    android:text="@string/project_location_default"
-                    android:textColor="@color/white" />
+				<com.google.android.material.textfield.TextInputEditText
+					style="@style/textinput_content"
+					android:text="@string/project_location_default" />
 
-            </com.google.android.material.textfield.TextInputLayout>
+			</com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:hint="@string/project_lang"
-                android:textColorHint="@color/hint"
-                android:theme="@style/Dropdown"
-                app:boxStrokeColor="@color/input"
-                app:endIconTint="@color/second">
+			<com.google.android.material.textfield.TextInputLayout
+				style="@style/textinput.drop"
+				android:layout_marginTop="10dp"
+				android:hint="@string/project_lang"
+				android:theme="@style/Dropdown">
 
-                <AutoCompleteTextView
-                    android:id="@+id/langs"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:dropDownSelector="?attr/selectableItemBackground"
-                    android:hint="@string/project_sdk"
-                    android:inputType="none"
-                    android:text="@string/project_lang_default"
-                    android:textColor="@color/white"
-                    android:textColorHint="#78909C" />
+				<AutoCompleteTextView
+					android:id="@+id/langs"
+					style="@style/textinput_content.drop"
+					android:hint="@string/project_sdk"
+					android:text="@string/project_lang_default" />
 
-            </com.google.android.material.textfield.TextInputLayout>
+			</com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:clipToPadding="false"
-                android:hint="@string/project_sdk"
-                android:textColorHint="@color/hint"
-                android:theme="@style/Dropdown"
-                app:boxStrokeColor="@color/input"
-                app:endIconTint="@color/hint">
+			<com.google.android.material.textfield.TextInputLayout
+				style="@style/textinput.drop"
+				android:layout_marginTop="10dp"
+				android:hint="@string/project_sdk"
+				android:theme="@style/Dropdown">
 
-                <AutoCompleteTextView
-                    android:id="@+id/sdk"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:dropDownSelector="?attr/selectableItemBackground"
-                    android:hint="@string/project_sdk"
-                    android:inputType="none"
-                    android:text="@string/project_sdk_default"
-                    android:textColor="@color/white"
-                    android:textColorHint="#78909C" />
+				<AutoCompleteTextView
+					android:id="@+id/sdk"
+					style="@style/textinput_content.drop"
+					android:hint="@string/project_sdk"
+					android:text="@string/project_sdk_default" />
 
-            </com.google.android.material.textfield.TextInputLayout>
+			</com.google.android.material.textfield.TextInputLayout>
 
-        </LinearLayout>
-    </ScrollView>
+		</LinearLayout>
+	</ScrollView>
 
 </LinearLayout>
