@@ -4,7 +4,7 @@
     	
 	<item android:drawable="@color/window_background" />
 	<item 
-		android:drawable="@drawable/ic_outline_android_24" 
+		android:drawable="@drawable/ic_android_outline" 
 		android:width="150dp"
         android:height="150dp"
 		android:gravity="center" />
