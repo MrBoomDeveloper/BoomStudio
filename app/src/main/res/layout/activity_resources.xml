@@ -4,90 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_launcher_background"
+    android:background="@color/window_background"
     android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/header_height"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingLeft="@dimen/header_padding"
-        android:paddingRight="@dimen/header_padding">
+        style="@style/header">
 
         <ImageView
-            android:layout_width="@dimen/header_height"
-            android:layout_height="@dimen/header_item"
-            android:background="@drawable/ripple_circle"
-            android:clickable="true"
-            android:contentDescription="@string/action_menu"
-            android:focusable="true"
-            android:padding="@dimen/header_item_padding"
+            style="@style/header_item.main"
             android:tooltipText="@string/action_back"
-            app:srcCompat="@drawable/ic_outline_arrow_back_24"
-            tools:srcCompat="@drawable/ic_outline_arrow_back_24" />
+            app:srcCompat="@drawable/ic_back_outline" />
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/header_padding"
-            android:layout_marginRight="15dp"
-            android:layout_weight="1"
-            android:text="@string/menu_resources"
-            android:textColor="@color/white"
-            android:fontFamily="sans-serif-medium"
-            android:textSize="@dimen/header_title" />
+            style="@style/header_title"
+            android:text="@string/menu_resources" />
 
         <ImageView
-            android:layout_width="@dimen/header_item"
-            android:layout_height="@dimen/header_item"
-            android:background="@drawable/ripple_circle"
-            android:clickable="true"
-            android:contentDescription="@string/action_create"
-            android:focusable="true"
-            android:padding="@dimen/header_item_padding"
+            style="@style/header_item.clickable"
             android:tooltipText="@string/action_new"
-            app:srcCompat="@drawable/ic_outline_add_24"
-            tools:srcCompat="@drawable/ic_outline_add_24" />
+            app:srcCompat="@drawable/ic_add_outline" />
 
         <ImageView
             android:id="@+id/search"
-            android:layout_width="@dimen/header_item"
-            android:layout_height="@dimen/header_item"
-            android:background="@drawable/ripple_circle"
-            android:clickable="true"
-            android:contentDescription="@string/action_search"
-            android:focusable="true"
-            android:padding="@dimen/header_item_padding"
+            style="@style/header_item.clickable"
             android:tooltipText="@string/action_search"
-            app:srcCompat="@drawable/ic_outline_search_24"
-            tools:srcCompat="@drawable/ic_outline_search_24" />
+            app:srcCompat="@drawable/ic_outline_search_24" />
 
         <ImageView
-            android:layout_width="@dimen/header_item"
-            android:layout_height="@dimen/header_item"
-            android:background="@drawable/ripple_circle"
-            android:clickable="true"
-            android:contentDescription="@string/action_refresh"
-            android:focusable="true"
-            android:padding="@dimen/header_item_padding"
+            style="@style/header_item.clickable"
             android:tooltipText="@string/action_refresh"
-            app:srcCompat="@drawable/ic_outline_refresh_24"
-            tools:srcCompat="@drawable/ic_outline_refresh_24" />
+            app:srcCompat="@drawable/ic_outline_refresh_24" />
 
     </LinearLayout>
 
     <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/transparent"
+        android:background="@color/window_transparent"
         app:tabIndicatorFullWidth="false"
         app:tabIndicatorHeight="1dp"
         app:tabMode="scrollable"
         app:tabPaddingEnd="10dp"
         app:tabPaddingStart="10dp"
         app:tabTextAppearance="@style/TextAppearance.AppCompat.Body1"
-        app:tabTextColor="@color/white">
+        app:tabTextColor="@color/view_first">
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
@@ -109,7 +69,7 @@
         android:id="@+id/materialDivider"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:dividerColor="@color/divider" />
+        app:dividerColor="@color/view_divider" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
