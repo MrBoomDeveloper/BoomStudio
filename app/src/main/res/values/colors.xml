@@ -5,7 +5,7 @@
 	<color name="window_transparent">#00000000</color>
 	<color name="window_ripple">#55555555</color>
 	
-	<color name="view_icon">#222222</color>
+	<color name="view_icon">#656565</color>
 	<color name="view_divider">#DFDFDF</color>
 	<color name="view_first">#121212</color>
 	<color name="view_second">#555555</color>
