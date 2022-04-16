@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
 	Button create;
 	Button open;
 	SwipeRefreshLayout refresh;
+	ProjectsListAdapter adapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -161,7 +162,17 @@ public class MainActivity extends AppCompatActivity {
 		projects_list.add(new ProjectItem("Java", "FreeHugs", "/sdcard/MrBoomDev/DroidStudio/Hugs"));
 		projects_list.add(new ProjectItem("Java", "YTVanced", "/sdcard/MrBoomDev/DroidStudio/Vanced"));
 		projects_list.add(new ProjectItem("Java", "VKClient", "/sdcard/MrBoomDev/DroidStudio/vkontakte"));
-		projects_recycler.setAdapter(new ProjectsListAdapter(projects_list));
+		adapter = new ProjectsListAdapter(projects_list);
+		projects_recycler.setAdapter(adapter);
+		adapter.setOnItemClickListener(new ProjectsListAdapter.OnItemClickListener() {
+			@Override
+			public void onItemClick(int position) {
+				Intent intent = new Intent(getApplicationContext(), EditorActivity.class);
+				intent.putExtra("name", projects_list.get(position).getName());
+				intent.putExtra("path", projects_list.get(position).getPath());
+				startActivity(intent);
+			}
+		});
 		refresh.setRefreshing(false);
 	}
 
