@@ -15,13 +15,13 @@
 	
 	
 	<!--REMOVE AFTER REFACTOR-->
-    <color name="background">#FEFEFE</color>
-    <color name="divider">#383838</color>
-    <color name="hint">#AAAAAA</color>
-    <color name="second">#AAAAAA</color>
-    <color name="primary">#39A8FF</color>
-    <color name="transparent">#00000000</color>
-    <color name="black">#FFFFFF</color>
-    <color name="black1">#030303</color>
-    <color name="white">#000000</color>
+    <color name="background">#FF0000</color>
+    <color name="divider">#FF0000</color>
+    <color name="hint">#FF0000</color>
+    <color name="second">#FF0000</color>
+    <color name="primary">#FF0000</color>
+    <color name="transparent">#FF0000</color>
+    <color name="black">#FF0000</color>
+    <color name="black1">#FF0000</color>
+    <color name="white">#FF0000</color>
 </resources>
