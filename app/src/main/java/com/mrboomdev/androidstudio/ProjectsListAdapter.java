@@ -12,7 +12,7 @@ public class ProjectsListAdapter extends RecyclerView.Adapter<ProjectsListAdapte
 	private ArrayList<ProjectItem> mProjectsList;
 	private OnItemClickListener mListener;
 	
-	public interface onItemClickListener {
+	public interface OnItemClickListener {
 		void onItemClick(int position);
 	}
    
