@@ -4,17 +4,15 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:background="@color/background"
+	android:background="@color/window_background"
 	android:orientation="vertical">
 
 	<LinearLayout
 		style="@style/header" >
 
 		<ImageView
-			android:contentDescription="@string/action_menu"
 			android:tooltipText="@string/action_menu"
-			app:srcCompat="@drawable/ic_outline_menu_24"
-			tools:srcCompat="@drawable/ic_outline_menu_24"
+			app:srcCompat="@drawable/ic_menu_outline"
 			style="@style/header_item.main.clickable" />
 
 		<TextView
@@ -22,24 +20,18 @@
 			style="@style/header_title" />
 
 		<ImageView
-			android:contentDescription="@string/action_edit"
 			android:tooltipText="@string/action_edit"
-			app:srcCompat="@drawable/ic_outline_edit_24"
-			tools:srcCompat="@drawable/ic_outline_edit_24"
+			app:srcCompat="@drawable/ic_edit_outline"
 			style="@style/header_item.clickable" />
 
 		<ImageView
-			android:contentDescription="@string/action_file"
 			android:tooltipText="@string/action_file"
-			app:srcCompat="@drawable/ic_outline_insert_drive_file_24"
-			tools:srcCompat="@drawable/ic_outline_insert_drive_file_24"
+			app:srcCompat="@drawable/ic_file_outline"
 			style="@style/header_item.clickable" />
 
 		<ImageView
-			android:contentDescription="@string/action_view"
 			android:tooltipText="@string/action_view"
-			app:srcCompat="@drawable/ic_outline_insert_photo_24"
-			tools:srcCompat="@drawable/ic_outline_insert_photo_24"
+			app:srcCompat="@drawable/ic_image_outline"
 			style="@style/header_item.clickable" />
 
 	</LinearLayout>
@@ -47,14 +39,14 @@
 	<com.google.android.material.tabs.TabLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:background="@color/transparent"
+		android:background="@color/window_transparent"
 		app:tabIndicatorFullWidth="false"
 		app:tabIndicatorHeight="1dp"
 		app:tabMode="scrollable"
 		app:tabPaddingEnd="10dp"
 		app:tabPaddingStart="10dp"
 		app:tabTextAppearance="@style/TextAppearance.AppCompat.Body1"
-		app:tabTextColor="@color/white">
+		app:tabTextColor="@color/view_first">
 
 		<com.google.android.material.tabs.TabItem
 			android:layout_width="wrap_content"
@@ -75,7 +67,7 @@
 	<com.google.android.material.divider.MaterialDivider
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		app:dividerColor="@color/divider" />
+		app:dividerColor="@color/view_divider" />
 
 	<androidx.viewpager2.widget.ViewPager2
 		android:layout_width="match_parent"
@@ -87,22 +79,20 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:max="100"
-		android:progressBackgroundTint="@color/transparent"
-		android:progressTint="@color/primary" />
+		android:progressBackgroundTint="@color/window_transparent"
+		android:progressTint="@color/view_primary" />
 
 	<com.google.android.material.divider.MaterialDivider
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		app:dividerColor="@color/divider" />
+		app:dividerColor="@color/view_divider" />
 
 	<LinearLayout
 		style="@style/header" >
 
 		<ImageView
 			android:id="@+id/processing"
-			android:contentDescription="@string/action_get_from_vcs"
-			app:srcCompat="@drawable/ic_outline_done_24"
-			tools:srcCompat="@drawable/ic_outline_done_24" 
+			app:srcCompat="@drawable/ic_done_outline"
 			style="@style/header_item.clickable"/>
 
 		<TextView
@@ -111,18 +101,14 @@
 
 		<ImageView
 			android:id="@+id/git"
-			android:contentDescription="@string/pref_cat_github"
 			android:tooltipText="@string/pref_cat_github"
-			app:srcCompat="@drawable/ic_outline_update_24"
-			tools:srcCompat="@drawable/ic_outline_update_24"
+			app:srcCompat="@drawable/ic_update_outline"
 			style="@style/header_item.clickable" />
 
 		<ImageView
 			android:id="@+id/run"
-			android:contentDescription="@string/action_run"
 			android:tooltipText="@string/action_run"
-			app:srcCompat="@drawable/ic_outline_play_arrow_24"
-			tools:srcCompat="@drawable/ic_outline_play_arrow_24"
+			app:srcCompat="@drawable/ic_play_outline"
 			style="@style/header_item.clickable" />
 	</LinearLayout>
 </LinearLayout>
