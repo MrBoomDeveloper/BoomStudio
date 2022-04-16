@@ -4,7 +4,8 @@ plugins {
 
 def date = new Date()
 def formattedDate = date.format('yyMMdd')
-def code = Integer.parseInt(formattedDate)
+def verCode = Integer.parseInt(formattedDate)
+def verName = date.format('yy')+"."+date.format('MM')+"."+date.format('dd')
 
 android {
     compileSdk 32
@@ -13,8 +14,8 @@ android {
         applicationId "com.mrboomdev.androidstudio"
         minSdk 26
         targetSdk 32
-        versionCode code
-        versionName code + " "
+        versionCode verCode
+        versionName verName
     }
 
     buildTypes {
