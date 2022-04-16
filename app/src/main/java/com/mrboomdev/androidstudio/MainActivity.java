@@ -36,7 +36,6 @@ import java.util.Map;
 import java.util.Set;
 import android.net.Uri;
 import android.content.res.Configuration;
-import android.widget.AdapterView.OnItemClickListener;
 
 public class MainActivity extends AppCompatActivity {
 	LinearLayout no_projects;
