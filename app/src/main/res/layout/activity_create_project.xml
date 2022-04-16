@@ -47,7 +47,7 @@
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				style="@style/textinput.edit"
-				app:boxStrokeColor="@color/input"
+				app:boxStrokeColor="@color/view_input"
 				android:hint="@string/project_name">
 
 				<com.google.android.material.textfield.TextInputEditText
@@ -62,7 +62,7 @@
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				style="@style/textinput.edit"
-				app:boxStrokeColor="@color/input"
+				app:boxStrokeColor="@color/view_input"
 				android:layout_marginTop="10dp"
 				android:hint="@string/project_package">
 
@@ -78,7 +78,7 @@
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				style="@style/textinput.edit"
-				app:boxStrokeColor="@color/input"
+				app:boxStrokeColor="@color/view_input"
 				android:layout_marginTop="10dp"
 				android:hint="@string/project_location">
 
@@ -95,7 +95,7 @@
 				android:layout_height="wrap_content"
 				style="@style/textinput.drop"
 				app:endIconTint="@color/view_second"
-				app:boxStrokeColor="@color/input"
+				app:boxStrokeColor="@color/view_input"
 				android:layout_marginTop="10dp"
 				android:hint="@string/project_lang"
 				android:theme="@style/Dropdown">
@@ -115,7 +115,7 @@
 				android:layout_height="wrap_content"
 				style="@style/textinput.drop"
 				app:endIconTint="@color/view_second"
-				app:boxStrokeColor="@color/input"
+				app:boxStrokeColor="@color/view_input"
 				android:layout_marginTop="10dp"
 				android:hint="@string/project_sdk"
 				android:theme="@style/Dropdown">
