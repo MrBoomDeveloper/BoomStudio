@@ -12,7 +12,6 @@
 
 		<ImageView
 			android:id="@+id/close"
-			android:contentDescription="@string/action_back"
 			android:tooltipText="@string/action_back"
 			app:srcCompat="@drawable/ic_close_outline"
 			style="@style/header_item.clickable" />
