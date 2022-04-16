@@ -4,65 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_launcher_background"
+    android:background="@color/window_background"
     android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/header_height"
-        android:elevation="8dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingLeft="@dimen/header_padding"
-        android:paddingRight="@dimen/header_padding">
+        style="@style/header">
 
         <ImageView
-            android:layout_width="@dimen/header_height"
-            android:layout_height="@dimen/header_item"
-            android:background="@drawable/ripple_circle"
-            android:clickable="true"
-            android:contentDescription="@string/action_menu"
-            android:focusable="true"
-            android:padding="@dimen/header_item_padding"
+            style="@style/header_item.clickable"
             android:tooltipText="@string/action_back"
-            app:srcCompat="@drawable/ic_outline_arrow_back_24"
-            tools:srcCompat="@drawable/ic_outline_arrow_back_24" />
+            app:srcCompat="@drawable/ic_back_outline" />
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/header_padding"
-            android:layout_marginRight="15dp"
-            android:layout_weight="1"
-            android:text="@string/menu_icons"
-            android:textColor="@color/white"
-            android:fontFamily="sans-serif-medium"
-            android:textSize="@dimen/header_title" />
+            style="@style/header_item.clickable"
+            android:text="@string/menu_icons" />
 
         <ImageView
             android:id="@+id/search"
-            android:layout_width="@dimen/header_item"
-            android:layout_height="@dimen/header_item"
-            android:background="@drawable/ripple_circle"
-            android:clickable="true"
-            android:contentDescription="@string/action_search"
-            android:focusable="true"
-            android:padding="@dimen/header_item_padding"
+            style="@style/header_item.clickable"
             android:tooltipText="@string/action_search"
-            app:srcCompat="@drawable/ic_outline_search_24"
-            tools:srcCompat="@drawable/ic_outline_search_24" />
+            app:srcCompat="@drawable/ic_outline_search_24" />
 
         <ImageView
-            android:layout_width="@dimen/header_item"
-            android:layout_height="@dimen/header_item"
-            android:background="@drawable/ripple_circle"
-            android:clickable="true"
-            android:contentDescription="@string/action_sort"
-            android:focusable="true"
-            android:padding="@dimen/header_item_padding"
+            style="@style/header_item.clickable"
             android:tooltipText="@string/action_sort"
-            app:srcCompat="@drawable/ic_outline_sort_24"
-            tools:srcCompat="@drawable/ic_outline_sort_24" />
+            app:srcCompat="@drawable/ic_outline_sort_24" />
 
     </LinearLayout>
 
