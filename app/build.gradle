@@ -2,7 +2,9 @@ plugins {
     id 'com.android.application'
 }
 
-def vcode = (int)(((new Date().getTime()/1000) - 1650127924) / 100)
+def date = new Date()
+def formattedDate = date.format('yyMMddHHmm')
+def code = formattedDate.toInteger()
 
 android {
     compileSdk 32
@@ -11,8 +13,8 @@ android {
         applicationId "com.mrboomdev.androidstudio"
         minSdk 26
         targetSdk 32
-        versionCode vcode
-        versionName vcode+" "
+        versionCode code
+        versionName code + " "
     }
 
     buildTypes {
