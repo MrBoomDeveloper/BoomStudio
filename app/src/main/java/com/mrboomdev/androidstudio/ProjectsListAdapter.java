@@ -7,11 +7,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
-import android.widget.AdapterView.OnItemClickListener;
 
 public class ProjectsListAdapter extends RecyclerView.Adapter<ProjectsListAdapter.ProjectsViewHolder> {
 	private ArrayList<ProjectItem> mProjectsList;
-	private onItemClickListener mListener;
+	private OnItemClickListener mListener;
 	
 	public interface onItemClickListener {
 		void onItemClick(int position);
