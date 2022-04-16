@@ -21,6 +21,8 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".EditorActivity"/>
+        <activity
             android:name=".CreateProjectActivity"/>
         <activity
             android:name=".NotificationsActivity"/>
