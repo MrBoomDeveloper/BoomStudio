@@ -4,16 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="@color/window_background"
     android:orientation="vertical">
 
     <LinearLayout
         style="@style/header" >
 
         <ImageView
-            android:contentDescription="@string/app_name"
             app:srcCompat="@drawable/ic_outline_android_24"
-            tools:srcCompat="@drawable/ic_outline_android_24" 
 			style="@style/header_item.main" />
 
         <TextView
@@ -22,26 +20,20 @@
 
         <ImageView
             android:id="@+id/new_project"
-            android:contentDescription="@string/action_new_project"
             android:tooltipText="@string/action_new_project"
             app:srcCompat="@drawable/ic_outline_add_24"
-            tools:srcCompat="@drawable/ic_outline_add_24"
             style="@style/header_item.clickable" />
 
         <ImageView
             android:id="@+id/notifications"
-            android:contentDescription="@string/menu_notifications"
             android:tooltipText="@string/menu_notifications"
             app:srcCompat="@drawable/ic_outline_notifications_24"
-            tools:srcCompat="@drawable/ic_outline_notifications_24" 
 			style="@style/header_item.clickable" />
 
         <ImageView
             android:id="@+id/settings"
-            android:contentDescription="@string/menu_settings"
             android:tooltipText="@string/menu_settings"
             app:srcCompat="@drawable/ic_outline_settings_24"
-            tools:srcCompat="@drawable/ic_outline_settings_24"
 			style="@style/header_item.clickable" />
     </LinearLayout>
 
@@ -71,16 +63,14 @@
                 <ImageView
                     android:layout_width="200dp"
                     android:layout_height="200dp"
-                    android:contentDescription="@string/description_welcome"
-                    app:srcCompat="@drawable/ic_no_content_upside_down"
-                    tools:srcCompat="@drawable/ic_no_content_upside_down" />
+                    app:srcCompat="@drawable/ic_no_content_upside_down" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="34dp"
                     android:gravity="bottom"
                     android:text="@string/app_welcome"
-                    android:textColor="@color/white"
+                    android:textColor="@color/view_first"
                     android:textSize="20sp" />
 
                 <TextView
@@ -90,7 +80,7 @@
                     android:gravity="center_horizontal"
                     android:maxWidth="300dp"
                     android:text="@string/description_welcome"
-                    android:textColor="@color/second"
+                    android:textColor="@color/view_second"
                     android:textSize="16sp" />
 
                 <LinearLayout
@@ -107,7 +97,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginRight="5dp"
                         android:text="@string/action_create"
-                        android:textColor="@color/black1" />
+                        android:textColor="@color/static_black" />
 
                     <Button
                         android:id="@+id/open"
@@ -116,7 +106,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:text="@string/action_open"
-                        android:textColor="@color/black1" />
+                        android:textColor="@color/static_black" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -126,7 +116,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:backgroundTint="@color/background"
+                android:backgroundTint="@color/window_background"
                 android:scrollbars="vertical"
                 android:visibility="gone" />
 
@@ -137,13 +127,13 @@
     <com.google.android.material.divider.MaterialDivider
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:dividerColor="@color/divider" />
+        app:dividerColor="@color/view_divider" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
 		android:id="@+id/navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-		android:background="@color/background"
+		android:background="@color/window_background"
         android:elevation="8dp"
         app:itemIconTint="@color/menu"
         app:itemTextColor="@color/menu"
