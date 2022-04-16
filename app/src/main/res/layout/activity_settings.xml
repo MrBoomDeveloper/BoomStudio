@@ -4,19 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
-    android:orientation="vertical"
-    tools:context="SettingsActivity">
+    android:background="@color/window_background"
+    android:orientation="vertical">
 
     <LinearLayout
         style="@style/header" >
 
         <ImageView
             android:id="@+id/back"
-            android:contentDescription="@string/action_back"
             android:tooltipText="@string/action_back"
             app:srcCompat="@drawable/ic_outline_arrow_back_24"
-            tools:srcCompat="@drawable/ic_outline_arrow_back_24"
 			style="@style/header_item.clickable" />
 
         <TextView
