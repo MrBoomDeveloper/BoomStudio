@@ -1,6 +1,33 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
 	<style name="Main" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+		<item name="colorPrimary">@color/view_primary</item>
+		<item name="colorSecondary">@color/view_primary</item>
+		<item name="colorPrimaryVariant">@color/view_primary</item>
+		<item name="colorSecondaryVariant">@color/view_primary</item>
+		<item name="android:colorEdgeEffect">@color/view_second</item>
+		
+		<item name="colorOnPrimary">#00FF00</item>
+		<item name="colorOnSecondary">#0000FF</item>
+		<item name="textAppearanceLargePopupMenu">@style/PopupText</item>
+		<item name="textAppearanceSmallPopupMenu">@style/PopupText</item>
 		<item name="android:windowLightStatusBar">false</item>
+		
+		<item name="android:statusBarColor">@color/window_background</item>
+		<item name="popupMenuBackground">@drawable/popup</item>
+	</style>
+	
+	<style name="Dropdown" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+		<item name="colorSurface">@color/window_popup</item>
+		<item name="android:textColor">@color/view_first</item>
+	</style>
+	
+	<style name="PopupText">
+		<item name="android:textSize">14sp</item>
+		<item name="android:textColor">@color/view_first</item>
+	</style>
+	
+	<style name="Opening" parent="Main">
+		<item name="android:windowBackground">@drawable/splash_screen</item>
 	</style>
 </resources>
