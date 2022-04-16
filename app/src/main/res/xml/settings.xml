@@ -10,6 +10,10 @@
 			android:title="Dark Theme"
 			android:summary="Darkness overwhelms my mind!"
 			app:iconSpaceReserved="false" />
+		<Preference
+			android:title="Language"
+			android:summary="О, вы тоже из Англии?"
+			app:iconSpaceReserved="false" />
 	</PreferenceCategory>
 	<PreferenceCategory
 		android:title="@string/menu_editor"
