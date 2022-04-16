@@ -2,9 +2,9 @@
 
 	<style name="Main" parent="Theme.MaterialComponents.DayNight.NoActionBar">
 		<item name="colorPrimary">@color/view_primary</item>
-		<item name="colorSecondary">@color/view_primary_second</item>
-		<item name="colorPrimaryVariant">@color/view_primary_second</item>
-		<item name="colorSecondaryVariant">@color/view_primary_second</item>
+		<item name="colorSecondary">@color/view_primary</item>
+		<item name="colorPrimaryVariant">@color/view_primary</item>
+		<item name="colorSecondaryVariant">@color/view_primary</item>
 		<item name="android:colorEdgeEffect">@color/view_second</item>
 		
 		<item name="colorOnPrimary">#00FF00</item>
@@ -12,8 +12,6 @@
 		<item name="textAppearanceLargePopupMenu">@style/PopupText</item>
 		<item name="textAppearanceSmallPopupMenu">@style/PopupText</item>
 		
-		<item name="colorSurface">@color/window_background</item>
-		<item name="android:colorBackground">@color/window_background</item>
 		<item name="android:statusBarColor">@color/window_background</item>
 		<item name="popupMenuBackground">@drawable/popup</item>
 	</style>
