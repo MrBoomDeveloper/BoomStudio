@@ -11,7 +11,7 @@
         style="@style/header" >
 
         <ImageView
-            app:srcCompat="@drawable/ic_outline_android_24"
+            app:srcCompat="@drawable/ic_android_outline"
 			style="@style/header_item.main" />
 
         <TextView
@@ -21,19 +21,19 @@
         <ImageView
             android:id="@+id/new_project"
             android:tooltipText="@string/action_new_project"
-            app:srcCompat="@drawable/ic_outline_add_24"
+            app:srcCompat="@drawable/ic_add_outline"
             style="@style/header_item.clickable" />
 
         <ImageView
             android:id="@+id/notifications"
             android:tooltipText="@string/menu_notifications"
-            app:srcCompat="@drawable/ic_outline_notifications_24"
+            app:srcCompat="@drawable/ic_notifications_outline"
 			style="@style/header_item.clickable" />
 
         <ImageView
             android:id="@+id/settings"
             android:tooltipText="@string/menu_settings"
-            app:srcCompat="@drawable/ic_outline_settings_24"
+            app:srcCompat="@drawable/ic_settings_outline"
 			style="@style/header_item.clickable" />
     </LinearLayout>
 
@@ -135,8 +135,8 @@
         android:layout_height="wrap_content"
 		android:background="@color/window_background"
         android:elevation="8dp"
-        app:itemIconTint="@color/menu"
-        app:itemTextColor="@color/menu"
+        app:itemIconTint="@color/view_menu"
+        app:itemTextColor="@color/view_menu"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/projects_bar" />
 
