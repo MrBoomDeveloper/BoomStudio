@@ -13,7 +13,7 @@
         <ImageView
             android:id="@+id/back"
             android:tooltipText="@string/action_back"
-            app:srcCompat="@drawable/ic_outline_arrow_back_24"
+            app:srcCompat="@drawable/ic_back_outline"
 			style="@style/header_item.clickable" />
 
         <TextView
