@@ -3,9 +3,9 @@ plugins {
 }
 
 def date = new Date()
-def formattedDate = date.format('yyMMdd')
+def formattedDate = date.format('yyMMdd')-210000
 def verCode = Integer.parseInt(formattedDate)
-def verName = date.format('yy')+"."+date.format('MM')+"."+date.format('dd')
+def verName = (date.format('yy')-21)+"."+date.format('MM')+"."+date.format('dd')
 
 android {
     compileSdk 32
