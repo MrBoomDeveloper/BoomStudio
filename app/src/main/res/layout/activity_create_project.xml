@@ -44,41 +44,55 @@
 			android:padding="15dp">
 
 			<com.google.android.material.textfield.TextInputLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
 				style="@style/textinput.edit"
 				app:boxStrokeColor="@color/input"
 				android:hint="@string/project_name">
 
 				<com.google.android.material.textfield.TextInputEditText
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
 					style="@style/textinput_content"
 					android:text="@string/project_name_default" />
 
 			</com.google.android.material.textfield.TextInputLayout>
 
 			<com.google.android.material.textfield.TextInputLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
 				style="@style/textinput.edit"
 				app:boxStrokeColor="@color/input"
 				android:layout_marginTop="10dp"
 				android:hint="@string/project_package">
 
 				<com.google.android.material.textfield.TextInputEditText
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
 					style="@style/textinput_content"
 					android:text="@string/project_package_default" />
 
 			</com.google.android.material.textfield.TextInputLayout>
 
 			<com.google.android.material.textfield.TextInputLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
 				style="@style/textinput.edit"
 				app:boxStrokeColor="@color/input"
 				android:layout_marginTop="10dp"
 				android:hint="@string/project_location">
 
 				<com.google.android.material.textfield.TextInputEditText
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
 					style="@style/textinput_content"
 					android:text="@string/project_location_default" />
 
 			</com.google.android.material.textfield.TextInputLayout>
 
 			<com.google.android.material.textfield.TextInputLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
 				style="@style/textinput.drop"
 				app:endIconTint="@color/view_second"
 				app:boxStrokeColor="@color/input"
@@ -88,6 +102,8 @@
 
 				<AutoCompleteTextView
 					android:id="@+id/langs"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
 					style="@style/textinput_content.drop"
 					android:hint="@string/project_sdk"
 					android:text="@string/project_lang_default" />
@@ -95,6 +111,8 @@
 			</com.google.android.material.textfield.TextInputLayout>
 
 			<com.google.android.material.textfield.TextInputLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
 				style="@style/textinput.drop"
 				app:endIconTint="@color/view_second"
 				app:boxStrokeColor="@color/input"
@@ -104,6 +122,8 @@
 
 				<AutoCompleteTextView
 					android:id="@+id/sdk"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
 					style="@style/textinput_content.drop"
 					android:hint="@string/project_sdk"
 					android:text="@string/project_sdk_default" />
