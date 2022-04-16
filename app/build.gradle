@@ -3,8 +3,8 @@ plugins {
 }
 
 def date = new Date()
-def formattedDate = date.format('yyMMddHHmm')
-def code = formattedDate.toInteger()
+def formattedDate = date.format('yyMMdd')
+def code = Integer.parseInt(formattedDate)
 
 android {
     compileSdk 32
