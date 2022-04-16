@@ -10,6 +10,7 @@
 	<color name="view_first">#121212</color>
 	<color name="view_second">#555555</color>
 	<color name="view_primary">#39A8FF</color>
+	<color name="view_primary_second">#0048FF</color>
 	
 	<color name="static_black">#000000</color>
 	
