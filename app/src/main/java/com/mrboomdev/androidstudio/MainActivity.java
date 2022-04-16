@@ -35,6 +35,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import android.net.Uri;
+import android.content.res.Configuration;
 
 public class MainActivity extends AppCompatActivity {
 	LinearLayout no_projects;
