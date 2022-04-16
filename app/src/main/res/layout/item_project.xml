@@ -24,7 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/project_name_default"
-            android:textColor="@color/white"
+            android:textColor="@color/view_first"
             android:textSize="16sp" />
 
 		<TextView
@@ -33,6 +33,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="1dp"
             android:text="@string/project_location_default"
-            android:textColor="@color/second" />
+            android:textColor="@color/view_second" />
     </LinearLayout>
 </LinearLayout>
