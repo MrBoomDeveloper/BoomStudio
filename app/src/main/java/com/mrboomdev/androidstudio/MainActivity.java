@@ -124,8 +124,8 @@ public class MainActivity extends AppCompatActivity {
 				});
 				popupMenu.show();
 			});
-			if(getContext().getResources().getConfiguration().uiMode &
-	Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES)
+			if((getResources().getConfiguration().uiMode &
+	Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES)
 				refresh.setProgressBackgroundColorSchemeColor(Color.parseColor("#212121"));
 			refresh.setColorSchemeColors(Color.parseColor("#39A8FF"));
 			refresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
