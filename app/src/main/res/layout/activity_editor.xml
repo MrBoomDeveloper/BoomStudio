@@ -11,25 +11,30 @@
 		style="@style/header" >
 
 		<ImageView
+			android:id="@+id/menu"
 			android:tooltipText="@string/action_menu"
 			app:srcCompat="@drawable/ic_menu_outline"
-			style="@style/header_item.main.clickable" />
+			style="@style/header_item.clickable" />
 
 		<TextView
+			android:id="@+id/title"
 			android:text="@string/menu_editor"
 			style="@style/header_title" />
 
 		<ImageView
+			android:id="@+id/edit"
 			android:tooltipText="@string/action_edit"
 			app:srcCompat="@drawable/ic_edit_outline"
 			style="@style/header_item.clickable" />
 
 		<ImageView
+			android:id="@+id/file"
 			android:tooltipText="@string/action_file"
 			app:srcCompat="@drawable/ic_file_outline"
 			style="@style/header_item.clickable" />
 
 		<ImageView
+			android:id="@+id/view"
 			android:tooltipText="@string/action_view"
 			app:srcCompat="@drawable/ic_image_outline"
 			style="@style/header_item.clickable" />
@@ -51,17 +56,17 @@
 		<com.google.android.material.tabs.TabItem
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="@string/app_name" />
+			android:text="MainActivity.xml" />
 
 		<com.google.android.material.tabs.TabItem
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="@string/action_get_from_vcs" />
+			android:text="activity_main.xml" />
 
 		<com.google.android.material.tabs.TabItem
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="@string/action_share" />
+			android:text="AndroidManifest.xml" />
 	</com.google.android.material.tabs.TabLayout>
 
 	<com.google.android.material.divider.MaterialDivider
@@ -70,11 +75,14 @@
 		app:dividerColor="@color/view_divider" />
 
 	<androidx.viewpager2.widget.ViewPager2
+		android:id="@+id/viewpager"
 		android:layout_width="match_parent"
 		android:layout_height="0dp"
 		android:layout_weight="1" />
 
 	<ProgressBar
+		android:id="@+id/progressbar"
+		android:visibility="gone"
 		style="?android:attr/progressBarStyleHorizontal"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
@@ -96,6 +104,7 @@
 			style="@style/header_item.clickable"/>
 
 		<TextView
+			android:id="@+id/current_task"
 			android:text="@string/task_building"
 			style="@style/header_title" />
 
