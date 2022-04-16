@@ -21,6 +21,7 @@
 	</style>
 	<style name="header_item.main">
 		<item name="android:layout_width">@dimen/header_height</item>
+		<item name="android:padding">8dp</item>
 	</style>
 	<style name="header_item.main.clickable">
 		<item name="android:background">@drawable/ripple_circle</item>
