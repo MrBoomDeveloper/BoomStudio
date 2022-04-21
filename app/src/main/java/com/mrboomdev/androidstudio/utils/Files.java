@@ -19,9 +19,11 @@ public class Files {
     		fOut = new FileOutputStream(file);
     		fOut.flush();
     		fOut.close();
+    		return true;
 		} catch (Exception e) {
 			return false;
 		}
+		return false;
 	}
 	
 	public void writeFolder(String path) {
