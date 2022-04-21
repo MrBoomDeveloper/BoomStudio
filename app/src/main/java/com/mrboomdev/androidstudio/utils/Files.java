@@ -1,61 +1,267 @@
 package com.mrboomdev.androidstudio.utils;
 
-import java.io.File;
-import java.io.OutputStream;
-import java.io.FileOutputStream;
-import java.io.OutputStreamWriter;
-import java.io.IOException;
+import android.content.ContentResolver;
+import android.content.ContentUris;
+import android.content.Context;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Environment;
+import android.provider.DocumentsContract;
+import android.provider.MediaStore;
+import android.text.TextUtils;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.net.URLDecoder;
+import java.util.ArrayList;
 
-public class Files {
-	
-	public boolean writeFile(String path, String name, String content) {
-		File directory = new File(Environment.getExternalStorageDirectory() + name);
+public class FileUtil {
 
-        if(!directory.exists())
-            directory.mkdir();
+    private static void createNewFile(String path) {
+        int lastSep = path.lastIndexOf(File.separator);
+        if (lastSep > 0) {
+            String dirPath = path.substring(0, lastSep);
+            makeDir(dirPath);
+        }
 
-        File newFile = new File(directory, name);
+        File file = new File(path);
 
-        if(!newFile.exists()){
-            try {
-                newFile.createNewFile();
-            } catch (IOException e) {
-                e.printStackTrace();
+        try {
+            if (!file.exists()) file.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static String readFile(String path) {
+        createNewFile(path);
+
+        StringBuilder sb = new StringBuilder();
+        FileReader fr = null;
+        try {
+            fr = new FileReader(new File(path));
+
+            char[] buff = new char[1024];
+            int length = 0;
+
+            while ((length = fr.read(buff)) > 0) {
+                sb.append(new String(buff, 0, length));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (fr != null) {
+                try {
+                    fr.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         }
-        try  {
-            FileOutputStream fOut = new FileOutputStream(newFile);
-            OutputStreamWriter outputWriter=new OutputStreamWriter(fOut);
-            outputWriter.write(content);
-            outputWriter.close();
+
+        return sb.toString();
+    }
+
+    public static boolean writeFile(String path, String str) {
+        createNewFile(path);
+        FileWriter fileWriter = null;
+
+        try {
+            fileWriter = new FileWriter(new File(path), false);
+            fileWriter.write(str);
+            fileWriter.flush();
             return true;
-        }catch (Exception e){
+        } catch (IOException e) {
             e.printStackTrace();
             return false;
+        } finally {
+            try {
+                if (fileWriter != null){
+                    fileWriter.close();
+                    return false;
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+                return false;
+            }
         }
-	}
-	
-	public void writeFolder(String path) {
-		
-	}
-	
-	public void deletePath(String path) {
-		
-	}
-	
-	public boolean isExist(String path) {
-		if(1 ==  2) {
-			return true;
-		}
-		return false;
-	}
-	
-	public boolean unzip(String from, String to, boolean isAsset) {
-		return false;
-	}
-	
-	public boolean zip(String from, String to) {
-		return false;
-	}
-}
+    }
+
+    public static void copyFile(String sourcePath, String destPath) {
+        if (!isExistFile(sourcePath)) return;
+        createNewFile(destPath);
+
+        FileInputStream fis = null;
+        FileOutputStream fos = null;
+
+        try {
+            fis = new FileInputStream(sourcePath);
+            fos = new FileOutputStream(destPath, false);
+
+            byte[] buff = new byte[1024];
+            int length = 0;
+
+            while ((length = fis.read(buff)) > 0) {
+                fos.write(buff, 0, length);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (fis != null) {
+                try {
+                    fis.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (fos != null) {
+                try {
+                    fos.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    public static void copyDir(String oldPath, String newPath) {
+        File oldFile = new File(oldPath);
+        File[] files = oldFile.listFiles();
+        File newFile = new File(newPath);
+        if (!newFile.exists()) {
+            newFile.mkdirs();
+        }
+        for (File file : files) {
+            if (file.isFile()) {
+                copyFile(file.getPath(), newPath + "/" + file.getName());
+            } else if (file.isDirectory()) {
+                copyDir(file.getPath(), newPath + "/" + file.getName());
+            }
+        }
+    }
+
+    public static void moveFile(String sourcePath, String destPath) {
+        copyFile(sourcePath, destPath);
+        deleteFile(sourcePath);
+    }
+
+    public static void deleteFile(String path) {
+        File file = new File(path);
+
+        if (!file.exists()) return;
+
+        if (file.isFile()) {
+            file.delete();
+            return;
+        }
+
+        File[] fileArr = file.listFiles();
+
+        if (fileArr != null) {
+            for (File subFile : fileArr) {
+                if (subFile.isDirectory()) {
+                    deleteFile(subFile.getAbsolutePath());
+                }
+
+                if (subFile.isFile()) {
+                    subFile.delete();
+                }
+            }
+        }
+
+        file.delete();
+    }
+
+    public static boolean isExistFile(String path) {
+        File file = new File(path);
+        return file.exists();
+    }
+
+    public static void makeDir(String path) {
+        if (!isExistFile(path)) {
+            File file = new File(path);
+            file.mkdirs();
+        }
+    }
+
+    public static void listDir(String path, ArrayList<String> list) {
+        File dir = new File(path);
+        if (!dir.exists() || dir.isFile()) return;
+
+        File[] listFiles = dir.listFiles();
+        if (listFiles == null || listFiles.length <= 0) return;
+
+        if (list == null) return;
+        list.clear();
+        for (File file : listFiles) {
+            list.add(file.getAbsolutePath());
+        }
+    }
+
+    public static boolean isDirectory(String path) {
+        if (!isExistFile(path)) return false;
+        return new File(path).isDirectory();
+    }
+
+    public static boolean isFile(String path) {
+        if (!isExistFile(path)) return false;
+        return new File(path).isFile();
+    }
+
+    public static String convertUriToFilePath(final Context context, final Uri uri) {
+        String path = null;
+        if (DocumentsContract.isDocumentUri(context, uri)) {
+            if (isExternalStorageDocument(uri)) {
+                final String docId = DocumentsContract.getDocumentId(uri);
+                final String[] split = docId.split(":");
+                final String type = split[0];
+
+                if ("primary".equalsIgnoreCase(type)) {
+                    path = Environment.getExternalStorageDirectory() + "/" + split[1];
+                }
+            } else if (isDownloadsDocument(uri)) {
+                final String id = DocumentsContract.getDocumentId(uri);
+
+                if (!TextUtils.isEmpty(id)) {
+                    if (id.startsWith("raw:")) {
+                        return id.replaceFirst("raw:", "");
+                    }
+                }
+
+                final Uri contentUri = ContentUris
+                        .withAppendedId(Uri.parse("content://downloads/public_downloads"), Long.valueOf(id));
+
+                path = getDataColumn(context, contentUri, null, null);
+            } else if (isMediaDocument(uri)) {
+                final String docId = DocumentsContract.getDocumentId(uri);
+                final String[] split = docId.split(":");
+                final String type = split[0];
+
+                Uri contentUri = null;
+
+                final String selection = "_id=?";
+                final String[] selectionArgs = new String[]{
+                        split[1]
+                };
+
+                path = getDataColumn(context, contentUri, selection, selectionArgs);
+            }
+        } else if (ContentResolver.SCHEME_CONTENT.equalsIgnoreCase(uri.getScheme())) {
+            path = getDataColumn(context, uri, null, null);
+        } else if (ContentResolver.SCHEME_FILE.equalsIgnoreCase(uri.getScheme())) {
+            path = uri.getPath();
+        }
+
+        if (path != null) {
+            try {
+                return URLDecoder.decode(path, "UTF-8");
+            } catch(Exception e) {
+                return null;
+            }
+        }
+        return null;
+    }
+}
