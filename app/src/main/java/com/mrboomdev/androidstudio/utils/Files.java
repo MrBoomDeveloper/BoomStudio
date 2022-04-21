@@ -23,7 +23,6 @@ public class Files {
 		} catch (Exception e) {
 			return false;
 		}
-		return false;
 	}
 	
 	public void writeFolder(String path) {
