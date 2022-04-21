@@ -43,7 +43,6 @@
 			android:padding="15dp">
 
 			<com.google.android.material.textfield.TextInputLayout
-				android:id="@+id/project_name"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				style="@style/textinput.edit"
@@ -51,6 +50,7 @@
 				android:hint="@string/project_name">
 
 				<com.google.android.material.textfield.TextInputEditText
+					android:id="@+id/project_name"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					style="@style/textinput_content"
