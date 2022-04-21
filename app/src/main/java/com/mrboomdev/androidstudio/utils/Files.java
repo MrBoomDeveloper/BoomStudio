@@ -3,26 +3,36 @@ package com.mrboomdev.androidstudio.utils;
 import java.io.File;
 import java.io.OutputStream;
 import java.io.FileOutputStream;
+import java.io.OutputStreamWriter;
+import android.os.Environment;
 
 public class Files {
 	
 	public boolean writeFile(String path, String name, String content) {
-		try {
-			File dir = new File(path);
-			if (!dir.exists())
-				dir.mkdirs();
-			OutputStream fOut = null;
-    		File file = new File(path, name);
-    		if(file.exists())
-        		file.delete();
-    		file.createNewFile();
-    		fOut = new FileOutputStream(file);
-    		fOut.flush();
-    		fOut.close();
-    		return true;
-		} catch (Exception e) {
-			return false;
-		}
+		File directory = new File(Environment.getExternalStorageDirectory() + name);
+
+        if(!directory.exists())
+            directory.mkdir();
+
+        File newFile = new File(directory, name);
+
+        if(!newFile.exists()){
+            try {
+                newFile.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        try  {
+            FileOutputStream fOut = new FileOutputStream(newFile);
+            OutputStreamWriter outputWriter=new OutputStreamWriter(fOut);
+            outputWriter.write(content);
+            outputWriter.close();
+            return true;
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
 	}
 	
 	public void writeFolder(String path) {
