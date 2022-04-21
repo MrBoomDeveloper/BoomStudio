@@ -55,7 +55,7 @@ public class ProjectsListAdapter extends RecyclerView.Adapter<ProjectsListAdapte
 	public void onBindViewHolder(ProjectsViewHolder holder, int position) {
 		ProjectItem currentItem = mProjectsList.get(position);
 		holder.mName.setText(currentItem.getName());
-		holder.mPath.setText(currentItem.getPath().replace("content://com.android.externalstorage.documents/tree/", "").replace("%3A", "/"). replace("%2F", "/"));
+		holder.mPath.setText(currentItem.getPath().replace("content://com.android.providers.downloads.documents/tree/raw%3A%2F", "/Downloads/").replace("content://com.android.externalstorage.documents/tree/primary", "").replace("content://com.android.externalstorage.documents/tree", "").replace("%3A", "/"). replace("%2F", "/"));
 	}
 
 	@Override
