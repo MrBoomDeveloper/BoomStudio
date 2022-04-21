@@ -37,7 +37,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
-import com.mrboomdev.androidstudio.utils.File;
+import com.mrboomdev.androidstudio.utils.Files;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 	SwipeRefreshLayout refresh;
 	ProjectsListAdapter adapter;
 	SharedPreferences prefs;
-	File file;
+	Files file;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
 		projects_recycler.setLayoutManager(new LinearLayoutManager(this));
 		projects_recycler.setHasFixedSize(true);
 		projects_recycler.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
-		file = new File();
+		file = new Files();
 		checkPermission();
 	}
 
