@@ -218,8 +218,8 @@ public class MainActivity extends AppCompatActivity {
 			case 2:
 				if(data != null) {
 					Editor editor = prefs.edit();
-					Uri uri = Uri.parse(data.getData().toString().replace("content://com.android.providers.downloads.documents/tree/raw%3A%2F", "/Downloads").replace("content://com.android.externalstorage.documents/tree/primary", "/sdcard").replace("content://com.android.externalstorage.documents/tree", "").replace("%3A", "/"). replace("%2F", "/"));
-					editor.putString(uri.getLastPathSegment(), data.getData().toString());
+					Uri uri = Uri.parse(file.uriToPath(data.getData().toString());
+					editor.putString(uri.getLastPathSegment(), file.uriToPath(uri));
 					editor.apply();
 					listProjects();
 					if(file.writeFile(data.getData().toString(), "hello world!")) {
