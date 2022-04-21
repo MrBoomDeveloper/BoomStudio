@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
 	SwipeRefreshLayout refresh;
 	ProjectsListAdapter adapter;
 	SharedPreferences prefs;
+	File file;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -109,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
 		projects_recycler.setLayoutManager(new LinearLayoutManager(this));
 		projects_recycler.setHasFixedSize(true);
 		projects_recycler.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
+		file = new File();
 		checkPermission();
 	}
 
@@ -220,6 +222,11 @@ public class MainActivity extends AppCompatActivity {
 					editor.putString(uri.getLastPathSegment(), data.getData().toString());
 					editor.apply();
 					listProjects();
+					if(file.writeFile(data.getData(), "test.txt", "hello world!") {
+						Toast.makeText(getApplicationContext(),"yay!", Toast.LENGTH_SHORT).show();
+					} else {
+						Toast.makeText(getApplicationContext(),"error :(", Toast.LENGTH_SHORT).show();
+					}
 				}
 				break;
 		}
