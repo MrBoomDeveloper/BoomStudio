@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.OutputStream;
 import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
+import java.io.IOException;
 import android.os.Environment;
 
 public class Files {
