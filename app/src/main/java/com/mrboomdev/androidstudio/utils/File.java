@@ -1,9 +1,27 @@
 package com.mrboomdev.androidstudio.utils;
 
+import java.io.File;
+import java.io.OutputStream;
+import java.io.FileOutputStream;
+
 public class File {
 	
-	public void writeFile(String path, String content) {
-		
+	public boolean writeFile(String path, String name, String content) {
+		try {
+			File dir = new File(path);
+			if (!dir.exists())
+				dir.mkdirs();
+			OutputStream fOut = null;
+    		File file = new File(path, name);
+    		if(file.exists())
+        		file.delete();
+    		file.createNewFile();
+    		fOut = new FileOutputStream(file);
+    		fOut.flush();
+    		fOut.close();
+		} catch (Exception e) {
+			return false;
+		}
 	}
 	
 	public void writeFolder(String path) {
