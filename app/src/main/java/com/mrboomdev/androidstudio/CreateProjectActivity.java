@@ -6,7 +6,8 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.google.android.material.textfield.TextInputLayout;
+import android.widget.Toast;
+import com.google.android.material.textfield.TextInputEditText;
 import com.mrboomdev.androidstudio.utils.Files;
 
 public class CreateProjectActivity extends AppCompatActivity {
@@ -35,7 +36,7 @@ public class CreateProjectActivity extends AppCompatActivity {
         ImageView close = findViewById(R.id.close);
         TextView create = findViewById(R.id.create);
         
-        TextInputLayout name = findViewById(R.id.project_name);
+        TextInputEditText name = findViewById(R.id.project_name);
         AutoCompleteTextView lang = findViewById(R.id.langs);
         AutoCompleteTextView sdk = findViewById(R.id.sdk);
 
