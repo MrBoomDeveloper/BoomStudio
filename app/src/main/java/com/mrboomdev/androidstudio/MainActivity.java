@@ -1,5 +1,6 @@
 package com.mrboomdev.androidstudio;
 
+import android.os.Bundle;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -13,10 +14,10 @@ import android.widget.Toast;
 import android.net.Uri;
 import android.content.res.Configuration;
 import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
-import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
 	Button open;
 	SwipeRefreshLayout refresh;
 	ProjectsListAdapter adapter;
+	SharedPreferences prefs;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
 		ImageView notifications = findViewById(R.id.notifications);
 		ImageView settings = findViewById(R.id.settings);
 		NavigationBarView navigation = findViewById(R.id.navigation);
+		prefs = getSharedPreferences("projects", Context.MODE_PRIVATE);
 
 		notifications.setOnClickListener(v -> {
 			Intent intent = new Intent(getApplicationContext(), NotificationsActivity.class);
@@ -88,6 +91,15 @@ public class MainActivity extends AppCompatActivity {
 				}
 			return true;
 		});
+		ActivityResultLauncher<Intent> startActivityForResult = registerForActivityResult(
+    		new ActivityResultContracts.StartActivityForResult(), result -> {
+    			Toast.makeText(getApplicationContext(),"result", Toast.LENGTH_SHORT).show();
+        		if (result.getResultCode() == AppCompatActivity.RESULT_OK) {
+        			Toast.makeText(getApplicationContext(),"ok", Toast.LENGTH_SHORT).show();
+            		Intent data = result.getData();
+        		}
+    		}
+		);
 		projects_recycler.setLayoutManager(new LinearLayoutManager(this));
 		projects_recycler.setHasFixedSize(true);
 		projects_recycler.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
@@ -156,28 +168,27 @@ public class MainActivity extends AppCompatActivity {
 	public void listProjects() {
 		//Load projects list from storage
 		
+		Map<String,?> keys = prefs.getAll();
+		ArrayList<ProjectItem> projects_list = new ArrayList<>();
+		for(Map.Entry<String,?> entry : keys.entrySet()){
+			projects_list.add(new ProjectItem("Java", entry.getKey(), entry.getValue().toString()));
+		}
+		//Display projects list
 		
-		if(projects_array.length() > 0) {
+		if(projects_list.size() > 0) {
 			no_projects.setVisibility(View.GONE);
 			projects_recycler.setVisibility(View.VISIBLE);
-			ArrayList<ProjectItem> projects_list = new ArrayList<>();
-			projects_list.add(new ProjectItem("Java", "HelloWorld", "/sdcard/MrBoomDev/DroidStudio/HelloWorld"));
-		projects_list.add(new ProjectItem("Kotlin", "I HATE KOTLIN", "/sdcard/MrBoomDev/DroidStudio/I_HATE_KOTLIN"));
-		projects_list.add(new ProjectItem("Java", "Test", "/sdcard/MrBoomDev/DroidStudio/Test"));
-		projects_list.add(new ProjectItem("Java", "FreeHugs", "/sdcard/MrBoomDev/DroidStudio/Hugs"));
-		projects_list.add(new ProjectItem("Java", "YTVanced", "/sdcard/MrBoomDev/DroidStudio/Vanced"));
-		projects_list.add(new ProjectItem("Java", "VKClient", "/sdcard/MrBoomDev/DroidStudio/vkontakte"));
-		adapter = new ProjectsListAdapter(projects_list);
-		projects_recycler.setAdapter(adapter);
-		adapter.setOnItemClickListener(new ProjectsListAdapter.OnItemClickListener() {
-			@Override
-			public void onItemClick(int position) {
-				Intent intent = new Intent(getApplicationContext(), EditorActivity.class);
-				intent.putExtra("name", projects_list.get(position).getName());
-				intent.putExtra("path", projects_list.get(position).getPath());
-				startActivity(intent);
-			}
-		});
+			adapter = new ProjectsListAdapter(projects_list);
+			projects_recycler.setAdapter(adapter);
+			adapter.setOnItemClickListener(new ProjectsListAdapter.OnItemClickListener() {
+				@Override
+				public void onItemClick(int position) {
+					Intent intent = new Intent(getApplicationContext(), EditorActivity.class);
+					intent.putExtra("name", projects_list.get(position).getName());
+					intent.putExtra("path", projects_list.get(position).getPath());
+					startActivity(intent);
+				}
+			});
 		} else {
 			no_projects.setVisibility(View.VISIBLE);
 			projects_recycler.setVisibility(View.GONE);
@@ -185,20 +196,7 @@ public class MainActivity extends AppCompatActivity {
 		refresh.setRefreshing(false);
 	}
 	
-	public List<String> projects(Context context) {
-        List<String> projects_array = new ArrayList<String>();
-        SharedPreferences mPrefs = context.getSharedPreferences("prefs", context.MODE_PRIVATE);
-        Gson gson = new Gson();
-        String json = mPrefs.getString("projects", "");
-        if (json.isEmpty()) {
-            projects_array = new ArrayList<String>();
-        } else {
-            Type type = new TypeToken<List<String>>() {
-            }.getType();
-            projects_array = gson.fromJson(json, type);
-        }
-        return projects_array;
-    }
+	
 
 	@Override
 	public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
@@ -212,6 +210,9 @@ public class MainActivity extends AppCompatActivity {
 			case 2:
 				if(data != null) {
 					Toast.makeText(getApplicationContext(),data.getData().toString(), Toast.LENGTH_SHORT).show();
+					Editor editor = prefs.edit();
+					editor.putString("HelloWorld", data.getData().toString());
+					editor.apply();
 				}
 				break;
 		}
