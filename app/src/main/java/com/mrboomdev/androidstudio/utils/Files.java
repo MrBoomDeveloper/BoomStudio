@@ -81,7 +81,7 @@ public class Files {
             try {
                 if (fileWriter != null){
                     fileWriter.close();
-                    return false;
+                    return true;
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -201,13 +201,14 @@ public class Files {
         }
     }
 
-    public static boolean isDirectory(String path) {
-        if (!isExistFile(path)) return false;
-        return new File(path).isDirectory();
-    }
-
     public static boolean isFile(String path) {
         if (!isExistFile(path)) return false;
         return new File(path).isFile();
+    }
+    
+    public String uriToPath(String uri) {
+    	Uri uri = uri.replace("content://com.android.providers.downloads.documents/tree/raw%3A%2F", "/storage/emulated/0/Downloads/").replace("content://com.android.externalstorage.documents/tree/primary", "/storage/emulated/0/").replace("content://com.android.externalstorage.documents/tree", "/storage/");
+		uri = uri.replace("%3A", "/"). replace("%2F", "/"));
+    return uri.toString();
     }
 }
