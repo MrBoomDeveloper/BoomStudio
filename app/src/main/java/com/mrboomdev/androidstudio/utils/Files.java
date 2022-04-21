@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.net.URLDecoder;
 import java.util.ArrayList;
 
-public class FileUtil {
+public class Files {
 
     private static void createNewFile(String path) {
         int lastSep = path.lastIndexOf(File.separator);
