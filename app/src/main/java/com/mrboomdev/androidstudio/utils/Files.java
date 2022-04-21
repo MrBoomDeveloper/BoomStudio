@@ -207,7 +207,7 @@ public class Files {
     }
     
     public String uriToPath(String uri) {
-    	String result = uri.replace("content://com.android.providers.downloads.documents/tree/raw%3A%2F", "/storage/emulated/0/Downloads/").replace("content://com.android.externalstorage.documents/tree/primary", "/storage/emulated/0/").replace("content://com.android.externalstorage.documents/tree", "/storage/");
+    	String result = uri.replace("content://com.android.providers.downloads.documents/tree/raw%3A%2F", "/storage/emulated/0/Download1/").replace("content://com.android.externalstorage.documents/tree/primary", "/storage/emulated/0").replace("content://com.android.externalstorage.documents/tree", "/storage");
 		result = result.replace("%3A", "/").replace("%2F", "/");
     return result;
     }
