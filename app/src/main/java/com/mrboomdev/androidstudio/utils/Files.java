@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.OutputStream;
 import java.io.FileOutputStream;
 
-public class File {
+public class Files {
 	
 	public boolean writeFile(String path, String name, String content) {
 		try {
