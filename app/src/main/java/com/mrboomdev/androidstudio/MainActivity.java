@@ -1,5 +1,18 @@
 package com.mrboomdev.androidstudio;
 
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.util.Log;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.Toast;
+import android.net.Uri;
+import android.content.res.Configuration;
+import android.content.SharedPreferences;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
@@ -16,16 +29,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import com.google.android.material.navigation.NavigationBarView;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.util.Log;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.Toast;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.mrboomdev.androidstudio.utils.File;
 import java.util.ArrayList;
@@ -34,8 +37,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import android.net.Uri;
-import android.content.res.Configuration;
 
 public class MainActivity extends AppCompatActivity {
 	LinearLayout no_projects;
@@ -153,10 +154,14 @@ public class MainActivity extends AppCompatActivity {
 	}
 
 	public void listProjects() {
-		no_projects.setVisibility(View.GONE);
-		projects_recycler.setVisibility(View.VISIBLE);
-		ArrayList<ProjectItem> projects_list = new ArrayList<>();
-		projects_list.add(new ProjectItem("Java", "HelloWorld", "/sdcard/MrBoomDev/DroidStudio/HelloWorld"));
+		//Load projects list from storage
+		
+		
+		if(projects_array.length() > 0) {
+			no_projects.setVisibility(View.GONE);
+			projects_recycler.setVisibility(View.VISIBLE);
+			ArrayList<ProjectItem> projects_list = new ArrayList<>();
+			projects_list.add(new ProjectItem("Java", "HelloWorld", "/sdcard/MrBoomDev/DroidStudio/HelloWorld"));
 		projects_list.add(new ProjectItem("Kotlin", "I HATE KOTLIN", "/sdcard/MrBoomDev/DroidStudio/I_HATE_KOTLIN"));
 		projects_list.add(new ProjectItem("Java", "Test", "/sdcard/MrBoomDev/DroidStudio/Test"));
 		projects_list.add(new ProjectItem("Java", "FreeHugs", "/sdcard/MrBoomDev/DroidStudio/Hugs"));
@@ -173,8 +178,27 @@ public class MainActivity extends AppCompatActivity {
 				startActivity(intent);
 			}
 		});
+		} else {
+			no_projects.setVisibility(View.VISIBLE);
+			projects_recycler.setVisibility(View.GONE);
+		}
 		refresh.setRefreshing(false);
 	}
+	
+	public List<String> projects(Context context) {
+        List<String> projects_array = new ArrayList<String>();
+        SharedPreferences mPrefs = context.getSharedPreferences("prefs", context.MODE_PRIVATE);
+        Gson gson = new Gson();
+        String json = mPrefs.getString("projects", "");
+        if (json.isEmpty()) {
+            projects_array = new ArrayList<String>();
+        } else {
+            Type type = new TypeToken<List<String>>() {
+            }.getType();
+            projects_array = gson.fromJson(json, type);
+        }
+        return projects_array;
+    }
 
 	@Override
 	public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
