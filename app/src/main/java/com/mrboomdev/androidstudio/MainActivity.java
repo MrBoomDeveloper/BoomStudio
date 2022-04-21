@@ -222,11 +222,6 @@ public class MainActivity extends AppCompatActivity {
 					editor.putString(uri.getLastPathSegment(), file.uriToPath(data.getData().toString()));
 					editor.apply();
 					listProjects();
-					if(file.writeFile(file.uriToPath(data.getData().toString() + "test.txt"), "hello world!")) {
-						Toast.makeText(getApplicationContext(),"yay!", Toast.LENGTH_SHORT).show();
-					} else {
-						Toast.makeText(getApplicationContext(),"error :(", Toast.LENGTH_SHORT).show();
-					}
 				}
 				break;
 		}
