@@ -18,6 +18,7 @@ import android.content.SharedPreferences.Editor;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.net.Uri;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
@@ -214,10 +215,11 @@ public class MainActivity extends AppCompatActivity {
 		switch(requestCode) {
 			case 2:
 				if(data != null) {
-					Toast.makeText(getApplicationContext(),data.getData().toString(), Toast.LENGTH_SHORT).show();
 					Editor editor = prefs.edit();
-					editor.putString("HelloWorld", data.getData().toString());
+					Uri uri = Uri.parse(data.getData().toString().replace("content://com.android.providers.downloads.documents/tree/raw%3A%2F", "/Downloads").replace("content://com.android.externalstorage.documents/tree/primary", "/sdcard").replace("content://com.android.externalstorage.documents/tree", "").replace("%3A", "/"). replace("%2F", "/"));
+					editor.putString(uri.getLastPathSegment(), data.getData().toString());
 					editor.apply();
+					listProjects();
 				}
 				break;
 		}
