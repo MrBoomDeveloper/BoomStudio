@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -19,18 +18,12 @@ import android.Manifest;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.net.Uri;
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.core.app.ActivityCompat;
-import androidx.activity.result.ActivityResult;
-import androidx.activity.result.ActivityResultCaller;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContract;
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -39,11 +32,7 @@ import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.mrboomdev.androidstudio.utils.Files;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
 	LinearLayout no_projects;
@@ -98,15 +87,6 @@ public class MainActivity extends AppCompatActivity {
 				}
 			return true;
 		});
-		ActivityResultLauncher<Intent> startActivityForResult = registerForActivityResult(
-    		new ActivityResultContracts.StartActivityForResult(), result -> {
-    			Toast.makeText(getApplicationContext(),"result", Toast.LENGTH_SHORT).show();
-        		if (result.getResultCode() == AppCompatActivity.RESULT_OK) {
-        			Toast.makeText(getApplicationContext(),"ok", Toast.LENGTH_SHORT).show();
-            		Intent data = result.getData();
-        		}
-    		}
-		);
 		projects_recycler.setLayoutManager(new LinearLayoutManager(this));
 		projects_recycler.setHasFixedSize(true);
 		projects_recycler.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
@@ -222,7 +202,8 @@ public class MainActivity extends AppCompatActivity {
 					editor.putString(uri.getLastPathSegment(), file.uriToPath(data.getData().toString()));
 					
 					Uri path = data.getData();
-					editor.putString(path.getLastPathSegment(), file.uriToPath(path.getPath()));
+					Uri name = Uri.parse(file.uriToPath(path.getPath()).getLastPathSegment();
+					editor.putString(name.toString(), file.uriToPath(path.getPath()));
 					editor.apply();
 					listProjects();
 				}
