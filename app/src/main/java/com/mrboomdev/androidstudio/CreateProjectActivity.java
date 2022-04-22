@@ -41,7 +41,7 @@ public class CreateProjectActivity extends AppCompatActivity {
         AutoCompleteTextView sdk = findViewById(R.id.sdk);
 
         create.setOnClickListener(v -> {
-			if(file.writeFile(file.uriToPath(data.getData().toString() + "/test.txt"), "hello world!")) {
+			if(file.writeFile(file.uriToPath("/storage/emulated/0 + "/test.txt"), "hello world!")) {
 				Toast.makeText(getApplicationContext(),"yay!", Toast.LENGTH_SHORT).show();
 			} else {
 				Toast.makeText(getApplicationContext(),"error :(", Toast.LENGTH_SHORT).show();
