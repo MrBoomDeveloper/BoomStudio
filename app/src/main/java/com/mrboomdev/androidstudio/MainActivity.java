@@ -221,7 +221,8 @@ public class MainActivity extends AppCompatActivity {
 					Uri uri = Uri.parse(file.uriToPath(data.getData().toString()));
 					editor.putString(uri.getLastPathSegment(), file.uriToPath(data.getData().toString()));
 					
-					editor.putString(uri.getLastPathSegment(), data.getData().getEncodedPath());
+					Uri path = data.getData();
+					editor.putString(path.getName(), file.uriToPath(path.getPath()));
 					editor.apply();
 					listProjects();
 				}
