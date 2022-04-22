@@ -105,20 +105,27 @@
 			style="@style/header_item.clickable"/>
 
 		<LinearLayout
-			android:layout_width="match_parent"
+			android:layout_width="0dp"
 			android:layout_height="match_parent"
+			android:layout_weight="1"
 			android:gravity="center_vertical"
 			android:orientation="vertical">
 				
 			<TextView
 				android:id="@+id/current_task"
 				android:text="Compile APK"
-				style="@style/header_title.medium" />
+				style="@style/header_title.medium"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="0" />
 				
 			<TextView
 				android:id="@+id/current_command"
 				android:text="Run manifestDexCompilier"
-				style="@style/header_title.small" />
+				style="@style/header_title.small"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="0" />
 			
 		</LinearLayout>
 
