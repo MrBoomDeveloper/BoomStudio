@@ -198,12 +198,9 @@ public class MainActivity extends AppCompatActivity {
 			case 2:
 				if(data != null) {
 					Editor editor = prefs.edit();
-					Uri uri = Uri.parse(file.uriToPath(data.getData().toString()));
-					editor.putString(uri.getLastPathSegment(), file.uriToPath(data.getData().toString()));
-					
 					Uri path = data.getData();
-					Uri name = new Uri(file.uriToPath(path.getPath()));
-					editor.putString(name.getLastPathSegment().toString(), file.uriToPath(path.getPath()));
+					Uri name = Uri.parse(file.uriToPath(path.getPath()));
+					editor.putString(name.getLastPathSegment(), file.uriToPath(path.getPath()));
 					editor.apply();
 					listProjects();
 				}
