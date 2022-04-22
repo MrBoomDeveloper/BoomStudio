@@ -208,7 +208,7 @@ public class Files {
     }
     
     public String uriToPath(String uri) {
-    	String result = uri.replace("/tree/primary:", "/storage/emulated/0/").replace("/tree/", "/storage/"));
+    	String result = uri.replace("/tree/primary:", "/storage/emulated/0/").replace("/tree/", "/storage/");
     return result;
     }
 }
