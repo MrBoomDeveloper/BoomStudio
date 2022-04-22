@@ -79,7 +79,8 @@ public class Files {
             return false;
         } finally {
             try {
-                if (fileWriter != null){
+                if (fileWriter != null)
+{
                     fileWriter.close();
                     return true;
                 }
@@ -207,8 +208,7 @@ public class Files {
     }
     
     public String uriToPath(String uri) {
-    	String result = uri.replace("content://com.android.providers.downloads.documents/tree/raw%3A%2F", "/storage/emulated/0/Download1/").replace("content://com.android.externalstorage.documents/tree/primary", "/storage/emulated/0").replace("content://com.android.externalstorage.documents/tree", "/storage");
-		result = result.replace("%3A", "/").replace("%2F", "/");
+    	String result = uri.replace("/tree/primary:", "/storage/emulated/0/").replace("/tree/", "/storage/"));
     return result;
     }
-}
+}
