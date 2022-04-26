@@ -145,25 +145,6 @@ public class MainActivity extends AppCompatActivity {
 		});
 	}
 
-	public void checkPermission() {
-		if(ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-			listProjects();
-		} else {
-			new MaterialAlertDialogBuilder(MainActivity.this)
-					.setTitle(getResources().getString(R.string.menu_storage_permission))
-					.setMessage(getResources().getString(R.string.description_storage))
-					.setCancelable(false)
-					.setPositiveButton(getResources().getString(R.string.action_got_it),
-							new DialogInterface.OnClickListener() {
-								@Override
-								public void onClick(DialogInterface dialogInterface, int i) {
-									ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
-								}
-							})
-					.show();
-		}
-	}
-
 	public void listProjects() {
 		if(ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
 			Map<String,?> keys = prefs.getAll();
@@ -192,6 +173,25 @@ public class MainActivity extends AppCompatActivity {
 			refresh.setRefreshing(false);
 		} else {
 			checkPermission();
+		}
+	}
+	
+	public void checkPermission() {
+		if(ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+			listProjects();
+		} else {
+			new MaterialAlertDialogBuilder(MainActivity.this)
+					.setTitle(getResources().getString(R.string.menu_storage_permission))
+					.setMessage(getResources().getString(R.string.description_storage))
+					.setCancelable(false)
+					.setPositiveButton(getResources().getString(R.string.action_got_it),
+							new DialogInterface.OnClickListener() {
+								@Override
+								public void onClick(DialogInterface dialogInterface, int i) {
+									ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+								}
+							})
+					.show();
 		}
 	}
 
