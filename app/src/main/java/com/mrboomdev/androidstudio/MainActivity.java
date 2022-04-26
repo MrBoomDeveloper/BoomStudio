@@ -35,14 +35,17 @@ import java.util.ArrayList;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
-	LinearLayout no_projects;
-	RecyclerView projects_recycler;
-	ImageView new_project;
-	Button create;
-	Button open;
 	SwipeRefreshLayout refresh;
 	ProjectsListAdapter adapter;
 	SharedPreferences prefs;
+	LinearLayout no_projects;
+	RecyclerView projects_recycler;
+	NavigationBarView navigation;
+	ImageView new_project;
+	ImageView notifications;
+	ImageView settings;
+	Button create;
+	Button open;
 	Files file;
 
 	@Override
@@ -59,9 +62,9 @@ public class MainActivity extends AppCompatActivity {
 		new_project = findViewById(R.id.new_project);
 		create = findViewById(R.id.create);
 		open = findViewById(R.id.open);
-		ImageView notifications = findViewById(R.id.notifications);
-		ImageView settings = findViewById(R.id.settings);
-		NavigationBarView navigation = findViewById(R.id.navigation);
+		notifications = findViewById(R.id.notifications);
+		settings = findViewById(R.id.settings);
+		navigation = findViewById(R.id.navigation);
 		prefs = getSharedPreferences("projects", Context.MODE_PRIVATE);
 		file = new Files();
 		initializeClicks();
