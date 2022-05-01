@@ -7,7 +7,7 @@ import android.graphics.Color;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 public class EditorActivity extends AppCompatActivity {
@@ -15,6 +15,7 @@ public class EditorActivity extends AppCompatActivity {
 	DrawerLayout drawer_layout;
 	Intent intent;
 	LinearLayout drawer;
+	ImageView menu;
 	ImageView drawer_import_file;
 
     @Override
@@ -27,6 +28,7 @@ public class EditorActivity extends AppCompatActivity {
         drawer_layout = findViewById(R.id.drawer_layout);
         drawer = findViewById(R.id.drawer);
         drawer_import_file = drawer.findViewById(R.id.upload_file);
+		menu = findViewById(R.id.menu);
         refresh = findViewById(R.id.refresh);
         
         title.setText(intent.getStringExtra("name"));
@@ -41,7 +43,7 @@ public class EditorActivity extends AppCompatActivity {
 		drawer_import_file.setOnClickListener(v -> {
 			Toast.makeText(getApplicationContext(),"currently not available", Toast.LENGTH_SHORT).show();
 		});
-		refresh.setOnRefreshListener(-> refresh.setRefreshing(false));
+		refresh.setOnRefreshListener(() -> refresh.setRefreshing(false));
 	}
     
     @Override
