@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayoutxmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="350dp"
@@ -8,27 +9,37 @@
 	android:orientation="vertical">
 
 	<LinearLayout
-		style="@style/header"
-		android:layout_marginTop="25dp">
+		style="@style/header">
 
 		<Spinner
 			android:id="@+id/project_structure"
 			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+			
+		<LinearLayout
+			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:layout_weight="1" />
+			android:gravity="right">
+				
+			<ImageView
+				android:id="@+id/upload_file"
+				style="@style/header_item.clickable"
+				android:tooltipText="Import file"
+				app:srcCompat="@drawable/ic_upload_file_outline" />
 			
-		<ImageView
-			android:id="@+id/new_file"
-			style="@style/header_item.clickable"
-			android:tooltipText="New file"
-			app:srcCompat="@drawable/ic_settings_outline"/>
+			<ImageView
+				android:id="@+id/new_file"
+				style="@style/header_item.clickable"
+				android:tooltipText="New file"
+				app:srcCompat="@drawable/ic_create_file_outline" />
 			
-		<ImageView
-			android:id="@+id/new_folder"
-			style="@style/header_item.clickable"
-			android:tooltipText="New folder"
-			app:srcCompat="@drawable/ic_settings_outline" />
-			
+			<ImageView
+				android:id="@+id/new_folder"
+				style="@style/header_item.clickable"
+				android:tooltipText="New folder"
+				app:srcCompat="@drawable/ic_create_folder_outline" />
+				
+			</LinearLayout>
 	</LinearLayout>
 	
 	<LinearLayout
@@ -38,7 +49,7 @@
 				
 		<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 			android:id="@+id/refresh"
-			android:layout_width="match_parent"
+			android:layout_width="match_parent"
 			android:layout_height="match_parent">
 						
 			<androidx.recyclerview.widget.RecyclerView
