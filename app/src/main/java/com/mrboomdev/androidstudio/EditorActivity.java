@@ -51,8 +51,8 @@ public class EditorActivity extends AppCompatActivity {
 
 	@Override
 	public void onBackPressed() {
-		if (drawer.isDrawerOpen(GravityCompat.START)) {
-			drawer.closeDrawer(GravityCompat.START);
+		if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
+			drawer_layout.closeDrawer(GravityCompat.START);
 		} else {
 			super.onBackPressed();
 		}
