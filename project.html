@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru" itemscope itemtype="https://schema.org/Article">
+	<head>
+		<!--Makes site beautiful-->
+		<meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<meta name="viewport" content="viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<link rel="stylesheet" href="./styles/default.css" />
+		<link rel="stylesheet" href="./styles/custom.css" />
+		<link rel="stylesheet" href="./styles/mobile.css" />
+		<script type="text/javascript" src="./scripts/main.js"></script>
+		<script type="text/javascript" src="./scripts/project.js"></script>
+		<script type="text/javascript" src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+		
+		<!--For browsers-->
+		<title>MrBoomDev - Фронтенд Разработчик</title>
+		<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico?" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png" />
+		<link rel="manifest" href="./site.webmanifest" />
+		<meta name="theme-color" content="#11071F" />
+		
+		<!--Index bots-->
+		<meta itemprop="name" content="MrBoomDev - Фронтенд Разработчик" />
+		<meta property="og:title" content="MrBoomDev - Фронтенд Разработчик" />
+		<meta property="og:site_name" content="MrBoomDev - Фронтенд Разработчик" />
+		<meta name="description" content="Я 14-летний фронтенд-разработчик из России. Занимаюсь разработкой веб-сайтов, приложений и 2D-игр с 9 лет." />
+		<meta itemprop="description" content="Я 14-летний фронтенд-разработчик из России. Занимаюсь разработкой веб-сайтов, приложений и 2D-игр с 9 лет." />
+		<meta property="og:description" content="Я 14-летний фронтенд-разработчик из России. Занимаюсь разработкой веб-сайтов, приложений и 2D-игр с 9 лет." />
+		<meta itemprop="image" content="./images/mrboom.jpg" />
+		<meta property="og:image" content="./images/mrboom.jpg" />
+		<meta property="og:url" content="https://mrboomdeveloper.github.io" />
+		<meta property="og:type" content="website" />
+		<meta name="keywords" content="Mister, Mr, Boom, MrBoom, MrBoomDev, MrBoomDeveloper, Dev, Developer, Мистер, Мр, Бум, Мистр, МрБум, МистерБум, DroidStudio, Droid Studio" />
+		<meta name="google-site-verification" content="LeFHmFhrNEA1vniLN3OZz2rkV6lK75eqm_Ax9eoDVlQ" />
+		<meta name="robots" content="index, follow" />
+	</head>
+	<body onload="loaded('overview');">
+		<img id="scrollFixer" src="./images/blank.png" />
+		
+		<header class="reveal">
+			<div class="content">
+				<a href="./"><h2>MrBoomDev</h2></a>
+				<div id="burger" onclick="toggleMenu()">
+					<div class="bar1"></div><div class="bar2"></div><div class="bar3"></div>
+				</div>
+				<nav><ul id="header-links"></ul></nav>
+			</div>
+		</header>
+		
+		<img id="banner" class="reveal" src="images/blank.png"/>
+		<div id="project-header" class="reveal">
+			<div class="content">
+				<div id="info">
+					<h1 id="name">Загрузка...</h1>
+					<div id="tags" class="tags"></div>
+				</div>
+				<div id="actions">
+					<a href="#screenshots"><button>Скриншоты</button></a>
+					<span id="download"></span>
+				</div>
+			</div>
+		</div>
+		
+		<section class="tip reveal">
+			<div class="content">
+				<hr noshade color="#FFE6FF" size="1" />
+				<p class="reveal">Для корректной работы требуется Android не ниже 8 версии.</p>
+				<hr noshade color="#FFE6FF" size="1" />
+			</div>
+		</section>
+		
+		<section id="project-about">
+			<div class="content">
+				<div class="block noimage reveal">
+					<div>
+						<h2>Описание</h2>
+						<p id="description">Загрузка...</p>
+					<div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="content">
+				<div id="screenshots" class="block noimage reveal">
+					<div>
+						<h2>Скриншоты</h2>
+						<div id="screenshotsa" class="grid"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<footer>
+			<div id="footer-links" class="content"></div>
+		</footer>
+		
+		<noscript>
+			<div class="warning">
+				<h4>Включите JavaScript</h4>
+				<p>Извините, но для полноценной работы сайта необходимо включить данную функцию. Сделать это можно в настройках вашего браузера</p>
+			</div>
+		</noscript>
+		
+	</body>
+</html>
