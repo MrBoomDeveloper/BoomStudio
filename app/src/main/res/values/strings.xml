@@ -1,11 +1,10 @@
 <resources>
-    <string name="app_name" translatable="false">DroidStudio</string>
-    <string name="app_welcome">Welcome to DroidStudio</string>
+    <string name="app_name" translatable="false">BoomStudio</string>
+    <string name="app_welcome">Welcome to BoomStudio</string>
 
     <string name="description_welcome">Create a new project to start from scratch. Open existing project from storage to continue.</string>
     <string name="description_storage">The app needs storage permission to open and edit projects.</string>
 
-    <string name="task_building">Building APK</string>
     <string name="task_loading">Loading</string>
 
     <string name="action_remove">Remove</string>
@@ -64,7 +63,7 @@
     <string name="project_name">App name</string>
     <string name="project_name_default" translatable="false">Hello world</string>
     <string name="project_location">Project location</string>
-    <string name="project_location_default" translatable="false">/sdcard/Android/data/com.mrboomdev.androidstudio/files/projects/helloworld/</string>
+    <string name="project_location_default" translatable="false">/sdcard/MrBoomDev/BoomStudio/helloworld/</string>
     <string name="project_lang">Language</string>
     <string name="project_lang_default" translatable="false">Java</string>
     <string name="project_sdk">Minimum SDK</string>
