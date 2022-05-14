@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<color name="window_background">#11071F</color>
-	<color name="window_popup">#140A23</color>
+	<color name="window_popup">#1D112F</color>
 	<color name="window_ripple">#55FFE6FF</color>
 	
 	<color name="view_icon">#FFE6FF</color>
-	<color name="view_divider">#40FFE6FF</color>
+	<color name="view_divider">#20FFE6FF</color>
 	<color name="view_first">#FFFFFF</color>
 	<color name="view_second">#FAFAFA</color>
 	<color name="view_primary">#D05EFC</color>
