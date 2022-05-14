@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_welcome">Добро Пожаловать в DroidStudio</string>
+    <string name="app_welcome">Добро Пожаловать в BoomStudio</string>
 
     <string name="description_welcome">Создайте новый проект, чтобы начать с нуля. Откройте существующий проект из хранилища чтобы продолжить.</string>
     <string name="description_storage">Приложению необходимо разрешение на доступ к хранилищу для открытия и редактирования проектов.</string>
 
-    <string name="task_building">Сборка APK</string>
     <string name="task_loading">Загрузка</string>
 
     <string name="action_remove">Убрать</string>
