@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.os.Process;
 import android.util.Log;
 
-public class SketchApplication extends Application {
+public class App extends Application {
     private Thread.UncaughtExceptionHandler uncaughtExceptionHandler;
 
     @Override
