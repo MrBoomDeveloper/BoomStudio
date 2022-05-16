@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.os.Process;
 import android.util.Log;
 
-public class App extends Application {
+public class BoomStudio extends Application {
     private Thread.UncaughtExceptionHandler uncaughtExceptionHandler;
 
     @Override
