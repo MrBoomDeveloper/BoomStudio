@@ -29,5 +29,7 @@
             android:name=".NotificationsActivity"/>
         <activity
             android:name=".SettingsActivity"/>
+        <activity
+            android:name=".CrashActivity"/>
     </application>
 </manifest>
