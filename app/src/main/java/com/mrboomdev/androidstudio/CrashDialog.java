@@ -17,7 +17,7 @@ public class CrashDialog extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		
 		Intent intent = getIntent();
-		new MaterialAlertDialogBuilder(CrashActivity.this)
+		new MaterialAlertDialogBuilder(MainActivity.this)
 					.setTitle("Something went wrong...")
 					.setMessage(intent.getStringExtra("error"))
 					.setCancelable(false)
