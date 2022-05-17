@@ -37,13 +37,14 @@ public class CreateProjectActivity extends AppCompatActivity {
 		TextView create = findViewById(R.id.create);
 	
 		TextInputEditText name = findViewById(R.id.project_name);
-		TextInputEditText pkg = findViewById(R.id.project_path);
+		TextInputEditText pkg = findViewById(R.id.project_package);
+		TextInputEditText path = findViewById(R.id.project_path);
 		AutoCompleteTextView lang = findViewById(R.id.langs);
 		AutoCompleteTextView sdk = findViewById(R.id.sdk);
 
 		create.setOnClickListener(v -> {
 			try {
-				String dir = project_package.getText().toString();
+				String dir = path.getText().toString();
 				dir = dir.replace("/sdcard/", "/storage/emulated/0/");
 				file.writeFile(dir + "test.txt", "hello world!");
 			} catch (Exception e) {
