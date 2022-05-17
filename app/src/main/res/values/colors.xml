@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<color name="window_background">#FEFEFE</color>
-	<color name="window_popup">@color/window_background</color>
-	<color name="window_transparent">#00000000</color>
-	<color name="window_ripple">#55555555</color>
+	<color name="brand_primary">#5AB2F1</color>
+	<color name="brand_colorOnPrimary">#FFFFFF</color>
+	<color name="brand_colorSecondary">#A8C8FB</color>
+	<color name="brand_colorOnSecondaryContainer">#000000</color>
+	<color name="brand_colorSurface">#FEFEFE</color>
+	<color name="brand_colorOnSurfaceVariant">#C3C8C4</color>
+	<color name="brand_colorOnSurface">#121212</color>
 	
+	<color name="view_ripple">#55555555</color>
+	<color name="view_transparent">#00000000</color>
 	<color name="view_icon">#656565</color>
 	<color name="view_divider">#DFDFDF</color>
-	<color name="view_first">#121212</color>
 	<color name="view_second">#555555</color>
+	
+	<!--DEPRECATED STYLES-->
+	<color name="view_first">#121212</color>
 	<color name="view_primary">#008FFF</color>
-	
+	<color name="window_popup">@color/window_background</color>
+	<color name="window_background">#FEFEFE</color>
 	<color name="static_black">#000000</color>
-	
-	
-	<!--REMOVE AFTER REFACTOR-->
     <color name="background">#FF0000</color>
     <color name="divider">#FF0000</color>
     <color name="hint">#FF0000</color>
