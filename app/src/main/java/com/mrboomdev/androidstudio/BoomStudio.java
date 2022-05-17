@@ -1,5 +1,6 @@
 package com.mrboomdev.androidstudio;
 
+import android.app.AlarmManager;
 import android.app.Application;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -21,6 +22,12 @@ public class BoomStudio extends Application {
 				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
 				intent.putExtra("error", Log.getStackTraceString(throwable));
 				PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 11111, intent, PendingIntent.FLAG_ONE_SHOT);
+				
+				AlarmManager am = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+				am.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, 1000, pendingIntent);
+
+				Process.killProcess(Process.myPid());
+				System.exit(1);
 
 				uncaughtExceptionHandler.uncaughtException(thread, throwable);
 			}
