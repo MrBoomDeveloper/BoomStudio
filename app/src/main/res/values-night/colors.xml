@@ -4,6 +4,7 @@
 	<color name="brand_colorSurface">#2C3033</color>
 	<color name="brand_colorOnSurface">#FFFFFF</color>
 	
+	<color name="view_popup">#38393D</color>
 	<color name="view_ripple">#55F5F5F5</color>
 	<color name="view_icon">#E1E1E1</color>
 	<color name="view_divider">#353535</color>
