@@ -2,7 +2,6 @@
 <resources>
 	<color name="brand_colorOnPrimary">#000000</color>
 	<color name="brand_colorSurface">#2C3033</color>
-	<color name="brand_colorOnSurfaceVariant">#BBBBBB</color>
 	<color name="brand_colorOnSurface">#FFFFFF</color>
 	
 	<color name="view_ripple">#55F5F5F5</color>
