@@ -6,18 +6,18 @@
 	android:id="@+id/drawer_layout"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:background="@color/window_background"
 	tools:openDrawer="start">
+		
 		<LinearLayout
-	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	android:orientation="vertical">
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
 
-	<LinearLayout
-		style="@style/header" >
+			<LinearLayout
+				style="@style/header" >
 
-		<ImageView
-			android:id="@+id/menu"
+				<ImageView
+					android:id="@+id/menu"
 			android:tooltipText="@string/action_menu"
 			app:srcCompat="@drawable/ic_menu_outline"
 			style="@style/header_item.clickable" />
