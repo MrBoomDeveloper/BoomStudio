@@ -25,7 +25,7 @@
 	</style>
 	
 	<style name="Popup" parent="TextAppearance.MaterialComponents.Subtitle1">
-		<item name="android:textSize">14sp</item>
+		<item name="android:textSize">16sp</item>
 	</style>
 	
 	<style name="Dropdown" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"></style>
