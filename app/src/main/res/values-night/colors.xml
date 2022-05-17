@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<color name="brand_colorOnPrimary">#000000</color>
-	<color name="brand_colorSurface">#252525</color>
+	<color name="brand_colorSurface">#202124</color>
 	<color name="brand_colorOnSurface">#FFFFFF</color>
 	
 	<color name="view_popup">#38393D</color>
