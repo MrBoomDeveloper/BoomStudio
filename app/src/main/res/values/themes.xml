@@ -20,13 +20,17 @@
 		<item name="android:windowLightStatusBar">true</item>
 	</style>
 	
-	<style name="Popup">
+	<style name="Opening" parent="Main">
+		<item name="android:windowBackground">@drawable/splash_screen</item>
+	</style>
+	
+	<style name="Popup" parent="TextAppearance.MaterialComponents.Subtitle1">
 		<item name="android:textSize">14sp</item>
 	</style>
 	
 	<style name="Dropdown" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"></style>
 	
-	<style name="Opening" parent="Main">
-		<item name="android:windowBackground">@drawable/splash_screen</item>
+	<style name="ThemeOverlay.AppTheme.BottomNavigationView" parent="@style/ThemeOverlay.MaterialComponents">
+		<item name="colorSurface">@null</item>
 	</style>
 </resources>
