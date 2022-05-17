@@ -1,4 +1,4 @@
-package com.mrboomdev.test;
+package com.mrboomdev.androidstudio;
 
 import android.app.Application;
 import android.app.PendingIntent;
