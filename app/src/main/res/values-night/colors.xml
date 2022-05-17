@@ -8,9 +8,9 @@
 	<color name="view_ripple">#55F5F5F5</color>
 	<color name="view_icon">#E1E1E1</color>
 	<color name="view_divider">#353535</color>
-	<color name="view_second">#CECECE</color>
 	
 	<!--DEPRECATED STYLES-->
+	<color name="view_second">#CECECE</color>
 	<color name="view_first">#FFFFFF</color>
 	<color name="window_popup">#38393D</color>
 	<color name="window_background">#202124</color>
