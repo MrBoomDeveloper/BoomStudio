@@ -2,9 +2,9 @@ name: Android CI
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    paths-ignore:
+      - 'app/src/main/res/**'
+      - 'app/build.gradle'
 
 jobs:
   build:
