@@ -22,9 +22,6 @@ public class BoomStudio extends Application {
 				intent.putExtra("error", Log.getStackTraceString(throwable));
 				PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 11111, intent, PendingIntent.FLAG_ONE_SHOT);
 
-				Process.killProcess(Process.myPid());
-				System.exit(1);
-
 				uncaughtExceptionHandler.uncaughtException(thread, throwable);
 			}
 		});
