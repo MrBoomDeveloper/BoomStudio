@@ -3,9 +3,7 @@
 	<color name="brand_primary">#5AB2F1</color>
 	<color name="brand_colorOnPrimary">#FFFFFF</color>
 	<color name="brand_colorSecondary">#A8C8FB</color>
-	<color name="brand_colorOnSecondaryContainer">#000000</color>
 	<color name="brand_colorSurface">#FEFEFE</color>
-	<color name="brand_colorOnSurfaceVariant">#C3C8C4</color>
 	<color name="brand_colorOnSurface">#121212</color>
 	
 	<color name="view_ripple">#55555555</color>
