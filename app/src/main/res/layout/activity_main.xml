@@ -1,143 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/window_background"
-    android:orientation="vertical">
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
 
-    <LinearLayout
-        style="@style/header" >
+	<LinearLayout
+		style="@style/header" >
 
-        <ImageView
-            app:srcCompat="@drawable/ic_android_outline"
+		<ImageView
+			app:srcCompat="@drawable/ic_android_outline"
 			style="@style/header_item.main" />
 
-        <TextView
-        	android:text="@string/app_name"
+		<TextView
+			android:text="@string/app_name"
 			style="@style/header_title"/>
 
-        <ImageView
-            android:id="@+id/new_project"
-            android:tooltipText="@string/action_new_project"
-            app:srcCompat="@drawable/ic_add_outline"
-            style="@style/header_item.clickable" />
-
-        <ImageView
-            android:id="@+id/notifications"
-            android:tooltipText="@string/menu_notifications"
-            app:srcCompat="@drawable/ic_notifications_outline"
+		<ImageView
+			android:id="@+id/new_project"
+			android:tooltipText="@string/action_new_project"
+			app:srcCompat="@drawable/ic_add_outline"
 			style="@style/header_item.clickable" />
 
-        <ImageView
-            android:id="@+id/settings"
-            android:tooltipText="@string/menu_settings"
-            app:srcCompat="@drawable/ic_settings_outline"
+		<ImageView
+			android:id="@+id/notifications"
+			android:tooltipText="@string/menu_notifications"
+			app:srcCompat="@drawable/ic_notifications_outline"
 			style="@style/header_item.clickable" />
-    </LinearLayout>
 
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        android:id="@+id/refresh"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+		<ImageView
+			android:id="@+id/settings"
+			android:tooltipText="@string/menu_settings"
+			app:srcCompat="@drawable/ic_settings_outline"
+			style="@style/header_item.clickable" />
+	</LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+	<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+		android:id="@+id/refresh"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1">
 
-            <LinearLayout
-                android:id="@+id/no_projects"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="2"
-                android:gravity="center_horizontal|center_vertical"
-                android:orientation="vertical"
-                android:paddingLeft="45dp"
-                android:paddingRight="45dp"
-                android:paddingBottom="45dp">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
-                    app:srcCompat="@drawable/ic_no_content_upside_down" />
+			<LinearLayout
+				android:id="@+id/no_projects"
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_gravity="center_vertical"
+				android:layout_weight="2"
+				android:gravity="center_horizontal|center_vertical"
+				android:orientation="vertical"
+				android:paddingLeft="45dp"
+				android:paddingRight="45dp"
+				android:paddingBottom="45dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="34dp"
-                    android:gravity="bottom"
-                    android:text="@string/app_welcome"
-                    android:textColor="@color/view_first"
-                    android:textSize="20sp" />
+				<ImageView
+					android:layout_width="200dp"
+					android:layout_height="200dp"
+					app:srcCompat="@drawable/ic_no_content_upside_down" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:gravity="center_horizontal"
-                    android:maxWidth="300dp"
-                    android:text="@string/description_welcome"
-                    android:textColor="@color/view_second"
-                    android:textSize="16sp" />
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="34dp"
+					android:gravity="bottom"
+					android:text="@string/app_welcome"
+					android:textColor="@color/view_first"
+					android:textSize="20sp" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center_horizontal"
-                    android:orientation="horizontal">
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5dp"
+					android:gravity="center_horizontal"
+					android:maxWidth="300dp"
+					android:text="@string/description_welcome"
+					android:textColor="@color/view_second"
+					android:textSize="16sp" />
 
-                    <Button
-                        android:id="@+id/create"
-                        style="@style/Widget.MaterialComponents.Button"
-                        android:layout_width="120dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="5dp"
-                        android:text="@string/action_create"
-                        android:textColor="@color/static_black" />
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="10dp"
+					android:gravity="center_horizontal"
+					android:orientation="horizontal">
 
-                    <Button
-                        android:id="@+id/open"
-                        style="@style/Widget.MaterialComponents.Button"
-                        android:layout_width="120dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:text="@string/action_open"
-                        android:textColor="@color/static_black" />
-                </LinearLayout>
+					<Button
+						android:id="@+id/create"
+						style="@style/Widget.Material3.Button"
+						android:layout_width="120dp"
+						android:layout_height="wrap_content"
+						android:layout_marginRight="5dp"
+						android:text="@string/action_create" />
 
-            </LinearLayout>
+					<Button
+						android:id="@+id/open"
+						style="@style/Widget.Material3.Button"
+						android:layout_width="120dp"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="5dp"
+						android:text="@string/action_open" />
+				</LinearLayout>
+	
+			</LinearLayout>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/projects_recycler"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/window_background"
-                android:scrollbars="vertical"
-                android:visibility="gone" />
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/projects_recycler"
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_weight="1"
+				android:scrollbars="vertical"
+				android:visibility="gone" />
 
-        </LinearLayout>
+		</LinearLayout>
 
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+	</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
-    <com.google.android.material.divider.MaterialDivider
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:dividerColor="@color/view_divider" />
+	<com.google.android.material.divider.MaterialDivider
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:dividerColor="@color/view_divider" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
+	<com.google.android.material.bottomnavigation.BottomNavigationView
 		android:id="@+id/navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-		android:background="@color/window_background"
-        android:elevation="8dp"
-        app:itemIconTint="@color/view_menu"
-        app:itemTextColor="@color/view_menu"
-        app:labelVisibilityMode="labeled"
-        app:menu="@menu/projects_bar" />
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:labelVisibilityMode="labeled"
+		app:menu="@menu/projects_bar" />
 
 </LinearLayout>
