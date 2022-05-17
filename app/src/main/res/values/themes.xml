@@ -2,22 +2,15 @@
 	<style name="Main" parent="Theme.MaterialComponents.DayNight.NoActionBar">
 		<item name="colorPrimary">@color/brand_primary</item>
 		<item name="colorOnPrimary">@color/brand_colorOnPrimary</item>
-		<item name="colorOnSecondaryContainer">@color/brand_colorOnSecondaryContainer</item>
 		<item name="colorSurface">@color/brand_colorSurface</item>
-		<item name="colorOnSurfaceVariant">@color/brand_colorOnSurfaceVariant</item>
 		<item name="colorOnSurface">@color/brand_colorOnSurface</item>
 		
 		<item name="popupMenuBackground">@drawable/popup</item>
-		<item name="textAppearanceTitleSmall">@style/Navigation</item>
 		
 		<item name="android:colorBackground">@color/brand_colorSurface</item>
 		<item name="android:colorEdgeEffect">@color/brand_colorSecondary</item>
 		<item name="android:statusBarColor">@color/brand_colorSurface</item>
 		<item name="android:windowLightStatusBar">true</item>
-	</style>
-	
-	<style name="Navigation">
-		<item name="android:textSize">14sp</item>
 	</style>
 	
 	<style name="Dropdown" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
