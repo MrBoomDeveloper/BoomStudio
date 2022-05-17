@@ -3,14 +3,16 @@
 		<item name="colorPrimary">@color/brand_primary</item>
 		<item name="colorPrimaryVariant">@color/brand_primary</item>
 		<item name="colorOnPrimary">@color/brand_colorOnPrimary</item>
+		<item name="colorSecondary">@color/brand_primary</item>
 		<item name="colorSecondaryVariant">@color/brand_primary</item>
+		<item name="colorOnSecondary">@color/brand_colorOnPrimary</item>
 		<item name="colorSurface">@color/brand_colorSurface</item>
 		<item name="colorOnSurface">@color/brand_colorOnSurface</item>
 		
 		<item name="popupMenuBackground">@drawable/popup</item>
-		
 		<item name="android:colorBackground">@color/brand_colorSurface</item>
 		<item name="android:colorEdgeEffect">@color/brand_colorSecondary</item>
+		<item name="android:navigationBarColor">@color/brand_colorSurface</item>
 		<item name="android:statusBarColor">@color/brand_colorSurface</item>
 		<item name="android:windowLightStatusBar">false</item>
 	</style>
