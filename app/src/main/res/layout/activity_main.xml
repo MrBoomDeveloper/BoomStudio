@@ -129,6 +129,7 @@
 		android:id="@+id/navigation"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
+		android:background="@color/brand_colorSurface"
 		app:labelVisibilityMode="labeled"
 		app:menu="@menu/projects_bar" />
 
