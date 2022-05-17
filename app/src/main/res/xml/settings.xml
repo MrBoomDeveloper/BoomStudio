@@ -4,7 +4,7 @@
 	app:iconSpaceReserved="false">
 
 	<PreferenceCategory
-		android:title="@string/pref_cat_theme"
+		android:title="@string/pref_cat_appearance"
 		app:iconSpaceReserved="false">
 		<Preference
 			android:title="@string/dark"
