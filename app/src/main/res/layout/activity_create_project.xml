@@ -67,6 +67,7 @@
 				android:hint="@string/project_package">
 
 				<com.google.android.material.textfield.TextInputEditText
+					android:id="@+id/project_package"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					style="@style/textinput_content"
@@ -83,6 +84,7 @@
 				android:hint="@string/project_location">
 
 				<com.google.android.material.textfield.TextInputEditText
+					android:id="@+id/project_path"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					style="@style/textinput_content"
