@@ -1,29 +1,26 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-
-	<style name="Main" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-		<item name="colorPrimary">@color/view_primary</item>
-		<item name="colorSecondary">@color/view_primary</item>
-		<item name="colorPrimaryVariant">@color/view_primary</item>
-		<item name="colorSecondaryVariant">@color/view_primary</item>
-		<item name="android:colorEdgeEffect">@color/view_second</item>
+	<style name="Main" parent="Theme.Material3.DayNight.NoActionBar">
+		<item name="colorPrimary">@color/brand_primary</item>
+		<item name="colorOnPrimary">@color/brand_colorOnPrimary</item>
+		<item name="colorOnSecondaryContainer">@color/brand_colorOnSecondaryContainer</item>
+		<item name="colorSurface">@color/brand_surface</item>
+		<item name="colorOnSurfaceVariant">@color/brand_colorOnSurfaceVariant</item>
+		<item name="colorOnSurface">@color/brand_colorOnSurface</item>
 		
-		<item name="colorOnPrimary">#00FF00</item>
-		<item name="colorOnSecondary">#0000FF</item>
-		<item name="textAppearanceLargePopupMenu">@style/PopupText</item>
-		<item name="textAppearanceSmallPopupMenu">@style/PopupText</item>
-		<item name="android:windowLightStatusBar">true</item>
-		
-		<item name="android:statusBarColor">@color/window_background</item>
 		<item name="popupMenuBackground">@drawable/popup</item>
+		<item name="textAppearanceTitleSmall">@style/Navigation</item>
+		
+		<item name="android:colorBackground">@color/brand_surface</item>
+		<item name="android:colorEdgeEffect">@color/view_second</item>
+		<item name="android:statusBarColor">@color/window_background</item>
+		<item name="android:windowLightStatusBar">true</item>
 	</style>
 	
-	<style name="Dropdown" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
-		<item name="colorSurface">@color/window_popup</item>
-		<item name="android:textColor">@color/view_first</item>
+	<style name="Navigation">
+		<item name="android:textSize">14sp</item>
 	</style>
 	
-	<style name="PopupText">
-		<item name="android:textSize">16sp</item>
+	<style name="Dropdown" parent="Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
 		<item name="android:textColor">@color/view_first</item>
 	</style>
 	
