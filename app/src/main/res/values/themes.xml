@@ -8,7 +8,7 @@
 		<item name="colorOnSurface">@color/brand_colorOnSurface</item>
 		
 		<item name="popupMenuBackground">@drawable/popup</item>
-		<item name="textAppearanceTitleSmall">@style/Navigation</item>
+		<!--<item name="textAppearanceTitleSmall">@style/Navigation</item>-->
 		
 		<item name="android:colorBackground">@color/brand_colorSurface</item>
 		<item name="android:colorEdgeEffect">@color/brand_colorSecondary</item>
