@@ -8,11 +8,11 @@
 		<item name="colorOnSurface">@color/brand_colorOnSurface</item>
 		
 		<item name="popupMenuBackground">@drawable/popup</item>
-		<item name="textAppearanceTitleSmall">@theme/Navigation</item>
+		<item name="textAppearanceTitleSmall">@style/Navigation</item>
 		
 		<item name="android:colorBackground">@color/brand_colorSurface</item>
 		<item name="android:colorEdgeEffect">@color/brand_colorSecondary</item>
-		<item name="android:statusBarColor">@color/window_background</item>
+		<item name="android:statusBarColor">@color/brand_colorSurface</item>
 		<item name="android:windowLightStatusBar">true</item>
 	</style>
 	
