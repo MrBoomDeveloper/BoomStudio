@@ -17,7 +17,7 @@
 	<color name="view_second">#555555</color>
 	<color name="view_first">#121212</color>
 	<color name="view_primary">#008FFF</color>
-	<color name="window_popup">@color/window_background</color>
+	<color name="window_popup">#FEFEFE</color>
 	<color name="window_transparent">#00000000</color>
 	<color name="window_background">#FEFEFE</color>
 	<color name="static_black">#000000</color>
