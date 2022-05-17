@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-	<style name="Main" parent="Theme.MaterialComponents.DayNight.NoActionBar.DayNight.NoActionBar">
+	<style name="Main" parent="Theme.MaterialComponents.DayNight.NoActionBar">
 		<item name="android:windowLightStatusBar">false</item>
 	</style>
 </resources>
