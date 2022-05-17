@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-	<style name="Main" parent="Theme.Material3.DayNight.NoActionBar">
+	<style name="Main" parent="Theme.MaterialComponents.DayNight.NoActionBar">
 		<item name="colorPrimary">@color/brand_primary</item>
 		<item name="colorOnPrimary">@color/brand_colorOnPrimary</item>
 		<item name="colorOnSecondaryContainer">@color/brand_colorOnSecondaryContainer</item>
@@ -8,7 +8,7 @@
 		<item name="colorOnSurface">@color/brand_colorOnSurface</item>
 		
 		<item name="popupMenuBackground">@drawable/popup</item>
-		<!--<item name="textAppearanceTitleSmall">@style/Navigation</item>-->
+		<item name="textAppearanceTitleSmall">@style/Navigation</item>
 		
 		<item name="android:colorBackground">@color/brand_colorSurface</item>
 		<item name="android:colorEdgeEffect">@color/brand_colorSecondary</item>
@@ -20,7 +20,7 @@
 		<item name="android:textSize">14sp</item>
 	</style>
 	
-	<style name="Dropdown" parent="Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+	<style name="Dropdown" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
 		<item name="android:textColor">@color/brand_colorOnSurface</item>
 	</style>
 	
