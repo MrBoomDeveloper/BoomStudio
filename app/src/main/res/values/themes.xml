@@ -3,15 +3,15 @@
 		<item name="colorPrimary">@color/brand_primary</item>
 		<item name="colorOnPrimary">@color/brand_colorOnPrimary</item>
 		<item name="colorOnSecondaryContainer">@color/brand_colorOnSecondaryContainer</item>
-		<item name="colorSurface">@color/brand_surface</item>
+		<item name="colorSurface">@color/brand_colorSurface</item>
 		<item name="colorOnSurfaceVariant">@color/brand_colorOnSurfaceVariant</item>
 		<item name="colorOnSurface">@color/brand_colorOnSurface</item>
 		
 		<item name="popupMenuBackground">@drawable/popup</item>
 		<item name="textAppearanceTitleSmall">@style/Navigation</item>
 		
-		<item name="android:colorBackground">@color/brand_surface</item>
-		<item name="android:colorEdgeEffect">@color/view_second</item>
+		<item name="android:colorBackground">@color/brand_colorSurface</item>
+		<item name="android:colorEdgeEffect">@color/brand_colorSecondary</item>
 		<item name="android:statusBarColor">@color/window_background</item>
 		<item name="android:windowLightStatusBar">true</item>
 	</style>
@@ -21,7 +21,7 @@
 	</style>
 	
 	<style name="Dropdown" parent="Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
-		<item name="android:textColor">@color/view_first</item>
+		<item name="android:textColor">@color/brand_colorOnSurface</item>
 	</style>
 	
 	<style name="Opening" parent="Main">
