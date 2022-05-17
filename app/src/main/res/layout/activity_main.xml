@@ -91,7 +91,7 @@
 
 					<Button
 						android:id="@+id/create"
-						style="@style/Widget.Material3.Button"
+						style="@style/Widget.MaterialComponents.Button"
 						android:layout_width="120dp"
 						android:layout_height="wrap_content"
 						android:layout_marginRight="5dp"
@@ -99,7 +99,7 @@
 
 					<Button
 						android:id="@+id/open"
-						style="@style/Widget.Material3.Button"
+						style="@style/Widget.MaterialComponents.Button"
 						android:layout_width="120dp"
 						android:layout_height="wrap_content"
 						android:layout_marginLeft="5dp"
