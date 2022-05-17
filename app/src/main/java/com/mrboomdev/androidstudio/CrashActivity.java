@@ -10,7 +10,7 @@ import java.io.InputStream;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import androidx.annotation.StringRes;
 
-public class CrashActivity extends AppCompatActivity {
+public class CrashDialog extends AppCompatActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
