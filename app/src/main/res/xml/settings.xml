@@ -4,15 +4,15 @@
 	app:iconSpaceReserved="false">
 
 	<PreferenceCategory
-		android:title="Appearance"
+		android:title="@string/pref_cat_theme"
 		app:iconSpaceReserved="false">
 		<Preference
-			android:title="Dark Theme"
-			android:summary="Darkness overwhelms my mind!"
+			android:title="@string/dark"
+			android:summary="@string/pref_desc_dark"
 			app:iconSpaceReserved="false" />
 		<Preference
-			android:title="Language"
-			android:summary="О, вы тоже из Англии?"
+			android:title="@string/pref_lang"
+			android:summary="@string/pref_desc_lang"
 			app:iconSpaceReserved="false" />
 	</PreferenceCategory>
 	<PreferenceCategory
@@ -23,7 +23,7 @@
 			android:defaultValue="true"
 			android:key="wordwrap"
 			android:title="@string/pref_wordwrap"
-			android:summary="When the end is reached, it wraps the text to the next line."
+			android:summary="@string_pref_desc_wrap"
 			app:iconSpaceReserved="false" />
 		<SwitchPreference
 			android:defaultValue="true"
