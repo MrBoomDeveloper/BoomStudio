@@ -1,64 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_welcome">Добро Пожаловать в BoomStudio</string>
+	<string name="app_welcome">Добро Пожаловать в BoomStudio</string>
 
-    <string name="description_welcome">Создайте новый проект, чтобы начать с нуля. Откройте существующий проект из хранилища чтобы продолжить.</string>
-    <string name="description_storage">Приложению необходимо разрешение на доступ к хранилищу для открытия и редактирования проектов.</string>
+	<string name="exception_name">Недопустимое название</string>
+	<string name="exception_path">Данный путь уже занят</string>
+	<string name="exception_unexpected">Произошла неожиданная ошибка</string>
+	
+	<string name="description_welcome">Создайте новый проект, чтобы начать с нуля. Откройте существующий проект из хранилища чтобы продолжить.</string>
+	<string name="description_storage">Приложению необходимо разрешение на доступ к хранилищу для открытия и редактирования проектов.</string>
+	
+	<string name="task_loading">Загрузка</string>
 
-    <string name="task_loading">Загрузка</string>
+	<string name="action_remove">Убрать</string>
+	<string name="action_got_it">ПОНЯТНО</string>
+	<string name="action_file">Файл</string>
+	<string name="action_edit">Редактировать</string>
+	<string name="action_view">Вид</string>
+	<string name="action_run">Запустить</string>
+	<string name="action_refresh">Обновить</string>
+	<string name="action_filter">Фильтры</string>
+	<string name="action_search">Поиск</string>
+	<string name="action_sort">Сортировать</string>
+	<string name="action_new">Новый</string>
+	<string name="action_save">Сохранить все</string>
+	<string name="action_back">Назад</string>
+	<string name="action_menu">Меню</string>
+	<string name="action_open">Открыть</string>
+	<string name="action_create">Создать</string>
+	<string name="action_copy">Копировать</string>
+	<string name="action_share">Поделиться</string>
+	<string name="action_delete">Удалить</string>
+	<string name="action_new_project">Новый проект</string>
+	<string name="action_open_folder">Новая папка</string>
+	<string name="action_install_apk">Установить APK</string>
+	<string name="action_get_from_vcs">Получить из VCS</string>
 
-    <string name="action_remove">Убрать</string>
-    <string name="action_got_it">ПОНЯТНО</string>
-    <string name="action_file">Файл</string>
-    <string name="action_edit">Редактировать</string>
-    <string name="action_view">Вид</string>
-    <string name="action_run">Запустить</string>
-    <string name="action_refresh">Обновить</string>
-    <string name="action_filter">Фильтры</string>
-    <string name="action_search">Поиск</string>
-    <string name="action_sort">Сортировать</string>
-    <string name="action_new">Новый</string>
-    <string name="action_save">Сохранить все</string>
-    <string name="action_back">Назад</string>
-    <string name="action_menu">Меню</string>
-    <string name="action_open">Открыть</string>
-    <string name="action_create">Создать</string>
-    <string name="action_copy">Копировать</string>
-    <string name="action_share">Поделиться</string>
-    <string name="action_delete">Удалить</string>
-    <string name="action_new_project">Новый проект</string>
-    <string name="action_open_folder">Новая папка</string>
-    <string name="action_install_apk">Установить APK</string>
-    <string name="action_get_from_vcs">Получить из VCS</string>
+	<string name="pref_cat_appearance">Вид</string>
+	<string name="pref_cat_about">Об приложении</string>
+	
+	<string name="pref_dark">Тёмная Тема</string>
+	<string name="pref_lang">Язык</string>
+	<string name="pref_autosave">Автосохранение</string>
+	<string name="pref_wordwrap">Перенос Строк</string>
+	<string name="pref_line_number">Номера Строк</string>
+	<string name="pref_syntax">Подсветка Синтаксиса</string>
+	<string name="pref_install">Устанавливать APK после сборки</string>
+	<string name="pref_hidden">Скрытые Файлы</string>
+	<string name="pref_about">Сделанно MrBoomDev в 2022</string>
+	
+	<string name="pref_desc_dark">Тьма поглотила мой разум!</string>
+	<string name="pref_desc_lang">Будет применен ко всему приложению</string>
+	<string name="pref_desc_wrap">При достижении конца текст переносится на следующую строку</string>
 
-    <string name="pref_cat_theme">Тема</string>
-    <string name="pref_cat_about">Об приложении</string>
-    <string name="pref_autosave">Автосохранение</string>
-    <string name="pref_wordwrap">Перенос Строк</string>
-    <string name="pref_line_number">Номера Строк</string>
-    <string name="pref_syntax">Подсветка Синтаксиса</string>
-    <string name="pref_install">Устанавливать APK после сборки</string>
-    <string name="pref_hidden">Скрытые Файлы</string>
-    <string name="pref_about">Сделанно MrBoomDev в 2022</string>
+	<string name="menu_icons">Выберите Иконку</string>
+	<string name="menu_vector">Конфигурация Векторной Графики</string>
+	<string name="menu_resources">Ресурсы</string>
+	<string name="menu_notifications">Уведомления</string>
+	<string name="menu_editor">Редактор</string>
+	<string name="menu_settings">Настройки</string>
+	<string name="menu_storage_permission">Доступ к Хранилищу</string>
 
-    <string name="menu_icons">Выберите Иконку</string>
-    <string name="menu_vector">Конфигурация Векторной Графики</string>
-    <string name="menu_resources">Ресурсы</string>
-    <string name="menu_notifications">Уведомления</string>
-    <string name="menu_editor">Редактор</string>
-    <string name="menu_settings">Настройки</string>
-    <string name="menu_storage_permission">Доступ к Хранилищу</string>
+	<string name="category_projects">Проекты</string>
+	<string name="category_customize">Кастомизировать</string>
+	<string name="category_plugins">Плагины</string>
+	<string name="category_help">Помощь</string>
+	<string name="category_project">Проект</string>
+	<string name="category_theme">Аттрибуты темы</string>
 
-    <string name="category_projects">Проекты</string>
-    <string name="category_customize">Кастомизировать</string>
-    <string name="category_plugins">Плагины</string>
-    <string name="category_help">Помощь</string>
-    <string name="category_project">Проект</string>
-    <string name="category_theme">Аттрибуты темы</string>
-
-    <string name="project_package">Название пакета</string>
-    <string name="project_name">Название приложения</string>
-    <string name="project_location">Путь проекта</string>
-    <string name="project_lang">Язык</string>
-    <string name="project_sdk">Минимальный SDK</string>
+	<string name="project_package">Название пакета</string>
+	<string name="project_name">Название приложения</string>
+	<string name="project_location">Путь проекта</string>
+	<string name="project_lang">Язык</string>
+	<string name="project_sdk">Минимальный SDK</string>
 </resources>
