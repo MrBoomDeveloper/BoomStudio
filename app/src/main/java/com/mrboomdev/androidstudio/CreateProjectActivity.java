@@ -46,9 +46,8 @@ public class CreateProjectActivity extends AppCompatActivity {
 				String dir = project_package.getText().toString();
 				dir = dir.replace("/sdcard/", "/storage/emulated/0/");
 				file.writeFile(dir + "test.txt", "hello world!");
-			} carch (Exception e) {
+			} catch (Exception e) {
 				Toast.makeText(getApplicationContext(),"Ошибка :(", Toast.LENGTH_SHORT).show();
-			}
 			}
 		});
 		close.setOnClickListener(v -> finish());
