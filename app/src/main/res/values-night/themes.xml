@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-	<style name="Main" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+	<style name="Main" parent="Theme.Material3.DayNight.NoActionBar">
 		<item name="colorPrimary">@color/view_primary</item>
 		<item name="colorSecondary">@color/view_primary</item>
 		<item name="colorPrimaryVariant">@color/view_primary</item>
@@ -17,7 +17,7 @@
 		<item name="popupMenuBackground">@drawable/popup</item>
 	</style>
 	
-	<style name="Dropdown" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+	<style name="Dropdown" parent="Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
 		<item name="colorSurface">@color/window_popup</item>
 		<item name="android:textColor">@color/view_first</item>
 	</style>
