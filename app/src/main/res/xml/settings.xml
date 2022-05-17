@@ -7,7 +7,7 @@
 		android:title="@string/pref_cat_appearance"
 		app:iconSpaceReserved="false">
 		<Preference
-			android:title="@string/dark"
+			android:title="@string/pref_dark"
 			android:summary="@string/pref_desc_dark"
 			app:iconSpaceReserved="false" />
 		<Preference
