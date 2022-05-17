@@ -49,8 +49,8 @@
 	<style name="textinput">
         <item name="android:textColorHint">@color/view_second</item>
 	</style>
-	<style name="textinput.edit" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox" />
-	<style name="textinput.drop" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu" />
+	<style name="textinput.edit" parent="Widget.Material3.TextInputLayout.OutlinedBox" />
+	<style name="textinput.drop" parent="Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu" />
 	<style name="textinput_content">
 		<item name="android:singleLine">true</item>
 		<item name="android:textColor">@color/view_first</item>
