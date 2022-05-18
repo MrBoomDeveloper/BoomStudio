@@ -46,7 +46,11 @@ public class CreateProjectActivity extends AppCompatActivity {
 			try {
 				String dir = path.getText().toString();
 				dir = dir.replace("/sdcard/", "/storage/emulated/0/");
-				file.writeFile(dir + "test.txt", "hello world!");
+				if(!file.existFile(dir)) {
+					file.writeFile(dir + "test.txt", "hello world!");
+				} else {
+					path.setError("Данный путь уже используется");
+				}
 			} catch (Exception e) {
 				Toast.makeText(getApplicationContext(),"Ошибка :(", Toast.LENGTH_SHORT).show();
 			}
